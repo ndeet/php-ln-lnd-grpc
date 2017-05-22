@@ -28,7 +28,7 @@ Adding to project
 Via composer
 ```
 $ cd /project/
-$ composer require BitfuryLightning/lnrpc
+$ composer require bitfurylightning/lnrpc
 ```
 
 If cloning from git
