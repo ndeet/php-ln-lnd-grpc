@@ -1,0 +1,26 @@
+{
+    "name": "bitfury/lnrpc",
+    "description": "Grpc client for lnd v0.2.1-alpha. It is generated code from rpc.proto.",
+    "keywords": ["lightning", "grpc"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BitfuryLightning",
+            "email": "lightning@bitfury.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+        "php": ">=5.6",
+        "ext-grpc": ">=0.1.0",
+        "grpc/grpc": "^v1.1.0",
+        "google/protobuf": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lnrpc\\": "src/Lnrpc/",
+            "Google\\": "src/Google/",
+            "GPBMetadata\\": "src/GPBMetadata/"
+        }
+    }
+}
