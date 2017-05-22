@@ -1,5 +1,5 @@
 {
-    "name": "BitfuryLightning/lnrpc",
+    "name": "bitfurylightning/lnrpc",
     "description": "Grpc client for lnd v0.2.1-alpha. It is generated code from rpc.proto.",
     "keywords": ["lightning", "grpc"],
     "license": "MIT",
