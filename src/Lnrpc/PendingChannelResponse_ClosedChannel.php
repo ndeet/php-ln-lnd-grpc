@@ -9,16 +9,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.PendingChannelResponse.ClosedChannel</code>
+ * Generated from protobuf message <code>lnrpc.PendingChannelResponse.ClosedChannel</code>
  */
 class PendingChannelResponse_ClosedChannel extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1;</code>
+     * Generated from protobuf field <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1;</code>
      */
     private $channel = null;
     /**
-     * <code>string closing_txid = 2[json_name = "closing_txid"];</code>
+     * Generated from protobuf field <code>string closing_txid = 2[json_name = "closing_txid"];</code>
      */
     private $closing_txid = '';
 
@@ -28,7 +28,8 @@ class PendingChannelResponse_ClosedChannel extends \Google\Protobuf\Internal\Mes
     }
 
     /**
-     * <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1;</code>
+     * Generated from protobuf field <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1;</code>
+     * @return \Lnrpc\PendingChannelResponse_PendingChannel
      */
     public function getChannel()
     {
@@ -36,16 +37,21 @@ class PendingChannelResponse_ClosedChannel extends \Google\Protobuf\Internal\Mes
     }
 
     /**
-     * <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1;</code>
+     * Generated from protobuf field <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1;</code>
+     * @param \Lnrpc\PendingChannelResponse_PendingChannel $var
+     * @return $this
      */
-    public function setChannel(&$var)
+    public function setChannel($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\PendingChannelResponse_PendingChannel::class);
         $this->channel = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string closing_txid = 2[json_name = "closing_txid"];</code>
+     * Generated from protobuf field <code>string closing_txid = 2[json_name = "closing_txid"];</code>
+     * @return string
      */
     public function getClosingTxid()
     {
@@ -53,12 +59,16 @@ class PendingChannelResponse_ClosedChannel extends \Google\Protobuf\Internal\Mes
     }
 
     /**
-     * <code>string closing_txid = 2[json_name = "closing_txid"];</code>
+     * Generated from protobuf field <code>string closing_txid = 2[json_name = "closing_txid"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setClosingTxid($var)
     {
         GPBUtil::checkString($var, True);
         $this->closing_txid = $var;
+
+        return $this;
     }
 
 }

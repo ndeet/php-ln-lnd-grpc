@@ -9,56 +9,56 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ActiveChannel</code>
+ * Generated from protobuf message <code>lnrpc.ActiveChannel</code>
  */
 class ActiveChannel extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>bool active = 1[json_name = "active"];</code>
+     * Generated from protobuf field <code>bool active = 1[json_name = "active"];</code>
      */
     private $active = false;
     /**
-     * <code>string remote_pubkey = 2[json_name = "remote_pubkey"];</code>
+     * Generated from protobuf field <code>string remote_pubkey = 2[json_name = "remote_pubkey"];</code>
      */
     private $remote_pubkey = '';
     /**
-     * <code>string channel_point = 3[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>string channel_point = 3[json_name = "channel_point"];</code>
      */
     private $channel_point = '';
     /**
-     * <code>uint64 chan_id = 4[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 4[json_name = "chan_id"];</code>
      */
     private $chan_id = 0;
     /**
-     * <code>int64 capacity = 5[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 5[json_name = "capacity"];</code>
      */
     private $capacity = 0;
     /**
-     * <code>int64 local_balance = 6[json_name = "local_balance"];</code>
+     * Generated from protobuf field <code>int64 local_balance = 6[json_name = "local_balance"];</code>
      */
     private $local_balance = 0;
     /**
-     * <code>int64 remote_balance = 7[json_name = "remote_balance"];</code>
+     * Generated from protobuf field <code>int64 remote_balance = 7[json_name = "remote_balance"];</code>
      */
     private $remote_balance = 0;
     /**
-     * <code>int64 unsettled_balance = 8[json_name = "unsettled_balance"];</code>
+     * Generated from protobuf field <code>int64 unsettled_balance = 8[json_name = "unsettled_balance"];</code>
      */
     private $unsettled_balance = 0;
     /**
-     * <code>int64 total_satoshis_sent = 9[json_name = "total_satoshis_sent"];</code>
+     * Generated from protobuf field <code>int64 total_satoshis_sent = 9[json_name = "total_satoshis_sent"];</code>
      */
     private $total_satoshis_sent = 0;
     /**
-     * <code>int64 total_satoshis_received = 10[json_name = "total_satoshis_received"];</code>
+     * Generated from protobuf field <code>int64 total_satoshis_received = 10[json_name = "total_satoshis_received"];</code>
      */
     private $total_satoshis_received = 0;
     /**
-     * <code>uint64 num_updates = 11[json_name = "num_updates"];</code>
+     * Generated from protobuf field <code>uint64 num_updates = 11[json_name = "num_updates"];</code>
      */
     private $num_updates = 0;
     /**
-     * <code>repeated .lnrpc.HTLC pending_htlcs = 12[json_name = "pending_htlcs"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.HTLC pending_htlcs = 12[json_name = "pending_htlcs"];</code>
      */
     private $pending_htlcs;
 
@@ -68,7 +68,8 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool active = 1[json_name = "active"];</code>
+     * Generated from protobuf field <code>bool active = 1[json_name = "active"];</code>
+     * @return bool
      */
     public function getActive()
     {
@@ -76,16 +77,21 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool active = 1[json_name = "active"];</code>
+     * Generated from protobuf field <code>bool active = 1[json_name = "active"];</code>
+     * @param bool $var
+     * @return $this
      */
     public function setActive($var)
     {
         GPBUtil::checkBool($var);
         $this->active = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string remote_pubkey = 2[json_name = "remote_pubkey"];</code>
+     * Generated from protobuf field <code>string remote_pubkey = 2[json_name = "remote_pubkey"];</code>
+     * @return string
      */
     public function getRemotePubkey()
     {
@@ -93,16 +99,21 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string remote_pubkey = 2[json_name = "remote_pubkey"];</code>
+     * Generated from protobuf field <code>string remote_pubkey = 2[json_name = "remote_pubkey"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setRemotePubkey($var)
     {
         GPBUtil::checkString($var, True);
         $this->remote_pubkey = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string channel_point = 3[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>string channel_point = 3[json_name = "channel_point"];</code>
+     * @return string
      */
     public function getChannelPoint()
     {
@@ -110,16 +121,21 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string channel_point = 3[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>string channel_point = 3[json_name = "channel_point"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setChannelPoint($var)
     {
         GPBUtil::checkString($var, True);
         $this->channel_point = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint64 chan_id = 4[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 4[json_name = "chan_id"];</code>
+     * @return int|string
      */
     public function getChanId()
     {
@@ -127,16 +143,21 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint64 chan_id = 4[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 4[json_name = "chan_id"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setChanId($var)
     {
         GPBUtil::checkUint64($var);
         $this->chan_id = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 capacity = 5[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 5[json_name = "capacity"];</code>
+     * @return int|string
      */
     public function getCapacity()
     {
@@ -144,16 +165,21 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 capacity = 5[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 5[json_name = "capacity"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setCapacity($var)
     {
         GPBUtil::checkInt64($var);
         $this->capacity = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 local_balance = 6[json_name = "local_balance"];</code>
+     * Generated from protobuf field <code>int64 local_balance = 6[json_name = "local_balance"];</code>
+     * @return int|string
      */
     public function getLocalBalance()
     {
@@ -161,16 +187,21 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 local_balance = 6[json_name = "local_balance"];</code>
+     * Generated from protobuf field <code>int64 local_balance = 6[json_name = "local_balance"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setLocalBalance($var)
     {
         GPBUtil::checkInt64($var);
         $this->local_balance = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 remote_balance = 7[json_name = "remote_balance"];</code>
+     * Generated from protobuf field <code>int64 remote_balance = 7[json_name = "remote_balance"];</code>
+     * @return int|string
      */
     public function getRemoteBalance()
     {
@@ -178,16 +209,21 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 remote_balance = 7[json_name = "remote_balance"];</code>
+     * Generated from protobuf field <code>int64 remote_balance = 7[json_name = "remote_balance"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setRemoteBalance($var)
     {
         GPBUtil::checkInt64($var);
         $this->remote_balance = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 unsettled_balance = 8[json_name = "unsettled_balance"];</code>
+     * Generated from protobuf field <code>int64 unsettled_balance = 8[json_name = "unsettled_balance"];</code>
+     * @return int|string
      */
     public function getUnsettledBalance()
     {
@@ -195,16 +231,21 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 unsettled_balance = 8[json_name = "unsettled_balance"];</code>
+     * Generated from protobuf field <code>int64 unsettled_balance = 8[json_name = "unsettled_balance"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setUnsettledBalance($var)
     {
         GPBUtil::checkInt64($var);
         $this->unsettled_balance = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 total_satoshis_sent = 9[json_name = "total_satoshis_sent"];</code>
+     * Generated from protobuf field <code>int64 total_satoshis_sent = 9[json_name = "total_satoshis_sent"];</code>
+     * @return int|string
      */
     public function getTotalSatoshisSent()
     {
@@ -212,16 +253,21 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 total_satoshis_sent = 9[json_name = "total_satoshis_sent"];</code>
+     * Generated from protobuf field <code>int64 total_satoshis_sent = 9[json_name = "total_satoshis_sent"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setTotalSatoshisSent($var)
     {
         GPBUtil::checkInt64($var);
         $this->total_satoshis_sent = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 total_satoshis_received = 10[json_name = "total_satoshis_received"];</code>
+     * Generated from protobuf field <code>int64 total_satoshis_received = 10[json_name = "total_satoshis_received"];</code>
+     * @return int|string
      */
     public function getTotalSatoshisReceived()
     {
@@ -229,16 +275,21 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 total_satoshis_received = 10[json_name = "total_satoshis_received"];</code>
+     * Generated from protobuf field <code>int64 total_satoshis_received = 10[json_name = "total_satoshis_received"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setTotalSatoshisReceived($var)
     {
         GPBUtil::checkInt64($var);
         $this->total_satoshis_received = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint64 num_updates = 11[json_name = "num_updates"];</code>
+     * Generated from protobuf field <code>uint64 num_updates = 11[json_name = "num_updates"];</code>
+     * @return int|string
      */
     public function getNumUpdates()
     {
@@ -246,16 +297,21 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint64 num_updates = 11[json_name = "num_updates"];</code>
+     * Generated from protobuf field <code>uint64 num_updates = 11[json_name = "num_updates"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setNumUpdates($var)
     {
         GPBUtil::checkUint64($var);
         $this->num_updates = $var;
+
+        return $this;
     }
 
     /**
-     * <code>repeated .lnrpc.HTLC pending_htlcs = 12[json_name = "pending_htlcs"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.HTLC pending_htlcs = 12[json_name = "pending_htlcs"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPendingHtlcs()
     {
@@ -263,12 +319,16 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.HTLC pending_htlcs = 12[json_name = "pending_htlcs"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.HTLC pending_htlcs = 12[json_name = "pending_htlcs"];</code>
+     * @param \Lnrpc\HTLC[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setPendingHtlcs(&$var)
+    public function setPendingHtlcs($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\HTLC::class);
         $this->pending_htlcs = $arr;
+
+        return $this;
     }
 
 }

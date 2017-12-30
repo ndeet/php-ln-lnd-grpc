@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.DeleteAllPaymentsResponse</code>
+ * Generated from protobuf message <code>lnrpc.DeleteAllPaymentsResponse</code>
  */
 class DeleteAllPaymentsResponse extends \Google\Protobuf\Internal\Message
 {

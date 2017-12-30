@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.InvoiceSubscription</code>
+ * Generated from protobuf message <code>lnrpc.InvoiceSubscription</code>
  */
 class InvoiceSubscription extends \Google\Protobuf\Internal\Message
 {

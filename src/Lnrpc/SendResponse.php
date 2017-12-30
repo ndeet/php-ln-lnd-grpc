@@ -9,16 +9,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.SendResponse</code>
+ * Generated from protobuf message <code>lnrpc.SendResponse</code>
  */
 class SendResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>bytes payment_preimage = 1[json_name = "payment_preimage"];</code>
+     * Generated from protobuf field <code>bytes payment_preimage = 1[json_name = "payment_preimage"];</code>
      */
     private $payment_preimage = '';
     /**
-     * <code>.lnrpc.Route payment_route = 2[json_name = "payment_route"];</code>
+     * Generated from protobuf field <code>.lnrpc.Route payment_route = 2[json_name = "payment_route"];</code>
      */
     private $payment_route = null;
 
@@ -28,7 +28,8 @@ class SendResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes payment_preimage = 1[json_name = "payment_preimage"];</code>
+     * Generated from protobuf field <code>bytes payment_preimage = 1[json_name = "payment_preimage"];</code>
+     * @return string
      */
     public function getPaymentPreimage()
     {
@@ -36,16 +37,21 @@ class SendResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes payment_preimage = 1[json_name = "payment_preimage"];</code>
+     * Generated from protobuf field <code>bytes payment_preimage = 1[json_name = "payment_preimage"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setPaymentPreimage($var)
     {
         GPBUtil::checkString($var, False);
         $this->payment_preimage = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.lnrpc.Route payment_route = 2[json_name = "payment_route"];</code>
+     * Generated from protobuf field <code>.lnrpc.Route payment_route = 2[json_name = "payment_route"];</code>
+     * @return \Lnrpc\Route
      */
     public function getPaymentRoute()
     {
@@ -53,12 +59,16 @@ class SendResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.Route payment_route = 2[json_name = "payment_route"];</code>
+     * Generated from protobuf field <code>.lnrpc.Route payment_route = 2[json_name = "payment_route"];</code>
+     * @param \Lnrpc\Route $var
+     * @return $this
      */
-    public function setPaymentRoute(&$var)
+    public function setPaymentRoute($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\Route::class);
         $this->payment_route = $var;
+
+        return $this;
     }
 
 }

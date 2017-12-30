@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.SetAliasRequest</code>
+ * Generated from protobuf message <code>lnrpc.SetAliasRequest</code>
  */
 class SetAliasRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string new_alias = 1;</code>
+     * Generated from protobuf field <code>string new_alias = 1;</code>
      */
     private $new_alias = '';
 
@@ -24,7 +24,8 @@ class SetAliasRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string new_alias = 1;</code>
+     * Generated from protobuf field <code>string new_alias = 1;</code>
+     * @return string
      */
     public function getNewAlias()
     {
@@ -32,12 +33,16 @@ class SetAliasRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string new_alias = 1;</code>
+     * Generated from protobuf field <code>string new_alias = 1;</code>
+     * @param string $var
+     * @return $this
      */
     public function setNewAlias($var)
     {
         GPBUtil::checkString($var, True);
         $this->new_alias = $var;
+
+        return $this;
     }
 
 }

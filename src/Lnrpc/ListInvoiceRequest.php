@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ListInvoiceRequest</code>
+ * Generated from protobuf message <code>lnrpc.ListInvoiceRequest</code>
  */
 class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>bool pending_only = 1;</code>
+     * Generated from protobuf field <code>bool pending_only = 1;</code>
      */
     private $pending_only = false;
 
@@ -24,7 +24,8 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool pending_only = 1;</code>
+     * Generated from protobuf field <code>bool pending_only = 1;</code>
+     * @return bool
      */
     public function getPendingOnly()
     {
@@ -32,12 +33,16 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool pending_only = 1;</code>
+     * Generated from protobuf field <code>bool pending_only = 1;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setPendingOnly($var)
     {
         GPBUtil::checkBool($var);
         $this->pending_only = $var;
+
+        return $this;
     }
 
 }

@@ -9,16 +9,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ConnectPeerRequest</code>
+ * Generated from protobuf message <code>lnrpc.ConnectPeerRequest</code>
  */
 class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.lnrpc.LightningAddress addr = 1;</code>
+     * Generated from protobuf field <code>.lnrpc.LightningAddress addr = 1;</code>
      */
     private $addr = null;
     /**
-     * <code>bool perm = 2;</code>
+     * Generated from protobuf field <code>bool perm = 2;</code>
      */
     private $perm = false;
 
@@ -28,7 +28,8 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.LightningAddress addr = 1;</code>
+     * Generated from protobuf field <code>.lnrpc.LightningAddress addr = 1;</code>
+     * @return \Lnrpc\LightningAddress
      */
     public function getAddr()
     {
@@ -36,16 +37,21 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.LightningAddress addr = 1;</code>
+     * Generated from protobuf field <code>.lnrpc.LightningAddress addr = 1;</code>
+     * @param \Lnrpc\LightningAddress $var
+     * @return $this
      */
-    public function setAddr(&$var)
+    public function setAddr($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\LightningAddress::class);
         $this->addr = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bool perm = 2;</code>
+     * Generated from protobuf field <code>bool perm = 2;</code>
+     * @return bool
      */
     public function getPerm()
     {
@@ -53,12 +59,16 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool perm = 2;</code>
+     * Generated from protobuf field <code>bool perm = 2;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setPerm($var)
     {
         GPBUtil::checkBool($var);
         $this->perm = $var;
+
+        return $this;
     }
 
 }

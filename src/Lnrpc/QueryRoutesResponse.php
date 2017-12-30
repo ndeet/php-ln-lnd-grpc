@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.QueryRoutesResponse</code>
+ * Generated from protobuf message <code>lnrpc.QueryRoutesResponse</code>
  */
 class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>repeated .lnrpc.Route routes = 1[json_name = "routes"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Route routes = 1[json_name = "routes"];</code>
      */
     private $routes;
 
@@ -24,7 +24,8 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.Route routes = 1[json_name = "routes"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Route routes = 1[json_name = "routes"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getRoutes()
     {
@@ -32,12 +33,16 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.Route routes = 1[json_name = "routes"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Route routes = 1[json_name = "routes"];</code>
+     * @param \Lnrpc\Route[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setRoutes(&$var)
+    public function setRoutes($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Route::class);
         $this->routes = $arr;
+
+        return $this;
     }
 
 }

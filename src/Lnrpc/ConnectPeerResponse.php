@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ConnectPeerResponse</code>
+ * Generated from protobuf message <code>lnrpc.ConnectPeerResponse</code>
  */
 class ConnectPeerResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>int32 peer_id = 1[json_name = "peer_id"];</code>
+     * Generated from protobuf field <code>int32 peer_id = 1[json_name = "peer_id"];</code>
      */
     private $peer_id = 0;
 
@@ -24,7 +24,8 @@ class ConnectPeerResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int32 peer_id = 1[json_name = "peer_id"];</code>
+     * Generated from protobuf field <code>int32 peer_id = 1[json_name = "peer_id"];</code>
+     * @return int
      */
     public function getPeerId()
     {
@@ -32,12 +33,16 @@ class ConnectPeerResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int32 peer_id = 1[json_name = "peer_id"];</code>
+     * Generated from protobuf field <code>int32 peer_id = 1[json_name = "peer_id"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setPeerId($var)
     {
         GPBUtil::checkInt32($var);
         $this->peer_id = $var;
+
+        return $this;
     }
 
 }

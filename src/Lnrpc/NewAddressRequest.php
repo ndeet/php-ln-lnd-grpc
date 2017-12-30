@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.NewAddressRequest</code>
+ * Generated from protobuf message <code>lnrpc.NewAddressRequest</code>
  */
 class NewAddressRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.lnrpc.NewAddressRequest.AddressType type = 1;</code>
+     * Generated from protobuf field <code>.lnrpc.NewAddressRequest.AddressType type = 1;</code>
      */
     private $type = 0;
 
@@ -24,7 +24,8 @@ class NewAddressRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.NewAddressRequest.AddressType type = 1;</code>
+     * Generated from protobuf field <code>.lnrpc.NewAddressRequest.AddressType type = 1;</code>
+     * @return int
      */
     public function getType()
     {
@@ -32,12 +33,16 @@ class NewAddressRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.NewAddressRequest.AddressType type = 1;</code>
+     * Generated from protobuf field <code>.lnrpc.NewAddressRequest.AddressType type = 1;</code>
+     * @param int $var
+     * @return $this
      */
     public function setType($var)
     {
         GPBUtil::checkEnum($var, \Lnrpc\NewAddressRequest_AddressType::class);
         $this->type = $var;
+
+        return $this;
     }
 
 }

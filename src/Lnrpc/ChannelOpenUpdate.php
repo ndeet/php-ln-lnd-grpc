@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ChannelOpenUpdate</code>
+ * Generated from protobuf message <code>lnrpc.ChannelOpenUpdate</code>
  */
 class ChannelOpenUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.lnrpc.ChannelPoint channel_point = 1[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1[json_name = "channel_point"];</code>
      */
     private $channel_point = null;
 
@@ -24,7 +24,8 @@ class ChannelOpenUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.ChannelPoint channel_point = 1[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1[json_name = "channel_point"];</code>
+     * @return \Lnrpc\ChannelPoint
      */
     public function getChannelPoint()
     {
@@ -32,12 +33,16 @@ class ChannelOpenUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.ChannelPoint channel_point = 1[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1[json_name = "channel_point"];</code>
+     * @param \Lnrpc\ChannelPoint $var
+     * @return $this
      */
-    public function setChannelPoint(&$var)
+    public function setChannelPoint($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\ChannelPoint::class);
         $this->channel_point = $var;
+
+        return $this;
     }
 
 }

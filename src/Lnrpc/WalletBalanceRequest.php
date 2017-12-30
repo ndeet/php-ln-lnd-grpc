@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.WalletBalanceRequest</code>
+ * Generated from protobuf message <code>lnrpc.WalletBalanceRequest</code>
  */
 class WalletBalanceRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>bool witness_only = 1;</code>
+     * Generated from protobuf field <code>bool witness_only = 1;</code>
      */
     private $witness_only = false;
 
@@ -24,7 +24,8 @@ class WalletBalanceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool witness_only = 1;</code>
+     * Generated from protobuf field <code>bool witness_only = 1;</code>
+     * @return bool
      */
     public function getWitnessOnly()
     {
@@ -32,12 +33,16 @@ class WalletBalanceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool witness_only = 1;</code>
+     * Generated from protobuf field <code>bool witness_only = 1;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setWitnessOnly($var)
     {
         GPBUtil::checkBool($var);
         $this->witness_only = $var;
+
+        return $this;
     }
 
 }

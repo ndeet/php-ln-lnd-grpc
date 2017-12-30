@@ -9,24 +9,24 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.NodeUpdate</code>
+ * Generated from protobuf message <code>lnrpc.NodeUpdate</code>
  */
 class NodeUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>repeated string addresses = 1;</code>
+     * Generated from protobuf field <code>repeated string addresses = 1;</code>
      */
     private $addresses;
     /**
-     * <code>string identity_key = 2;</code>
+     * Generated from protobuf field <code>string identity_key = 2;</code>
      */
     private $identity_key = '';
     /**
-     * <code>bytes global_features = 3;</code>
+     * Generated from protobuf field <code>bytes global_features = 3;</code>
      */
     private $global_features = '';
     /**
-     * <code>string alias = 4;</code>
+     * Generated from protobuf field <code>string alias = 4;</code>
      */
     private $alias = '';
 
@@ -36,7 +36,8 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated string addresses = 1;</code>
+     * Generated from protobuf field <code>repeated string addresses = 1;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getAddresses()
     {
@@ -44,16 +45,21 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated string addresses = 1;</code>
+     * Generated from protobuf field <code>repeated string addresses = 1;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setAddresses(&$var)
+    public function setAddresses($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->addresses = $arr;
+
+        return $this;
     }
 
     /**
-     * <code>string identity_key = 2;</code>
+     * Generated from protobuf field <code>string identity_key = 2;</code>
+     * @return string
      */
     public function getIdentityKey()
     {
@@ -61,16 +67,21 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string identity_key = 2;</code>
+     * Generated from protobuf field <code>string identity_key = 2;</code>
+     * @param string $var
+     * @return $this
      */
     public function setIdentityKey($var)
     {
         GPBUtil::checkString($var, True);
         $this->identity_key = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bytes global_features = 3;</code>
+     * Generated from protobuf field <code>bytes global_features = 3;</code>
+     * @return string
      */
     public function getGlobalFeatures()
     {
@@ -78,16 +89,21 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes global_features = 3;</code>
+     * Generated from protobuf field <code>bytes global_features = 3;</code>
+     * @param string $var
+     * @return $this
      */
     public function setGlobalFeatures($var)
     {
         GPBUtil::checkString($var, False);
         $this->global_features = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string alias = 4;</code>
+     * Generated from protobuf field <code>string alias = 4;</code>
+     * @return string
      */
     public function getAlias()
     {
@@ -95,12 +111,16 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string alias = 4;</code>
+     * Generated from protobuf field <code>string alias = 4;</code>
+     * @param string $var
+     * @return $this
      */
     public function setAlias($var)
     {
         GPBUtil::checkString($var, True);
         $this->alias = $var;
+
+        return $this;
     }
 
 }

@@ -9,24 +9,24 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.Route</code>
+ * Generated from protobuf message <code>lnrpc.Route</code>
  */
 class Route extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>uint32 total_time_lock = 1[json_name = "total_time_lock"];</code>
+     * Generated from protobuf field <code>uint32 total_time_lock = 1[json_name = "total_time_lock"];</code>
      */
     private $total_time_lock = 0;
     /**
-     * <code>int64 total_fees = 2[json_name = "total_fees"];</code>
+     * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees"];</code>
      */
     private $total_fees = 0;
     /**
-     * <code>int64 total_amt = 3[json_name = "total_amt"];</code>
+     * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt"];</code>
      */
     private $total_amt = 0;
     /**
-     * <code>repeated .lnrpc.Hop hops = 4[json_name = "hops"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Hop hops = 4[json_name = "hops"];</code>
      */
     private $hops;
 
@@ -36,7 +36,8 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 total_time_lock = 1[json_name = "total_time_lock"];</code>
+     * Generated from protobuf field <code>uint32 total_time_lock = 1[json_name = "total_time_lock"];</code>
+     * @return int
      */
     public function getTotalTimeLock()
     {
@@ -44,16 +45,21 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 total_time_lock = 1[json_name = "total_time_lock"];</code>
+     * Generated from protobuf field <code>uint32 total_time_lock = 1[json_name = "total_time_lock"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setTotalTimeLock($var)
     {
         GPBUtil::checkUint32($var);
         $this->total_time_lock = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 total_fees = 2[json_name = "total_fees"];</code>
+     * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees"];</code>
+     * @return int|string
      */
     public function getTotalFees()
     {
@@ -61,16 +67,21 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 total_fees = 2[json_name = "total_fees"];</code>
+     * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setTotalFees($var)
     {
         GPBUtil::checkInt64($var);
         $this->total_fees = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 total_amt = 3[json_name = "total_amt"];</code>
+     * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt"];</code>
+     * @return int|string
      */
     public function getTotalAmt()
     {
@@ -78,16 +89,21 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 total_amt = 3[json_name = "total_amt"];</code>
+     * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setTotalAmt($var)
     {
         GPBUtil::checkInt64($var);
         $this->total_amt = $var;
+
+        return $this;
     }
 
     /**
-     * <code>repeated .lnrpc.Hop hops = 4[json_name = "hops"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Hop hops = 4[json_name = "hops"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getHops()
     {
@@ -95,12 +111,16 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.Hop hops = 4[json_name = "hops"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Hop hops = 4[json_name = "hops"];</code>
+     * @param \Lnrpc\Hop[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setHops(&$var)
+    public function setHops($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Hop::class);
         $this->hops = $arr;
+
+        return $this;
     }
 
 }

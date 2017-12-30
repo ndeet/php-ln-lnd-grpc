@@ -9,16 +9,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.PendingUpdate</code>
+ * Generated from protobuf message <code>lnrpc.PendingUpdate</code>
  */
 class PendingUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>bytes txid = 1[json_name = "txid"];</code>
+     * Generated from protobuf field <code>bytes txid = 1[json_name = "txid"];</code>
      */
     private $txid = '';
     /**
-     * <code>uint32 output_index = 2[json_name = "output_index"];</code>
+     * Generated from protobuf field <code>uint32 output_index = 2[json_name = "output_index"];</code>
      */
     private $output_index = 0;
 
@@ -28,7 +28,8 @@ class PendingUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes txid = 1[json_name = "txid"];</code>
+     * Generated from protobuf field <code>bytes txid = 1[json_name = "txid"];</code>
+     * @return string
      */
     public function getTxid()
     {
@@ -36,16 +37,21 @@ class PendingUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes txid = 1[json_name = "txid"];</code>
+     * Generated from protobuf field <code>bytes txid = 1[json_name = "txid"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setTxid($var)
     {
         GPBUtil::checkString($var, False);
         $this->txid = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 output_index = 2[json_name = "output_index"];</code>
+     * Generated from protobuf field <code>uint32 output_index = 2[json_name = "output_index"];</code>
+     * @return int
      */
     public function getOutputIndex()
     {
@@ -53,12 +59,16 @@ class PendingUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 output_index = 2[json_name = "output_index"];</code>
+     * Generated from protobuf field <code>uint32 output_index = 2[json_name = "output_index"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setOutputIndex($var)
     {
         GPBUtil::checkUint32($var);
         $this->output_index = $var;
+
+        return $this;
     }
 
 }

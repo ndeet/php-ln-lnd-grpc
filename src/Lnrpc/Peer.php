@@ -9,44 +9,44 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.Peer</code>
+ * Generated from protobuf message <code>lnrpc.Peer</code>
  */
 class Peer extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
      */
     private $pub_key = '';
     /**
-     * <code>int32 peer_id = 2[json_name = "peer_id"];</code>
+     * Generated from protobuf field <code>int32 peer_id = 2[json_name = "peer_id"];</code>
      */
     private $peer_id = 0;
     /**
-     * <code>string address = 3[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 3[json_name = "address"];</code>
      */
     private $address = '';
     /**
-     * <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
+     * Generated from protobuf field <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
      */
     private $bytes_sent = 0;
     /**
-     * <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
+     * Generated from protobuf field <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
      */
     private $bytes_recv = 0;
     /**
-     * <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
+     * Generated from protobuf field <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
      */
     private $sat_sent = 0;
     /**
-     * <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
+     * Generated from protobuf field <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
      */
     private $sat_recv = 0;
     /**
-     * <code>bool inbound = 8[json_name = "inbound"];</code>
+     * Generated from protobuf field <code>bool inbound = 8[json_name = "inbound"];</code>
      */
     private $inbound = false;
     /**
-     * <code>int64 ping_time = 9[json_name = "ping_time"];</code>
+     * Generated from protobuf field <code>int64 ping_time = 9[json_name = "ping_time"];</code>
      */
     private $ping_time = 0;
 
@@ -56,7 +56,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * @return string
      */
     public function getPubKey()
     {
@@ -64,16 +65,21 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setPubKey($var)
     {
         GPBUtil::checkString($var, True);
         $this->pub_key = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int32 peer_id = 2[json_name = "peer_id"];</code>
+     * Generated from protobuf field <code>int32 peer_id = 2[json_name = "peer_id"];</code>
+     * @return int
      */
     public function getPeerId()
     {
@@ -81,16 +87,21 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int32 peer_id = 2[json_name = "peer_id"];</code>
+     * Generated from protobuf field <code>int32 peer_id = 2[json_name = "peer_id"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setPeerId($var)
     {
         GPBUtil::checkInt32($var);
         $this->peer_id = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string address = 3[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 3[json_name = "address"];</code>
+     * @return string
      */
     public function getAddress()
     {
@@ -98,16 +109,21 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string address = 3[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 3[json_name = "address"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setAddress($var)
     {
         GPBUtil::checkString($var, True);
         $this->address = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
+     * Generated from protobuf field <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
+     * @return int|string
      */
     public function getBytesSent()
     {
@@ -115,16 +131,21 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
+     * Generated from protobuf field <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setBytesSent($var)
     {
         GPBUtil::checkUint64($var);
         $this->bytes_sent = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
+     * Generated from protobuf field <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
+     * @return int|string
      */
     public function getBytesRecv()
     {
@@ -132,16 +153,21 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
+     * Generated from protobuf field <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setBytesRecv($var)
     {
         GPBUtil::checkUint64($var);
         $this->bytes_recv = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
+     * Generated from protobuf field <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
+     * @return int|string
      */
     public function getSatSent()
     {
@@ -149,16 +175,21 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
+     * Generated from protobuf field <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setSatSent($var)
     {
         GPBUtil::checkInt64($var);
         $this->sat_sent = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
+     * Generated from protobuf field <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
+     * @return int|string
      */
     public function getSatRecv()
     {
@@ -166,16 +197,21 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
+     * Generated from protobuf field <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setSatRecv($var)
     {
         GPBUtil::checkInt64($var);
         $this->sat_recv = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bool inbound = 8[json_name = "inbound"];</code>
+     * Generated from protobuf field <code>bool inbound = 8[json_name = "inbound"];</code>
+     * @return bool
      */
     public function getInbound()
     {
@@ -183,16 +219,21 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool inbound = 8[json_name = "inbound"];</code>
+     * Generated from protobuf field <code>bool inbound = 8[json_name = "inbound"];</code>
+     * @param bool $var
+     * @return $this
      */
     public function setInbound($var)
     {
         GPBUtil::checkBool($var);
         $this->inbound = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 ping_time = 9[json_name = "ping_time"];</code>
+     * Generated from protobuf field <code>int64 ping_time = 9[json_name = "ping_time"];</code>
+     * @return int|string
      */
     public function getPingTime()
     {
@@ -200,12 +241,16 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 ping_time = 9[json_name = "ping_time"];</code>
+     * Generated from protobuf field <code>int64 ping_time = 9[json_name = "ping_time"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setPingTime($var)
     {
         GPBUtil::checkInt64($var);
         $this->ping_time = $var;
+
+        return $this;
     }
 
 }

@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.NewAddressResponse</code>
+ * Generated from protobuf message <code>lnrpc.NewAddressResponse</code>
  */
 class NewAddressResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string address = 1[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 1[json_name = "address"];</code>
      */
     private $address = '';
 
@@ -24,7 +24,8 @@ class NewAddressResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string address = 1[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 1[json_name = "address"];</code>
+     * @return string
      */
     public function getAddress()
     {
@@ -32,12 +33,16 @@ class NewAddressResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string address = 1[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 1[json_name = "address"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setAddress($var)
     {
         GPBUtil::checkString($var, True);
         $this->address = $var;
+
+        return $this;
     }
 
 }

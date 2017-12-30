@@ -9,24 +9,22 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ChannelPoint</code>
+ * Generated from protobuf message <code>lnrpc.ChannelPoint</code>
  */
 class ChannelPoint extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <pre>
      * TODO(roasbeef): make str vs bytes into a oneof
-     * </pre>
      *
-     * <code>bytes funding_txid = 1[json_name = "funding_txid"];</code>
+     * Generated from protobuf field <code>bytes funding_txid = 1[json_name = "funding_txid"];</code>
      */
     private $funding_txid = '';
     /**
-     * <code>string funding_txid_str = 2[json_name = "funding_txid_str"];</code>
+     * Generated from protobuf field <code>string funding_txid_str = 2[json_name = "funding_txid_str"];</code>
      */
     private $funding_txid_str = '';
     /**
-     * <code>uint32 output_index = 3[json_name = "output_index"];</code>
+     * Generated from protobuf field <code>uint32 output_index = 3[json_name = "output_index"];</code>
      */
     private $output_index = 0;
 
@@ -36,11 +34,10 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * TODO(roasbeef): make str vs bytes into a oneof
-     * </pre>
      *
-     * <code>bytes funding_txid = 1[json_name = "funding_txid"];</code>
+     * Generated from protobuf field <code>bytes funding_txid = 1[json_name = "funding_txid"];</code>
+     * @return string
      */
     public function getFundingTxid()
     {
@@ -48,20 +45,23 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * TODO(roasbeef): make str vs bytes into a oneof
-     * </pre>
      *
-     * <code>bytes funding_txid = 1[json_name = "funding_txid"];</code>
+     * Generated from protobuf field <code>bytes funding_txid = 1[json_name = "funding_txid"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setFundingTxid($var)
     {
         GPBUtil::checkString($var, False);
         $this->funding_txid = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string funding_txid_str = 2[json_name = "funding_txid_str"];</code>
+     * Generated from protobuf field <code>string funding_txid_str = 2[json_name = "funding_txid_str"];</code>
+     * @return string
      */
     public function getFundingTxidStr()
     {
@@ -69,16 +69,21 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string funding_txid_str = 2[json_name = "funding_txid_str"];</code>
+     * Generated from protobuf field <code>string funding_txid_str = 2[json_name = "funding_txid_str"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setFundingTxidStr($var)
     {
         GPBUtil::checkString($var, True);
         $this->funding_txid_str = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 output_index = 3[json_name = "output_index"];</code>
+     * Generated from protobuf field <code>uint32 output_index = 3[json_name = "output_index"];</code>
+     * @return int
      */
     public function getOutputIndex()
     {
@@ -86,12 +91,16 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 output_index = 3[json_name = "output_index"];</code>
+     * Generated from protobuf field <code>uint32 output_index = 3[json_name = "output_index"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setOutputIndex($var)
     {
         GPBUtil::checkUint32($var);
         $this->output_index = $var;
+
+        return $this;
     }
 
 }

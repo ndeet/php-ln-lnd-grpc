@@ -9,24 +9,24 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.RoutingPolicy</code>
+ * Generated from protobuf message <code>lnrpc.RoutingPolicy</code>
  */
 class RoutingPolicy extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>uint32 time_lock_delta = 1[json_name = "time_lock_delta"];</code>
+     * Generated from protobuf field <code>uint32 time_lock_delta = 1[json_name = "time_lock_delta"];</code>
      */
     private $time_lock_delta = 0;
     /**
-     * <code>int64 min_htlc = 2[json_name = "min_htlc"];</code>
+     * Generated from protobuf field <code>int64 min_htlc = 2[json_name = "min_htlc"];</code>
      */
     private $min_htlc = 0;
     /**
-     * <code>int64 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
      */
     private $fee_base_msat = 0;
     /**
-     * <code>int64 fee_rate_milli_msat = 4[json_name = "fee_rate_milli_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_rate_milli_msat = 4[json_name = "fee_rate_milli_msat"];</code>
      */
     private $fee_rate_milli_msat = 0;
 
@@ -36,7 +36,8 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 time_lock_delta = 1[json_name = "time_lock_delta"];</code>
+     * Generated from protobuf field <code>uint32 time_lock_delta = 1[json_name = "time_lock_delta"];</code>
+     * @return int
      */
     public function getTimeLockDelta()
     {
@@ -44,16 +45,21 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 time_lock_delta = 1[json_name = "time_lock_delta"];</code>
+     * Generated from protobuf field <code>uint32 time_lock_delta = 1[json_name = "time_lock_delta"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setTimeLockDelta($var)
     {
         GPBUtil::checkUint32($var);
         $this->time_lock_delta = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 min_htlc = 2[json_name = "min_htlc"];</code>
+     * Generated from protobuf field <code>int64 min_htlc = 2[json_name = "min_htlc"];</code>
+     * @return int|string
      */
     public function getMinHtlc()
     {
@@ -61,16 +67,21 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 min_htlc = 2[json_name = "min_htlc"];</code>
+     * Generated from protobuf field <code>int64 min_htlc = 2[json_name = "min_htlc"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setMinHtlc($var)
     {
         GPBUtil::checkInt64($var);
         $this->min_htlc = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
+     * @return int|string
      */
     public function getFeeBaseMsat()
     {
@@ -78,16 +89,21 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setFeeBaseMsat($var)
     {
         GPBUtil::checkInt64($var);
         $this->fee_base_msat = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 fee_rate_milli_msat = 4[json_name = "fee_rate_milli_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_rate_milli_msat = 4[json_name = "fee_rate_milli_msat"];</code>
+     * @return int|string
      */
     public function getFeeRateMilliMsat()
     {
@@ -95,12 +111,16 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 fee_rate_milli_msat = 4[json_name = "fee_rate_milli_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_rate_milli_msat = 4[json_name = "fee_rate_milli_msat"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setFeeRateMilliMsat($var)
     {
         GPBUtil::checkInt64($var);
         $this->fee_rate_milli_msat = $var;
+
+        return $this;
     }
 
 }

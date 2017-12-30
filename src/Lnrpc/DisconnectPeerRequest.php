@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.DisconnectPeerRequest</code>
+ * Generated from protobuf message <code>lnrpc.DisconnectPeerRequest</code>
  */
 class DisconnectPeerRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
      */
     private $pub_key = '';
 
@@ -24,7 +24,8 @@ class DisconnectPeerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * @return string
      */
     public function getPubKey()
     {
@@ -32,12 +33,16 @@ class DisconnectPeerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setPubKey($var)
     {
         GPBUtil::checkString($var, True);
         $this->pub_key = $var;
+
+        return $this;
     }
 
 }

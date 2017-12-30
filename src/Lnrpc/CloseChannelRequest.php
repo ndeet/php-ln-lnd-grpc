@@ -9,20 +9,20 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.CloseChannelRequest</code>
+ * Generated from protobuf message <code>lnrpc.CloseChannelRequest</code>
  */
 class CloseChannelRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.lnrpc.ChannelPoint channel_point = 1;</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
      */
     private $channel_point = null;
     /**
-     * <code>int64 time_limit = 2;</code>
+     * Generated from protobuf field <code>int64 time_limit = 2;</code>
      */
     private $time_limit = 0;
     /**
-     * <code>bool force = 3;</code>
+     * Generated from protobuf field <code>bool force = 3;</code>
      */
     private $force = false;
 
@@ -32,7 +32,8 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.ChannelPoint channel_point = 1;</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
+     * @return \Lnrpc\ChannelPoint
      */
     public function getChannelPoint()
     {
@@ -40,16 +41,21 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.ChannelPoint channel_point = 1;</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
+     * @param \Lnrpc\ChannelPoint $var
+     * @return $this
      */
-    public function setChannelPoint(&$var)
+    public function setChannelPoint($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\ChannelPoint::class);
         $this->channel_point = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 time_limit = 2;</code>
+     * Generated from protobuf field <code>int64 time_limit = 2;</code>
+     * @return int|string
      */
     public function getTimeLimit()
     {
@@ -57,16 +63,21 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 time_limit = 2;</code>
+     * Generated from protobuf field <code>int64 time_limit = 2;</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setTimeLimit($var)
     {
         GPBUtil::checkInt64($var);
         $this->time_limit = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bool force = 3;</code>
+     * Generated from protobuf field <code>bool force = 3;</code>
+     * @return bool
      */
     public function getForce()
     {
@@ -74,12 +85,16 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool force = 3;</code>
+     * Generated from protobuf field <code>bool force = 3;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setForce($var)
     {
         GPBUtil::checkBool($var);
         $this->force = $var;
+
+        return $this;
     }
 
 }

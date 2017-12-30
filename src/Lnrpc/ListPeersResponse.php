@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ListPeersResponse</code>
+ * Generated from protobuf message <code>lnrpc.ListPeersResponse</code>
  */
 class ListPeersResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>repeated .lnrpc.Peer peers = 1[json_name = "peers"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Peer peers = 1[json_name = "peers"];</code>
      */
     private $peers;
 
@@ -24,7 +24,8 @@ class ListPeersResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.Peer peers = 1[json_name = "peers"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Peer peers = 1[json_name = "peers"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPeers()
     {
@@ -32,12 +33,16 @@ class ListPeersResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.Peer peers = 1[json_name = "peers"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Peer peers = 1[json_name = "peers"];</code>
+     * @param \Lnrpc\Peer[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setPeers(&$var)
+    public function setPeers($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Peer::class);
         $this->peers = $arr;
+
+        return $this;
     }
 
 }

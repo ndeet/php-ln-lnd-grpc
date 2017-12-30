@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.DisconnectPeerResponse</code>
+ * Generated from protobuf message <code>lnrpc.DisconnectPeerResponse</code>
  */
 class DisconnectPeerResponse extends \Google\Protobuf\Internal\Message
 {

@@ -9,44 +9,44 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.Invoice</code>
+ * Generated from protobuf message <code>lnrpc.Invoice</code>
  */
 class Invoice extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string memo = 1[json_name = "memo"];</code>
+     * Generated from protobuf field <code>string memo = 1[json_name = "memo"];</code>
      */
     private $memo = '';
     /**
-     * <code>bytes receipt = 2[json_name = "receipt"];</code>
+     * Generated from protobuf field <code>bytes receipt = 2[json_name = "receipt"];</code>
      */
     private $receipt = '';
     /**
-     * <code>bytes r_preimage = 3[json_name = "r_preimage"];</code>
+     * Generated from protobuf field <code>bytes r_preimage = 3[json_name = "r_preimage"];</code>
      */
     private $r_preimage = '';
     /**
-     * <code>bytes r_hash = 4[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 4[json_name = "r_hash"];</code>
      */
     private $r_hash = '';
     /**
-     * <code>int64 value = 5[json_name = "value"];</code>
+     * Generated from protobuf field <code>int64 value = 5[json_name = "value"];</code>
      */
     private $value = 0;
     /**
-     * <code>bool settled = 6[json_name = "settled"];</code>
+     * Generated from protobuf field <code>bool settled = 6[json_name = "settled"];</code>
      */
     private $settled = false;
     /**
-     * <code>int64 creation_date = 7[json_name = "creation_date"];</code>
+     * Generated from protobuf field <code>int64 creation_date = 7[json_name = "creation_date"];</code>
      */
     private $creation_date = 0;
     /**
-     * <code>int64 settle_date = 8[json_name = "settle_date"];</code>
+     * Generated from protobuf field <code>int64 settle_date = 8[json_name = "settle_date"];</code>
      */
     private $settle_date = 0;
     /**
-     * <code>string payment_request = 9[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 9[json_name = "payment_request"];</code>
      */
     private $payment_request = '';
 
@@ -56,7 +56,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string memo = 1[json_name = "memo"];</code>
+     * Generated from protobuf field <code>string memo = 1[json_name = "memo"];</code>
+     * @return string
      */
     public function getMemo()
     {
@@ -64,16 +65,21 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string memo = 1[json_name = "memo"];</code>
+     * Generated from protobuf field <code>string memo = 1[json_name = "memo"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setMemo($var)
     {
         GPBUtil::checkString($var, True);
         $this->memo = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bytes receipt = 2[json_name = "receipt"];</code>
+     * Generated from protobuf field <code>bytes receipt = 2[json_name = "receipt"];</code>
+     * @return string
      */
     public function getReceipt()
     {
@@ -81,16 +87,21 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes receipt = 2[json_name = "receipt"];</code>
+     * Generated from protobuf field <code>bytes receipt = 2[json_name = "receipt"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setReceipt($var)
     {
         GPBUtil::checkString($var, False);
         $this->receipt = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bytes r_preimage = 3[json_name = "r_preimage"];</code>
+     * Generated from protobuf field <code>bytes r_preimage = 3[json_name = "r_preimage"];</code>
+     * @return string
      */
     public function getRPreimage()
     {
@@ -98,16 +109,21 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes r_preimage = 3[json_name = "r_preimage"];</code>
+     * Generated from protobuf field <code>bytes r_preimage = 3[json_name = "r_preimage"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setRPreimage($var)
     {
         GPBUtil::checkString($var, False);
         $this->r_preimage = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bytes r_hash = 4[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 4[json_name = "r_hash"];</code>
+     * @return string
      */
     public function getRHash()
     {
@@ -115,16 +131,21 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes r_hash = 4[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 4[json_name = "r_hash"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setRHash($var)
     {
         GPBUtil::checkString($var, False);
         $this->r_hash = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 value = 5[json_name = "value"];</code>
+     * Generated from protobuf field <code>int64 value = 5[json_name = "value"];</code>
+     * @return int|string
      */
     public function getValue()
     {
@@ -132,16 +153,21 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 value = 5[json_name = "value"];</code>
+     * Generated from protobuf field <code>int64 value = 5[json_name = "value"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setValue($var)
     {
         GPBUtil::checkInt64($var);
         $this->value = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bool settled = 6[json_name = "settled"];</code>
+     * Generated from protobuf field <code>bool settled = 6[json_name = "settled"];</code>
+     * @return bool
      */
     public function getSettled()
     {
@@ -149,16 +175,21 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool settled = 6[json_name = "settled"];</code>
+     * Generated from protobuf field <code>bool settled = 6[json_name = "settled"];</code>
+     * @param bool $var
+     * @return $this
      */
     public function setSettled($var)
     {
         GPBUtil::checkBool($var);
         $this->settled = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 creation_date = 7[json_name = "creation_date"];</code>
+     * Generated from protobuf field <code>int64 creation_date = 7[json_name = "creation_date"];</code>
+     * @return int|string
      */
     public function getCreationDate()
     {
@@ -166,16 +197,21 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 creation_date = 7[json_name = "creation_date"];</code>
+     * Generated from protobuf field <code>int64 creation_date = 7[json_name = "creation_date"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setCreationDate($var)
     {
         GPBUtil::checkInt64($var);
         $this->creation_date = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 settle_date = 8[json_name = "settle_date"];</code>
+     * Generated from protobuf field <code>int64 settle_date = 8[json_name = "settle_date"];</code>
+     * @return int|string
      */
     public function getSettleDate()
     {
@@ -183,16 +219,21 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 settle_date = 8[json_name = "settle_date"];</code>
+     * Generated from protobuf field <code>int64 settle_date = 8[json_name = "settle_date"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setSettleDate($var)
     {
         GPBUtil::checkInt64($var);
         $this->settle_date = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string payment_request = 9[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 9[json_name = "payment_request"];</code>
+     * @return string
      */
     public function getPaymentRequest()
     {
@@ -200,12 +241,16 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string payment_request = 9[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 9[json_name = "payment_request"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setPaymentRequest($var)
     {
         GPBUtil::checkString($var, True);
         $this->payment_request = $var;
+
+        return $this;
     }
 
 }

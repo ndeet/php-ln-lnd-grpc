@@ -9,28 +9,28 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.PendingChannelResponse.PendingChannel</code>
+ * Generated from protobuf message <code>lnrpc.PendingChannelResponse.PendingChannel</code>
  */
 class PendingChannelResponse_PendingChannel extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string remote_node_pub = 1[json_name = "remote_node_pub"];</code>
+     * Generated from protobuf field <code>string remote_node_pub = 1[json_name = "remote_node_pub"];</code>
      */
     private $remote_node_pub = '';
     /**
-     * <code>string channel_point = 2[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>string channel_point = 2[json_name = "channel_point"];</code>
      */
     private $channel_point = '';
     /**
-     * <code>int64 capacity = 3[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 3[json_name = "capacity"];</code>
      */
     private $capacity = 0;
     /**
-     * <code>int64 local_balance = 4[json_name = "local_balance"];</code>
+     * Generated from protobuf field <code>int64 local_balance = 4[json_name = "local_balance"];</code>
      */
     private $local_balance = 0;
     /**
-     * <code>int64 remote_balance = 5[json_name = "remote_balance"];</code>
+     * Generated from protobuf field <code>int64 remote_balance = 5[json_name = "remote_balance"];</code>
      */
     private $remote_balance = 0;
 
@@ -40,7 +40,8 @@ class PendingChannelResponse_PendingChannel extends \Google\Protobuf\Internal\Me
     }
 
     /**
-     * <code>string remote_node_pub = 1[json_name = "remote_node_pub"];</code>
+     * Generated from protobuf field <code>string remote_node_pub = 1[json_name = "remote_node_pub"];</code>
+     * @return string
      */
     public function getRemoteNodePub()
     {
@@ -48,16 +49,21 @@ class PendingChannelResponse_PendingChannel extends \Google\Protobuf\Internal\Me
     }
 
     /**
-     * <code>string remote_node_pub = 1[json_name = "remote_node_pub"];</code>
+     * Generated from protobuf field <code>string remote_node_pub = 1[json_name = "remote_node_pub"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setRemoteNodePub($var)
     {
         GPBUtil::checkString($var, True);
         $this->remote_node_pub = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string channel_point = 2[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>string channel_point = 2[json_name = "channel_point"];</code>
+     * @return string
      */
     public function getChannelPoint()
     {
@@ -65,16 +71,21 @@ class PendingChannelResponse_PendingChannel extends \Google\Protobuf\Internal\Me
     }
 
     /**
-     * <code>string channel_point = 2[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>string channel_point = 2[json_name = "channel_point"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setChannelPoint($var)
     {
         GPBUtil::checkString($var, True);
         $this->channel_point = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 capacity = 3[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 3[json_name = "capacity"];</code>
+     * @return int|string
      */
     public function getCapacity()
     {
@@ -82,16 +93,21 @@ class PendingChannelResponse_PendingChannel extends \Google\Protobuf\Internal\Me
     }
 
     /**
-     * <code>int64 capacity = 3[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 3[json_name = "capacity"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setCapacity($var)
     {
         GPBUtil::checkInt64($var);
         $this->capacity = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 local_balance = 4[json_name = "local_balance"];</code>
+     * Generated from protobuf field <code>int64 local_balance = 4[json_name = "local_balance"];</code>
+     * @return int|string
      */
     public function getLocalBalance()
     {
@@ -99,16 +115,21 @@ class PendingChannelResponse_PendingChannel extends \Google\Protobuf\Internal\Me
     }
 
     /**
-     * <code>int64 local_balance = 4[json_name = "local_balance"];</code>
+     * Generated from protobuf field <code>int64 local_balance = 4[json_name = "local_balance"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setLocalBalance($var)
     {
         GPBUtil::checkInt64($var);
         $this->local_balance = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 remote_balance = 5[json_name = "remote_balance"];</code>
+     * Generated from protobuf field <code>int64 remote_balance = 5[json_name = "remote_balance"];</code>
+     * @return int|string
      */
     public function getRemoteBalance()
     {
@@ -116,12 +137,16 @@ class PendingChannelResponse_PendingChannel extends \Google\Protobuf\Internal\Me
     }
 
     /**
-     * <code>int64 remote_balance = 5[json_name = "remote_balance"];</code>
+     * Generated from protobuf field <code>int64 remote_balance = 5[json_name = "remote_balance"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setRemoteBalance($var)
     {
         GPBUtil::checkInt64($var);
         $this->remote_balance = $var;
+
+        return $this;
     }
 
 }

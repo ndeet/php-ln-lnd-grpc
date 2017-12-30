@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.SendCoinsResponse</code>
+ * Generated from protobuf message <code>lnrpc.SendCoinsResponse</code>
  */
 class SendCoinsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string txid = 1[json_name = "txid"];</code>
+     * Generated from protobuf field <code>string txid = 1[json_name = "txid"];</code>
      */
     private $txid = '';
 
@@ -24,7 +24,8 @@ class SendCoinsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string txid = 1[json_name = "txid"];</code>
+     * Generated from protobuf field <code>string txid = 1[json_name = "txid"];</code>
+     * @return string
      */
     public function getTxid()
     {
@@ -32,12 +33,16 @@ class SendCoinsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string txid = 1[json_name = "txid"];</code>
+     * Generated from protobuf field <code>string txid = 1[json_name = "txid"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setTxid($var)
     {
         GPBUtil::checkString($var, True);
         $this->txid = $var;
+
+        return $this;
     }
 
 }

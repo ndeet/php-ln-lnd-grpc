@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ListPaymentsResponse</code>
+ * Generated from protobuf message <code>lnrpc.ListPaymentsResponse</code>
  */
 class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>repeated .lnrpc.Payment payments = 1[json_name = "payments"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1[json_name = "payments"];</code>
      */
     private $payments;
 
@@ -24,7 +24,8 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.Payment payments = 1[json_name = "payments"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1[json_name = "payments"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPayments()
     {
@@ -32,12 +33,16 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.Payment payments = 1[json_name = "payments"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1[json_name = "payments"];</code>
+     * @param \Lnrpc\Payment[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setPayments(&$var)
+    public function setPayments($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Payment::class);
         $this->payments = $arr;
+
+        return $this;
     }
 
 }

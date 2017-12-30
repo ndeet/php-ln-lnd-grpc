@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.WalletBalanceResponse</code>
+ * Generated from protobuf message <code>lnrpc.WalletBalanceResponse</code>
  */
 class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>double balance = 1[json_name = "balance"];</code>
+     * Generated from protobuf field <code>double balance = 1[json_name = "balance"];</code>
      */
     private $balance = 0.0;
 
@@ -24,7 +24,8 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>double balance = 1[json_name = "balance"];</code>
+     * Generated from protobuf field <code>double balance = 1[json_name = "balance"];</code>
+     * @return float
      */
     public function getBalance()
     {
@@ -32,12 +33,16 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>double balance = 1[json_name = "balance"];</code>
+     * Generated from protobuf field <code>double balance = 1[json_name = "balance"];</code>
+     * @param float $var
+     * @return $this
      */
     public function setBalance($var)
     {
         GPBUtil::checkDouble($var);
         $this->balance = $var;
+
+        return $this;
     }
 
 }

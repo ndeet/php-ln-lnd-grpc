@@ -9,20 +9,20 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.PendingChannelResponse.PendingOpenChannel</code>
+ * Generated from protobuf message <code>lnrpc.PendingChannelResponse.PendingOpenChannel</code>
  */
 class PendingChannelResponse_PendingOpenChannel extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1[json_name = "channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1[json_name = "channel"];</code>
      */
     private $channel = null;
     /**
-     * <code>uint32 confirmation_height = 2[json_name = "confirmation_height"];</code>
+     * Generated from protobuf field <code>uint32 confirmation_height = 2[json_name = "confirmation_height"];</code>
      */
     private $confirmation_height = 0;
     /**
-     * <code>uint32 blocks_till_open = 3[json_name = "blocks_till_open"];</code>
+     * Generated from protobuf field <code>uint32 blocks_till_open = 3[json_name = "blocks_till_open"];</code>
      */
     private $blocks_till_open = 0;
 
@@ -32,7 +32,8 @@ class PendingChannelResponse_PendingOpenChannel extends \Google\Protobuf\Interna
     }
 
     /**
-     * <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1[json_name = "channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1[json_name = "channel"];</code>
+     * @return \Lnrpc\PendingChannelResponse_PendingChannel
      */
     public function getChannel()
     {
@@ -40,16 +41,21 @@ class PendingChannelResponse_PendingOpenChannel extends \Google\Protobuf\Interna
     }
 
     /**
-     * <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1[json_name = "channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1[json_name = "channel"];</code>
+     * @param \Lnrpc\PendingChannelResponse_PendingChannel $var
+     * @return $this
      */
-    public function setChannel(&$var)
+    public function setChannel($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\PendingChannelResponse_PendingChannel::class);
         $this->channel = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 confirmation_height = 2[json_name = "confirmation_height"];</code>
+     * Generated from protobuf field <code>uint32 confirmation_height = 2[json_name = "confirmation_height"];</code>
+     * @return int
      */
     public function getConfirmationHeight()
     {
@@ -57,16 +63,21 @@ class PendingChannelResponse_PendingOpenChannel extends \Google\Protobuf\Interna
     }
 
     /**
-     * <code>uint32 confirmation_height = 2[json_name = "confirmation_height"];</code>
+     * Generated from protobuf field <code>uint32 confirmation_height = 2[json_name = "confirmation_height"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setConfirmationHeight($var)
     {
         GPBUtil::checkUint32($var);
         $this->confirmation_height = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 blocks_till_open = 3[json_name = "blocks_till_open"];</code>
+     * Generated from protobuf field <code>uint32 blocks_till_open = 3[json_name = "blocks_till_open"];</code>
+     * @return int
      */
     public function getBlocksTillOpen()
     {
@@ -74,12 +85,16 @@ class PendingChannelResponse_PendingOpenChannel extends \Google\Protobuf\Interna
     }
 
     /**
-     * <code>uint32 blocks_till_open = 3[json_name = "blocks_till_open"];</code>
+     * Generated from protobuf field <code>uint32 blocks_till_open = 3[json_name = "blocks_till_open"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setBlocksTillOpen($var)
     {
         GPBUtil::checkUint32($var);
         $this->blocks_till_open = $var;
+
+        return $this;
     }
 
 }

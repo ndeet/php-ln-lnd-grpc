@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ListChannelsRequest</code>
+ * Generated from protobuf message <code>lnrpc.ListChannelsRequest</code>
  */
 class ListChannelsRequest extends \Google\Protobuf\Internal\Message
 {

@@ -9,16 +9,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ChannelGraph</code>
+ * Generated from protobuf message <code>lnrpc.ChannelGraph</code>
  */
 class ChannelGraph extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>repeated .lnrpc.LightningNode nodes = 1[json_name = "nodes"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.LightningNode nodes = 1[json_name = "nodes"];</code>
      */
     private $nodes;
     /**
-     * <code>repeated .lnrpc.ChannelEdge edges = 2[json_name = "edges"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge edges = 2[json_name = "edges"];</code>
      */
     private $edges;
 
@@ -28,7 +28,8 @@ class ChannelGraph extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.LightningNode nodes = 1[json_name = "nodes"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.LightningNode nodes = 1[json_name = "nodes"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getNodes()
     {
@@ -36,16 +37,21 @@ class ChannelGraph extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.LightningNode nodes = 1[json_name = "nodes"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.LightningNode nodes = 1[json_name = "nodes"];</code>
+     * @param \Lnrpc\LightningNode[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setNodes(&$var)
+    public function setNodes($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\LightningNode::class);
         $this->nodes = $arr;
+
+        return $this;
     }
 
     /**
-     * <code>repeated .lnrpc.ChannelEdge edges = 2[json_name = "edges"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge edges = 2[json_name = "edges"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getEdges()
     {
@@ -53,12 +59,16 @@ class ChannelGraph extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.ChannelEdge edges = 2[json_name = "edges"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge edges = 2[json_name = "edges"];</code>
+     * @param \Lnrpc\ChannelEdge[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setEdges(&$var)
+    public function setEdges($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\ChannelEdge::class);
         $this->edges = $arr;
+
+        return $this;
     }
 
 }

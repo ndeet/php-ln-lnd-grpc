@@ -9,20 +9,20 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.NodeInfo</code>
+ * Generated from protobuf message <code>lnrpc.NodeInfo</code>
  */
 class NodeInfo extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.lnrpc.LightningNode node = 1[json_name = "node"];</code>
+     * Generated from protobuf field <code>.lnrpc.LightningNode node = 1[json_name = "node"];</code>
      */
     private $node = null;
     /**
-     * <code>uint32 num_channels = 2[json_name = "num_channels"];</code>
+     * Generated from protobuf field <code>uint32 num_channels = 2[json_name = "num_channels"];</code>
      */
     private $num_channels = 0;
     /**
-     * <code>int64 total_capacity = 3[json_name = "total_capacity"];</code>
+     * Generated from protobuf field <code>int64 total_capacity = 3[json_name = "total_capacity"];</code>
      */
     private $total_capacity = 0;
 
@@ -32,7 +32,8 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.LightningNode node = 1[json_name = "node"];</code>
+     * Generated from protobuf field <code>.lnrpc.LightningNode node = 1[json_name = "node"];</code>
+     * @return \Lnrpc\LightningNode
      */
     public function getNode()
     {
@@ -40,16 +41,21 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.LightningNode node = 1[json_name = "node"];</code>
+     * Generated from protobuf field <code>.lnrpc.LightningNode node = 1[json_name = "node"];</code>
+     * @param \Lnrpc\LightningNode $var
+     * @return $this
      */
-    public function setNode(&$var)
+    public function setNode($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\LightningNode::class);
         $this->node = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 num_channels = 2[json_name = "num_channels"];</code>
+     * Generated from protobuf field <code>uint32 num_channels = 2[json_name = "num_channels"];</code>
+     * @return int
      */
     public function getNumChannels()
     {
@@ -57,16 +63,21 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 num_channels = 2[json_name = "num_channels"];</code>
+     * Generated from protobuf field <code>uint32 num_channels = 2[json_name = "num_channels"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setNumChannels($var)
     {
         GPBUtil::checkUint32($var);
         $this->num_channels = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 total_capacity = 3[json_name = "total_capacity"];</code>
+     * Generated from protobuf field <code>int64 total_capacity = 3[json_name = "total_capacity"];</code>
+     * @return int|string
      */
     public function getTotalCapacity()
     {
@@ -74,12 +85,16 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 total_capacity = 3[json_name = "total_capacity"];</code>
+     * Generated from protobuf field <code>int64 total_capacity = 3[json_name = "total_capacity"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setTotalCapacity($var)
     {
         GPBUtil::checkInt64($var);
         $this->total_capacity = $var;
+
+        return $this;
     }
 
 }

@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.PayReqString</code>
+ * Generated from protobuf message <code>lnrpc.PayReqString</code>
  */
 class PayReqString extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string pay_req = 1;</code>
+     * Generated from protobuf field <code>string pay_req = 1;</code>
      */
     private $pay_req = '';
 
@@ -24,7 +24,8 @@ class PayReqString extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string pay_req = 1;</code>
+     * Generated from protobuf field <code>string pay_req = 1;</code>
+     * @return string
      */
     public function getPayReq()
     {
@@ -32,12 +33,16 @@ class PayReqString extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string pay_req = 1;</code>
+     * Generated from protobuf field <code>string pay_req = 1;</code>
+     * @param string $var
+     * @return $this
      */
     public function setPayReq($var)
     {
         GPBUtil::checkString($var, True);
         $this->pay_req = $var;
+
+        return $this;
     }
 
 }

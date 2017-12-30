@@ -9,32 +9,32 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.SendRequest</code>
+ * Generated from protobuf message <code>lnrpc.SendRequest</code>
  */
 class SendRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>bytes dest = 1;</code>
+     * Generated from protobuf field <code>bytes dest = 1;</code>
      */
     private $dest = '';
     /**
-     * <code>string dest_string = 2;</code>
+     * Generated from protobuf field <code>string dest_string = 2;</code>
      */
     private $dest_string = '';
     /**
-     * <code>int64 amt = 3;</code>
+     * Generated from protobuf field <code>int64 amt = 3;</code>
      */
     private $amt = 0;
     /**
-     * <code>bytes payment_hash = 4;</code>
+     * Generated from protobuf field <code>bytes payment_hash = 4;</code>
      */
     private $payment_hash = '';
     /**
-     * <code>string payment_hash_string = 5;</code>
+     * Generated from protobuf field <code>string payment_hash_string = 5;</code>
      */
     private $payment_hash_string = '';
     /**
-     * <code>string payment_request = 6;</code>
+     * Generated from protobuf field <code>string payment_request = 6;</code>
      */
     private $payment_request = '';
 
@@ -44,7 +44,8 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes dest = 1;</code>
+     * Generated from protobuf field <code>bytes dest = 1;</code>
+     * @return string
      */
     public function getDest()
     {
@@ -52,16 +53,21 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes dest = 1;</code>
+     * Generated from protobuf field <code>bytes dest = 1;</code>
+     * @param string $var
+     * @return $this
      */
     public function setDest($var)
     {
         GPBUtil::checkString($var, False);
         $this->dest = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string dest_string = 2;</code>
+     * Generated from protobuf field <code>string dest_string = 2;</code>
+     * @return string
      */
     public function getDestString()
     {
@@ -69,16 +75,21 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string dest_string = 2;</code>
+     * Generated from protobuf field <code>string dest_string = 2;</code>
+     * @param string $var
+     * @return $this
      */
     public function setDestString($var)
     {
         GPBUtil::checkString($var, True);
         $this->dest_string = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 amt = 3;</code>
+     * Generated from protobuf field <code>int64 amt = 3;</code>
+     * @return int|string
      */
     public function getAmt()
     {
@@ -86,16 +97,21 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 amt = 3;</code>
+     * Generated from protobuf field <code>int64 amt = 3;</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setAmt($var)
     {
         GPBUtil::checkInt64($var);
         $this->amt = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bytes payment_hash = 4;</code>
+     * Generated from protobuf field <code>bytes payment_hash = 4;</code>
+     * @return string
      */
     public function getPaymentHash()
     {
@@ -103,16 +119,21 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes payment_hash = 4;</code>
+     * Generated from protobuf field <code>bytes payment_hash = 4;</code>
+     * @param string $var
+     * @return $this
      */
     public function setPaymentHash($var)
     {
         GPBUtil::checkString($var, False);
         $this->payment_hash = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string payment_hash_string = 5;</code>
+     * Generated from protobuf field <code>string payment_hash_string = 5;</code>
+     * @return string
      */
     public function getPaymentHashString()
     {
@@ -120,16 +141,21 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string payment_hash_string = 5;</code>
+     * Generated from protobuf field <code>string payment_hash_string = 5;</code>
+     * @param string $var
+     * @return $this
      */
     public function setPaymentHashString($var)
     {
         GPBUtil::checkString($var, True);
         $this->payment_hash_string = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string payment_request = 6;</code>
+     * Generated from protobuf field <code>string payment_request = 6;</code>
+     * @return string
      */
     public function getPaymentRequest()
     {
@@ -137,12 +163,16 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string payment_request = 6;</code>
+     * Generated from protobuf field <code>string payment_request = 6;</code>
+     * @param string $var
+     * @return $this
      */
     public function setPaymentRequest($var)
     {
         GPBUtil::checkString($var, True);
         $this->payment_request = $var;
+
+        return $this;
     }
 
 }

@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ChannelBalanceRequest</code>
+ * Generated from protobuf message <code>lnrpc.ChannelBalanceRequest</code>
  */
 class ChannelBalanceRequest extends \Google\Protobuf\Internal\Message
 {

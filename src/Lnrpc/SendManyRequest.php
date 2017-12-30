@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.SendManyRequest</code>
+ * Generated from protobuf message <code>lnrpc.SendManyRequest</code>
  */
 class SendManyRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>map&lt;string, int64&gt; AddrToAmount = 1;</code>
+     * Generated from protobuf field <code>map<string, int64> AddrToAmount = 1;</code>
      */
     private $AddrToAmount;
 
@@ -24,7 +24,8 @@ class SendManyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>map&lt;string, int64&gt; AddrToAmount = 1;</code>
+     * Generated from protobuf field <code>map<string, int64> AddrToAmount = 1;</code>
+     * @return \Google\Protobuf\Internal\MapField
      */
     public function getAddrToAmount()
     {
@@ -32,12 +33,16 @@ class SendManyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>map&lt;string, int64&gt; AddrToAmount = 1;</code>
+     * Generated from protobuf field <code>map<string, int64> AddrToAmount = 1;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
      */
-    public function setAddrToAmount(&$var)
+    public function setAddrToAmount($var)
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
         $this->AddrToAmount = $arr;
+
+        return $this;
     }
 
 }

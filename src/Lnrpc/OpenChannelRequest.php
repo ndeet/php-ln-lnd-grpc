@@ -9,32 +9,32 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.OpenChannelRequest</code>
+ * Generated from protobuf message <code>lnrpc.OpenChannelRequest</code>
  */
 class OpenChannelRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>int32 target_peer_id = 1[json_name = "target_peer_id"];</code>
+     * Generated from protobuf field <code>int32 target_peer_id = 1[json_name = "target_peer_id"];</code>
      */
     private $target_peer_id = 0;
     /**
-     * <code>bytes node_pubkey = 2[json_name = "node_pubkey"];</code>
+     * Generated from protobuf field <code>bytes node_pubkey = 2[json_name = "node_pubkey"];</code>
      */
     private $node_pubkey = '';
     /**
-     * <code>string node_pubkey_string = 3[json_name = "node_pubkey_string"];</code>
+     * Generated from protobuf field <code>string node_pubkey_string = 3[json_name = "node_pubkey_string"];</code>
      */
     private $node_pubkey_string = '';
     /**
-     * <code>int64 local_funding_amount = 4[json_name = "local_funding_amount"];</code>
+     * Generated from protobuf field <code>int64 local_funding_amount = 4[json_name = "local_funding_amount"];</code>
      */
     private $local_funding_amount = 0;
     /**
-     * <code>int64 push_sat = 5[json_name = "push_sat"];</code>
+     * Generated from protobuf field <code>int64 push_sat = 5[json_name = "push_sat"];</code>
      */
     private $push_sat = 0;
     /**
-     * <code>uint32 num_confs = 6[json_name = "num_confs"];</code>
+     * Generated from protobuf field <code>uint32 num_confs = 6[json_name = "num_confs"];</code>
      */
     private $num_confs = 0;
 
@@ -44,7 +44,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int32 target_peer_id = 1[json_name = "target_peer_id"];</code>
+     * Generated from protobuf field <code>int32 target_peer_id = 1[json_name = "target_peer_id"];</code>
+     * @return int
      */
     public function getTargetPeerId()
     {
@@ -52,16 +53,21 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int32 target_peer_id = 1[json_name = "target_peer_id"];</code>
+     * Generated from protobuf field <code>int32 target_peer_id = 1[json_name = "target_peer_id"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setTargetPeerId($var)
     {
         GPBUtil::checkInt32($var);
         $this->target_peer_id = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bytes node_pubkey = 2[json_name = "node_pubkey"];</code>
+     * Generated from protobuf field <code>bytes node_pubkey = 2[json_name = "node_pubkey"];</code>
+     * @return string
      */
     public function getNodePubkey()
     {
@@ -69,16 +75,21 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes node_pubkey = 2[json_name = "node_pubkey"];</code>
+     * Generated from protobuf field <code>bytes node_pubkey = 2[json_name = "node_pubkey"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setNodePubkey($var)
     {
         GPBUtil::checkString($var, False);
         $this->node_pubkey = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string node_pubkey_string = 3[json_name = "node_pubkey_string"];</code>
+     * Generated from protobuf field <code>string node_pubkey_string = 3[json_name = "node_pubkey_string"];</code>
+     * @return string
      */
     public function getNodePubkeyString()
     {
@@ -86,16 +97,21 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string node_pubkey_string = 3[json_name = "node_pubkey_string"];</code>
+     * Generated from protobuf field <code>string node_pubkey_string = 3[json_name = "node_pubkey_string"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setNodePubkeyString($var)
     {
         GPBUtil::checkString($var, True);
         $this->node_pubkey_string = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 local_funding_amount = 4[json_name = "local_funding_amount"];</code>
+     * Generated from protobuf field <code>int64 local_funding_amount = 4[json_name = "local_funding_amount"];</code>
+     * @return int|string
      */
     public function getLocalFundingAmount()
     {
@@ -103,16 +119,21 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 local_funding_amount = 4[json_name = "local_funding_amount"];</code>
+     * Generated from protobuf field <code>int64 local_funding_amount = 4[json_name = "local_funding_amount"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setLocalFundingAmount($var)
     {
         GPBUtil::checkInt64($var);
         $this->local_funding_amount = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 push_sat = 5[json_name = "push_sat"];</code>
+     * Generated from protobuf field <code>int64 push_sat = 5[json_name = "push_sat"];</code>
+     * @return int|string
      */
     public function getPushSat()
     {
@@ -120,16 +141,21 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 push_sat = 5[json_name = "push_sat"];</code>
+     * Generated from protobuf field <code>int64 push_sat = 5[json_name = "push_sat"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setPushSat($var)
     {
         GPBUtil::checkInt64($var);
         $this->push_sat = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 num_confs = 6[json_name = "num_confs"];</code>
+     * Generated from protobuf field <code>uint32 num_confs = 6[json_name = "num_confs"];</code>
+     * @return int
      */
     public function getNumConfs()
     {
@@ -137,12 +163,16 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 num_confs = 6[json_name = "num_confs"];</code>
+     * Generated from protobuf field <code>uint32 num_confs = 6[json_name = "num_confs"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setNumConfs($var)
     {
         GPBUtil::checkUint32($var);
         $this->num_confs = $var;
+
+        return $this;
     }
 
 }

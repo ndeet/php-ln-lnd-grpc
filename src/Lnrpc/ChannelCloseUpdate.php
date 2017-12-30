@@ -9,16 +9,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ChannelCloseUpdate</code>
+ * Generated from protobuf message <code>lnrpc.ChannelCloseUpdate</code>
  */
 class ChannelCloseUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>bytes closing_txid = 1[json_name = "closing_txid"];</code>
+     * Generated from protobuf field <code>bytes closing_txid = 1[json_name = "closing_txid"];</code>
      */
     private $closing_txid = '';
     /**
-     * <code>bool success = 2[json_name = "success"];</code>
+     * Generated from protobuf field <code>bool success = 2[json_name = "success"];</code>
      */
     private $success = false;
 
@@ -28,7 +28,8 @@ class ChannelCloseUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes closing_txid = 1[json_name = "closing_txid"];</code>
+     * Generated from protobuf field <code>bytes closing_txid = 1[json_name = "closing_txid"];</code>
+     * @return string
      */
     public function getClosingTxid()
     {
@@ -36,16 +37,21 @@ class ChannelCloseUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes closing_txid = 1[json_name = "closing_txid"];</code>
+     * Generated from protobuf field <code>bytes closing_txid = 1[json_name = "closing_txid"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setClosingTxid($var)
     {
         GPBUtil::checkString($var, False);
         $this->closing_txid = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bool success = 2[json_name = "success"];</code>
+     * Generated from protobuf field <code>bool success = 2[json_name = "success"];</code>
+     * @return bool
      */
     public function getSuccess()
     {
@@ -53,12 +59,16 @@ class ChannelCloseUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool success = 2[json_name = "success"];</code>
+     * Generated from protobuf field <code>bool success = 2[json_name = "success"];</code>
+     * @param bool $var
+     * @return $this
      */
     public function setSuccess($var)
     {
         GPBUtil::checkBool($var);
         $this->success = $var;
+
+        return $this;
     }
 
 }

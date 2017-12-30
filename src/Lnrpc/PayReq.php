@@ -9,20 +9,20 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.PayReq</code>
+ * Generated from protobuf message <code>lnrpc.PayReq</code>
  */
 class PayReq extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string destination = 1[json_name = "destination"];</code>
+     * Generated from protobuf field <code>string destination = 1[json_name = "destination"];</code>
      */
     private $destination = '';
     /**
-     * <code>string payment_hash = 2[json_name = "payment_hash"];</code>
+     * Generated from protobuf field <code>string payment_hash = 2[json_name = "payment_hash"];</code>
      */
     private $payment_hash = '';
     /**
-     * <code>int64 num_satoshis = 3[json_name = "num_satoshis"];</code>
+     * Generated from protobuf field <code>int64 num_satoshis = 3[json_name = "num_satoshis"];</code>
      */
     private $num_satoshis = 0;
 
@@ -32,7 +32,8 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string destination = 1[json_name = "destination"];</code>
+     * Generated from protobuf field <code>string destination = 1[json_name = "destination"];</code>
+     * @return string
      */
     public function getDestination()
     {
@@ -40,16 +41,21 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string destination = 1[json_name = "destination"];</code>
+     * Generated from protobuf field <code>string destination = 1[json_name = "destination"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setDestination($var)
     {
         GPBUtil::checkString($var, True);
         $this->destination = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string payment_hash = 2[json_name = "payment_hash"];</code>
+     * Generated from protobuf field <code>string payment_hash = 2[json_name = "payment_hash"];</code>
+     * @return string
      */
     public function getPaymentHash()
     {
@@ -57,16 +63,21 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string payment_hash = 2[json_name = "payment_hash"];</code>
+     * Generated from protobuf field <code>string payment_hash = 2[json_name = "payment_hash"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setPaymentHash($var)
     {
         GPBUtil::checkString($var, True);
         $this->payment_hash = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 num_satoshis = 3[json_name = "num_satoshis"];</code>
+     * Generated from protobuf field <code>int64 num_satoshis = 3[json_name = "num_satoshis"];</code>
+     * @return int|string
      */
     public function getNumSatoshis()
     {
@@ -74,12 +85,16 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 num_satoshis = 3[json_name = "num_satoshis"];</code>
+     * Generated from protobuf field <code>int64 num_satoshis = 3[json_name = "num_satoshis"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setNumSatoshis($var)
     {
         GPBUtil::checkInt64($var);
         $this->num_satoshis = $var;
+
+        return $this;
     }
 
 }

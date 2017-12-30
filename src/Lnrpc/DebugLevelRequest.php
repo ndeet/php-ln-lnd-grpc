@@ -9,16 +9,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.DebugLevelRequest</code>
+ * Generated from protobuf message <code>lnrpc.DebugLevelRequest</code>
  */
 class DebugLevelRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>bool show = 1;</code>
+     * Generated from protobuf field <code>bool show = 1;</code>
      */
     private $show = false;
     /**
-     * <code>string level_spec = 2;</code>
+     * Generated from protobuf field <code>string level_spec = 2;</code>
      */
     private $level_spec = '';
 
@@ -28,7 +28,8 @@ class DebugLevelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool show = 1;</code>
+     * Generated from protobuf field <code>bool show = 1;</code>
+     * @return bool
      */
     public function getShow()
     {
@@ -36,16 +37,21 @@ class DebugLevelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool show = 1;</code>
+     * Generated from protobuf field <code>bool show = 1;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setShow($var)
     {
         GPBUtil::checkBool($var);
         $this->show = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string level_spec = 2;</code>
+     * Generated from protobuf field <code>string level_spec = 2;</code>
+     * @return string
      */
     public function getLevelSpec()
     {
@@ -53,12 +59,16 @@ class DebugLevelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string level_spec = 2;</code>
+     * Generated from protobuf field <code>string level_spec = 2;</code>
+     * @param string $var
+     * @return $this
      */
     public function setLevelSpec($var)
     {
         GPBUtil::checkString($var, True);
         $this->level_spec = $var;
+
+        return $this;
     }
 
 }

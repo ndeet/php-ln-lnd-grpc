@@ -9,24 +9,24 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.Hop</code>
+ * Generated from protobuf message <code>lnrpc.Hop</code>
  */
 class Hop extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>uint64 chan_id = 1[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id"];</code>
      */
     private $chan_id = 0;
     /**
-     * <code>int64 chan_capacity = 2[json_name = "chan_capacity"];</code>
+     * Generated from protobuf field <code>int64 chan_capacity = 2[json_name = "chan_capacity"];</code>
      */
     private $chan_capacity = 0;
     /**
-     * <code>int64 amt_to_forward = 3[json_name = "amt_to_forward"];</code>
+     * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward"];</code>
      */
     private $amt_to_forward = 0;
     /**
-     * <code>int64 fee = 4[json_name = "fee"];</code>
+     * Generated from protobuf field <code>int64 fee = 4[json_name = "fee"];</code>
      */
     private $fee = 0;
 
@@ -36,7 +36,8 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint64 chan_id = 1[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id"];</code>
+     * @return int|string
      */
     public function getChanId()
     {
@@ -44,16 +45,21 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint64 chan_id = 1[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setChanId($var)
     {
         GPBUtil::checkUint64($var);
         $this->chan_id = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 chan_capacity = 2[json_name = "chan_capacity"];</code>
+     * Generated from protobuf field <code>int64 chan_capacity = 2[json_name = "chan_capacity"];</code>
+     * @return int|string
      */
     public function getChanCapacity()
     {
@@ -61,16 +67,21 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 chan_capacity = 2[json_name = "chan_capacity"];</code>
+     * Generated from protobuf field <code>int64 chan_capacity = 2[json_name = "chan_capacity"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setChanCapacity($var)
     {
         GPBUtil::checkInt64($var);
         $this->chan_capacity = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 amt_to_forward = 3[json_name = "amt_to_forward"];</code>
+     * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward"];</code>
+     * @return int|string
      */
     public function getAmtToForward()
     {
@@ -78,16 +89,21 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 amt_to_forward = 3[json_name = "amt_to_forward"];</code>
+     * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setAmtToForward($var)
     {
         GPBUtil::checkInt64($var);
         $this->amt_to_forward = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 fee = 4[json_name = "fee"];</code>
+     * Generated from protobuf field <code>int64 fee = 4[json_name = "fee"];</code>
+     * @return int|string
      */
     public function getFee()
     {
@@ -95,12 +111,16 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 fee = 4[json_name = "fee"];</code>
+     * Generated from protobuf field <code>int64 fee = 4[json_name = "fee"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setFee($var)
     {
         GPBUtil::checkInt64($var);
         $this->fee = $var;
+
+        return $this;
     }
 
 }

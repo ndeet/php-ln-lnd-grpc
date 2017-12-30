@@ -9,40 +9,40 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ChannelEdge</code>
+ * Generated from protobuf message <code>lnrpc.ChannelEdge</code>
  */
 class ChannelEdge extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>uint64 channel_id = 1[json_name = "channel_id"];</code>
+     * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id"];</code>
      */
     private $channel_id = 0;
     /**
-     * <code>string chan_point = 2[json_name = "chan_point"];</code>
+     * Generated from protobuf field <code>string chan_point = 2[json_name = "chan_point"];</code>
      */
     private $chan_point = '';
     /**
-     * <code>uint32 last_update = 3[json_name = "last_update"];</code>
+     * Generated from protobuf field <code>uint32 last_update = 3[json_name = "last_update"];</code>
      */
     private $last_update = 0;
     /**
-     * <code>string node1_pub = 4[json_name = "node1_pub"];</code>
+     * Generated from protobuf field <code>string node1_pub = 4[json_name = "node1_pub"];</code>
      */
     private $node1_pub = '';
     /**
-     * <code>string node2_pub = 5[json_name = "node2_pub"];</code>
+     * Generated from protobuf field <code>string node2_pub = 5[json_name = "node2_pub"];</code>
      */
     private $node2_pub = '';
     /**
-     * <code>int64 capacity = 6[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 6[json_name = "capacity"];</code>
      */
     private $capacity = 0;
     /**
-     * <code>.lnrpc.RoutingPolicy node1_policy = 7[json_name = "node1_policy"];</code>
+     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node1_policy = 7[json_name = "node1_policy"];</code>
      */
     private $node1_policy = null;
     /**
-     * <code>.lnrpc.RoutingPolicy node2_policy = 8[json_name = "node2_policy"];</code>
+     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8[json_name = "node2_policy"];</code>
      */
     private $node2_policy = null;
 
@@ -52,7 +52,8 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint64 channel_id = 1[json_name = "channel_id"];</code>
+     * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id"];</code>
+     * @return int|string
      */
     public function getChannelId()
     {
@@ -60,16 +61,21 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint64 channel_id = 1[json_name = "channel_id"];</code>
+     * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setChannelId($var)
     {
         GPBUtil::checkUint64($var);
         $this->channel_id = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string chan_point = 2[json_name = "chan_point"];</code>
+     * Generated from protobuf field <code>string chan_point = 2[json_name = "chan_point"];</code>
+     * @return string
      */
     public function getChanPoint()
     {
@@ -77,16 +83,21 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string chan_point = 2[json_name = "chan_point"];</code>
+     * Generated from protobuf field <code>string chan_point = 2[json_name = "chan_point"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setChanPoint($var)
     {
         GPBUtil::checkString($var, True);
         $this->chan_point = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 last_update = 3[json_name = "last_update"];</code>
+     * Generated from protobuf field <code>uint32 last_update = 3[json_name = "last_update"];</code>
+     * @return int
      */
     public function getLastUpdate()
     {
@@ -94,16 +105,21 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 last_update = 3[json_name = "last_update"];</code>
+     * Generated from protobuf field <code>uint32 last_update = 3[json_name = "last_update"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setLastUpdate($var)
     {
         GPBUtil::checkUint32($var);
         $this->last_update = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string node1_pub = 4[json_name = "node1_pub"];</code>
+     * Generated from protobuf field <code>string node1_pub = 4[json_name = "node1_pub"];</code>
+     * @return string
      */
     public function getNode1Pub()
     {
@@ -111,16 +127,21 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string node1_pub = 4[json_name = "node1_pub"];</code>
+     * Generated from protobuf field <code>string node1_pub = 4[json_name = "node1_pub"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setNode1Pub($var)
     {
         GPBUtil::checkString($var, True);
         $this->node1_pub = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string node2_pub = 5[json_name = "node2_pub"];</code>
+     * Generated from protobuf field <code>string node2_pub = 5[json_name = "node2_pub"];</code>
+     * @return string
      */
     public function getNode2Pub()
     {
@@ -128,16 +149,21 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string node2_pub = 5[json_name = "node2_pub"];</code>
+     * Generated from protobuf field <code>string node2_pub = 5[json_name = "node2_pub"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setNode2Pub($var)
     {
         GPBUtil::checkString($var, True);
         $this->node2_pub = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 capacity = 6[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 6[json_name = "capacity"];</code>
+     * @return int|string
      */
     public function getCapacity()
     {
@@ -145,16 +171,21 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 capacity = 6[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 6[json_name = "capacity"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setCapacity($var)
     {
         GPBUtil::checkInt64($var);
         $this->capacity = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.lnrpc.RoutingPolicy node1_policy = 7[json_name = "node1_policy"];</code>
+     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node1_policy = 7[json_name = "node1_policy"];</code>
+     * @return \Lnrpc\RoutingPolicy
      */
     public function getNode1Policy()
     {
@@ -162,16 +193,21 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.RoutingPolicy node1_policy = 7[json_name = "node1_policy"];</code>
+     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node1_policy = 7[json_name = "node1_policy"];</code>
+     * @param \Lnrpc\RoutingPolicy $var
+     * @return $this
      */
-    public function setNode1Policy(&$var)
+    public function setNode1Policy($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\RoutingPolicy::class);
         $this->node1_policy = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.lnrpc.RoutingPolicy node2_policy = 8[json_name = "node2_policy"];</code>
+     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8[json_name = "node2_policy"];</code>
+     * @return \Lnrpc\RoutingPolicy
      */
     public function getNode2Policy()
     {
@@ -179,12 +215,16 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.RoutingPolicy node2_policy = 8[json_name = "node2_policy"];</code>
+     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8[json_name = "node2_policy"];</code>
+     * @param \Lnrpc\RoutingPolicy $var
+     * @return $this
      */
-    public function setNode2Policy(&$var)
+    public function setNode2Policy($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\RoutingPolicy::class);
         $this->node2_policy = $var;
+
+        return $this;
     }
 
 }

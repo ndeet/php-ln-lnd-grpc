@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.OpenStatusUpdate</code>
+ * Generated from protobuf message <code>lnrpc.OpenStatusUpdate</code>
  */
 class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
 {
@@ -21,7 +21,8 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.PendingUpdate chan_pending = 1[json_name = "chan_pending"];</code>
+     * Generated from protobuf field <code>.lnrpc.PendingUpdate chan_pending = 1[json_name = "chan_pending"];</code>
+     * @return \Lnrpc\PendingUpdate
      */
     public function getChanPending()
     {
@@ -29,16 +30,21 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.PendingUpdate chan_pending = 1[json_name = "chan_pending"];</code>
+     * Generated from protobuf field <code>.lnrpc.PendingUpdate chan_pending = 1[json_name = "chan_pending"];</code>
+     * @param \Lnrpc\PendingUpdate $var
+     * @return $this
      */
-    public function setChanPending(&$var)
+    public function setChanPending($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\PendingUpdate::class);
         $this->writeOneof(1, $var);
+
+        return $this;
     }
 
     /**
-     * <code>.lnrpc.ConfirmationUpdate confirmation = 2[json_name = "confirmation"];</code>
+     * Generated from protobuf field <code>.lnrpc.ConfirmationUpdate confirmation = 2[json_name = "confirmation"];</code>
+     * @return \Lnrpc\ConfirmationUpdate
      */
     public function getConfirmation()
     {
@@ -46,16 +52,21 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.ConfirmationUpdate confirmation = 2[json_name = "confirmation"];</code>
+     * Generated from protobuf field <code>.lnrpc.ConfirmationUpdate confirmation = 2[json_name = "confirmation"];</code>
+     * @param \Lnrpc\ConfirmationUpdate $var
+     * @return $this
      */
-    public function setConfirmation(&$var)
+    public function setConfirmation($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\ConfirmationUpdate::class);
         $this->writeOneof(2, $var);
+
+        return $this;
     }
 
     /**
-     * <code>.lnrpc.ChannelOpenUpdate chan_open = 3[json_name = "chan_open"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelOpenUpdate chan_open = 3[json_name = "chan_open"];</code>
+     * @return \Lnrpc\ChannelOpenUpdate
      */
     public function getChanOpen()
     {
@@ -63,14 +74,21 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.ChannelOpenUpdate chan_open = 3[json_name = "chan_open"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelOpenUpdate chan_open = 3[json_name = "chan_open"];</code>
+     * @param \Lnrpc\ChannelOpenUpdate $var
+     * @return $this
      */
-    public function setChanOpen(&$var)
+    public function setChanOpen($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\ChannelOpenUpdate::class);
         $this->writeOneof(3, $var);
+
+        return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getUpdate()
     {
         return $this->whichOneof("update");

@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.DebugLevelResponse</code>
+ * Generated from protobuf message <code>lnrpc.DebugLevelResponse</code>
  */
 class DebugLevelResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string sub_systems = 1[json_name = "sub_systems"];</code>
+     * Generated from protobuf field <code>string sub_systems = 1[json_name = "sub_systems"];</code>
      */
     private $sub_systems = '';
 
@@ -24,7 +24,8 @@ class DebugLevelResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string sub_systems = 1[json_name = "sub_systems"];</code>
+     * Generated from protobuf field <code>string sub_systems = 1[json_name = "sub_systems"];</code>
+     * @return string
      */
     public function getSubSystems()
     {
@@ -32,12 +33,16 @@ class DebugLevelResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string sub_systems = 1[json_name = "sub_systems"];</code>
+     * Generated from protobuf field <code>string sub_systems = 1[json_name = "sub_systems"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setSubSystems($var)
     {
         GPBUtil::checkString($var, True);
         $this->sub_systems = $var;
+
+        return $this;
     }
 
 }

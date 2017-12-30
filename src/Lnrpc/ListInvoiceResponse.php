@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ListInvoiceResponse</code>
+ * Generated from protobuf message <code>lnrpc.ListInvoiceResponse</code>
  */
 class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>repeated .lnrpc.Invoice invoices = 1[json_name = "invoices"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Invoice invoices = 1[json_name = "invoices"];</code>
      */
     private $invoices;
 
@@ -24,7 +24,8 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.Invoice invoices = 1[json_name = "invoices"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Invoice invoices = 1[json_name = "invoices"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getInvoices()
     {
@@ -32,12 +33,16 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.Invoice invoices = 1[json_name = "invoices"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Invoice invoices = 1[json_name = "invoices"];</code>
+     * @param \Lnrpc\Invoice[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setInvoices(&$var)
+    public function setInvoices($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Invoice::class);
         $this->invoices = $arr;
+
+        return $this;
     }
 
 }

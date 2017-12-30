@@ -9,24 +9,24 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.ClosedChannelUpdate</code>
+ * Generated from protobuf message <code>lnrpc.ClosedChannelUpdate</code>
  */
 class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>uint64 chan_id = 1;</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1;</code>
      */
     private $chan_id = 0;
     /**
-     * <code>int64 capacity = 2;</code>
+     * Generated from protobuf field <code>int64 capacity = 2;</code>
      */
     private $capacity = 0;
     /**
-     * <code>uint32 closed_height = 3;</code>
+     * Generated from protobuf field <code>uint32 closed_height = 3;</code>
      */
     private $closed_height = 0;
     /**
-     * <code>.lnrpc.ChannelPoint chan_point = 4;</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 4;</code>
      */
     private $chan_point = null;
 
@@ -36,7 +36,8 @@ class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint64 chan_id = 1;</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1;</code>
+     * @return int|string
      */
     public function getChanId()
     {
@@ -44,16 +45,21 @@ class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint64 chan_id = 1;</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1;</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setChanId($var)
     {
         GPBUtil::checkUint64($var);
         $this->chan_id = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 capacity = 2;</code>
+     * Generated from protobuf field <code>int64 capacity = 2;</code>
+     * @return int|string
      */
     public function getCapacity()
     {
@@ -61,16 +67,21 @@ class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 capacity = 2;</code>
+     * Generated from protobuf field <code>int64 capacity = 2;</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setCapacity($var)
     {
         GPBUtil::checkInt64($var);
         $this->capacity = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 closed_height = 3;</code>
+     * Generated from protobuf field <code>uint32 closed_height = 3;</code>
+     * @return int
      */
     public function getClosedHeight()
     {
@@ -78,16 +89,21 @@ class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 closed_height = 3;</code>
+     * Generated from protobuf field <code>uint32 closed_height = 3;</code>
+     * @param int $var
+     * @return $this
      */
     public function setClosedHeight($var)
     {
         GPBUtil::checkUint32($var);
         $this->closed_height = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.lnrpc.ChannelPoint chan_point = 4;</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 4;</code>
+     * @return \Lnrpc\ChannelPoint
      */
     public function getChanPoint()
     {
@@ -95,12 +111,16 @@ class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.lnrpc.ChannelPoint chan_point = 4;</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 4;</code>
+     * @param \Lnrpc\ChannelPoint $var
+     * @return $this
      */
-    public function setChanPoint(&$var)
+    public function setChanPoint($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\ChannelPoint::class);
         $this->chan_point = $var;
+
+        return $this;
     }
 
 }

@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.StopResponse</code>
+ * Generated from protobuf message <code>lnrpc.StopResponse</code>
  */
 class StopResponse extends \Google\Protobuf\Internal\Message
 {

@@ -5,20 +5,20 @@
 namespace Lnrpc;
 
 /**
- * Protobuf enum <code>lnrpc.NewAddressRequest.AddressType</code>
+ * Protobuf enum <code>Lnrpc\NewAddressRequest\AddressType</code>
  */
 class NewAddressRequest_AddressType
 {
     /**
-     * <code>WITNESS_PUBKEY_HASH = 0;</code>
+     * Generated from protobuf enum <code>WITNESS_PUBKEY_HASH = 0;</code>
      */
     const WITNESS_PUBKEY_HASH = 0;
     /**
-     * <code>NESTED_PUBKEY_HASH = 1;</code>
+     * Generated from protobuf enum <code>NESTED_PUBKEY_HASH = 1;</code>
      */
     const NESTED_PUBKEY_HASH = 1;
     /**
-     * <code>PUBKEY_HASH = 2;</code>
+     * Generated from protobuf enum <code>PUBKEY_HASH = 2;</code>
      */
     const PUBKEY_HASH = 2;
 }

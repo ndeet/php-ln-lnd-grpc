@@ -9,16 +9,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.LightningAddress</code>
+ * Generated from protobuf message <code>lnrpc.LightningAddress</code>
  */
 class LightningAddress extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string pubkey = 1[json_name = "pubkey"];</code>
+     * Generated from protobuf field <code>string pubkey = 1[json_name = "pubkey"];</code>
      */
     private $pubkey = '';
     /**
-     * <code>string host = 2[json_name = "host"];</code>
+     * Generated from protobuf field <code>string host = 2[json_name = "host"];</code>
      */
     private $host = '';
 
@@ -28,7 +28,8 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string pubkey = 1[json_name = "pubkey"];</code>
+     * Generated from protobuf field <code>string pubkey = 1[json_name = "pubkey"];</code>
+     * @return string
      */
     public function getPubkey()
     {
@@ -36,16 +37,21 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string pubkey = 1[json_name = "pubkey"];</code>
+     * Generated from protobuf field <code>string pubkey = 1[json_name = "pubkey"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setPubkey($var)
     {
         GPBUtil::checkString($var, True);
         $this->pubkey = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string host = 2[json_name = "host"];</code>
+     * Generated from protobuf field <code>string host = 2[json_name = "host"];</code>
+     * @return string
      */
     public function getHost()
     {
@@ -53,12 +59,16 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string host = 2[json_name = "host"];</code>
+     * Generated from protobuf field <code>string host = 2[json_name = "host"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setHost($var)
     {
         GPBUtil::checkString($var, True);
         $this->host = $var;
+
+        return $this;
     }
 
 }

@@ -9,20 +9,20 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.GraphTopologyUpdate</code>
+ * Generated from protobuf message <code>lnrpc.GraphTopologyUpdate</code>
  */
 class GraphTopologyUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>repeated .lnrpc.NodeUpdate node_updates = 1;</code>
+     * Generated from protobuf field <code>repeated .lnrpc.NodeUpdate node_updates = 1;</code>
      */
     private $node_updates;
     /**
-     * <code>repeated .lnrpc.ChannelEdgeUpdate channel_updates = 2;</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdgeUpdate channel_updates = 2;</code>
      */
     private $channel_updates;
     /**
-     * <code>repeated .lnrpc.ClosedChannelUpdate closed_chans = 3;</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ClosedChannelUpdate closed_chans = 3;</code>
      */
     private $closed_chans;
 
@@ -32,7 +32,8 @@ class GraphTopologyUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.NodeUpdate node_updates = 1;</code>
+     * Generated from protobuf field <code>repeated .lnrpc.NodeUpdate node_updates = 1;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getNodeUpdates()
     {
@@ -40,16 +41,21 @@ class GraphTopologyUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.NodeUpdate node_updates = 1;</code>
+     * Generated from protobuf field <code>repeated .lnrpc.NodeUpdate node_updates = 1;</code>
+     * @param \Lnrpc\NodeUpdate[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setNodeUpdates(&$var)
+    public function setNodeUpdates($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\NodeUpdate::class);
         $this->node_updates = $arr;
+
+        return $this;
     }
 
     /**
-     * <code>repeated .lnrpc.ChannelEdgeUpdate channel_updates = 2;</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdgeUpdate channel_updates = 2;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getChannelUpdates()
     {
@@ -57,16 +63,21 @@ class GraphTopologyUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.ChannelEdgeUpdate channel_updates = 2;</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdgeUpdate channel_updates = 2;</code>
+     * @param \Lnrpc\ChannelEdgeUpdate[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setChannelUpdates(&$var)
+    public function setChannelUpdates($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\ChannelEdgeUpdate::class);
         $this->channel_updates = $arr;
+
+        return $this;
     }
 
     /**
-     * <code>repeated .lnrpc.ClosedChannelUpdate closed_chans = 3;</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ClosedChannelUpdate closed_chans = 3;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getClosedChans()
     {
@@ -74,12 +85,16 @@ class GraphTopologyUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.ClosedChannelUpdate closed_chans = 3;</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ClosedChannelUpdate closed_chans = 3;</code>
+     * @param \Lnrpc\ClosedChannelUpdate[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setClosedChans(&$var)
+    public function setClosedChans($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\ClosedChannelUpdate::class);
         $this->closed_chans = $arr;
+
+        return $this;
     }
 
 }

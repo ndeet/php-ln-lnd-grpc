@@ -9,16 +9,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.AddInvoiceResponse</code>
+ * Generated from protobuf message <code>lnrpc.AddInvoiceResponse</code>
  */
 class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>bytes r_hash = 1[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 1[json_name = "r_hash"];</code>
      */
     private $r_hash = '';
     /**
-     * <code>string payment_request = 2[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 2[json_name = "payment_request"];</code>
      */
     private $payment_request = '';
 
@@ -28,7 +28,8 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes r_hash = 1[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 1[json_name = "r_hash"];</code>
+     * @return string
      */
     public function getRHash()
     {
@@ -36,16 +37,21 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes r_hash = 1[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 1[json_name = "r_hash"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setRHash($var)
     {
         GPBUtil::checkString($var, False);
         $this->r_hash = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string payment_request = 2[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 2[json_name = "payment_request"];</code>
+     * @return string
      */
     public function getPaymentRequest()
     {
@@ -53,12 +59,16 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string payment_request = 2[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 2[json_name = "payment_request"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setPaymentRequest($var)
     {
         GPBUtil::checkString($var, True);
         $this->payment_request = $var;
+
+        return $this;
     }
 
 }

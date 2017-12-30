@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.NetworkInfoRequest</code>
+ * Generated from protobuf message <code>lnrpc.NetworkInfoRequest</code>
  */
 class NetworkInfoRequest extends \Google\Protobuf\Internal\Message
 {

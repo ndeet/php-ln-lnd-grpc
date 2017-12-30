@@ -9,28 +9,28 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.PendingChannelResponse.ForceClosedChannel</code>
+ * Generated from protobuf message <code>lnrpc.PendingChannelResponse.ForceClosedChannel</code>
  */
 class PendingChannelResponse_ForceClosedChannel extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1[json_name = "channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1[json_name = "channel"];</code>
      */
     private $channel = null;
     /**
-     * <code>string closing_txid = 2[json_name = "closing_txid"];</code>
+     * Generated from protobuf field <code>string closing_txid = 2[json_name = "closing_txid"];</code>
      */
     private $closing_txid = '';
     /**
-     * <code>int64 limbo_balance = 3[json_name = "limbo_balance"];</code>
+     * Generated from protobuf field <code>int64 limbo_balance = 3[json_name = "limbo_balance"];</code>
      */
     private $limbo_balance = 0;
     /**
-     * <code>uint32 maturity_height = 4[json_name = "maturity_height"];</code>
+     * Generated from protobuf field <code>uint32 maturity_height = 4[json_name = "maturity_height"];</code>
      */
     private $maturity_height = 0;
     /**
-     * <code>uint32 blocks_til_maturity = 5[json_name = "blocks_til_maturity"];</code>
+     * Generated from protobuf field <code>uint32 blocks_til_maturity = 5[json_name = "blocks_til_maturity"];</code>
      */
     private $blocks_til_maturity = 0;
 
@@ -40,7 +40,8 @@ class PendingChannelResponse_ForceClosedChannel extends \Google\Protobuf\Interna
     }
 
     /**
-     * <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1[json_name = "channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1[json_name = "channel"];</code>
+     * @return \Lnrpc\PendingChannelResponse_PendingChannel
      */
     public function getChannel()
     {
@@ -48,16 +49,21 @@ class PendingChannelResponse_ForceClosedChannel extends \Google\Protobuf\Interna
     }
 
     /**
-     * <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1[json_name = "channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1[json_name = "channel"];</code>
+     * @param \Lnrpc\PendingChannelResponse_PendingChannel $var
+     * @return $this
      */
-    public function setChannel(&$var)
+    public function setChannel($var)
     {
         GPBUtil::checkMessage($var, \Lnrpc\PendingChannelResponse_PendingChannel::class);
         $this->channel = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string closing_txid = 2[json_name = "closing_txid"];</code>
+     * Generated from protobuf field <code>string closing_txid = 2[json_name = "closing_txid"];</code>
+     * @return string
      */
     public function getClosingTxid()
     {
@@ -65,16 +71,21 @@ class PendingChannelResponse_ForceClosedChannel extends \Google\Protobuf\Interna
     }
 
     /**
-     * <code>string closing_txid = 2[json_name = "closing_txid"];</code>
+     * Generated from protobuf field <code>string closing_txid = 2[json_name = "closing_txid"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setClosingTxid($var)
     {
         GPBUtil::checkString($var, True);
         $this->closing_txid = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 limbo_balance = 3[json_name = "limbo_balance"];</code>
+     * Generated from protobuf field <code>int64 limbo_balance = 3[json_name = "limbo_balance"];</code>
+     * @return int|string
      */
     public function getLimboBalance()
     {
@@ -82,16 +93,21 @@ class PendingChannelResponse_ForceClosedChannel extends \Google\Protobuf\Interna
     }
 
     /**
-     * <code>int64 limbo_balance = 3[json_name = "limbo_balance"];</code>
+     * Generated from protobuf field <code>int64 limbo_balance = 3[json_name = "limbo_balance"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setLimboBalance($var)
     {
         GPBUtil::checkInt64($var);
         $this->limbo_balance = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 maturity_height = 4[json_name = "maturity_height"];</code>
+     * Generated from protobuf field <code>uint32 maturity_height = 4[json_name = "maturity_height"];</code>
+     * @return int
      */
     public function getMaturityHeight()
     {
@@ -99,16 +115,21 @@ class PendingChannelResponse_ForceClosedChannel extends \Google\Protobuf\Interna
     }
 
     /**
-     * <code>uint32 maturity_height = 4[json_name = "maturity_height"];</code>
+     * Generated from protobuf field <code>uint32 maturity_height = 4[json_name = "maturity_height"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setMaturityHeight($var)
     {
         GPBUtil::checkUint32($var);
         $this->maturity_height = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 blocks_til_maturity = 5[json_name = "blocks_til_maturity"];</code>
+     * Generated from protobuf field <code>uint32 blocks_til_maturity = 5[json_name = "blocks_til_maturity"];</code>
+     * @return int
      */
     public function getBlocksTilMaturity()
     {
@@ -116,12 +137,16 @@ class PendingChannelResponse_ForceClosedChannel extends \Google\Protobuf\Interna
     }
 
     /**
-     * <code>uint32 blocks_til_maturity = 5[json_name = "blocks_til_maturity"];</code>
+     * Generated from protobuf field <code>uint32 blocks_til_maturity = 5[json_name = "blocks_til_maturity"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setBlocksTilMaturity($var)
     {
         GPBUtil::checkUint32($var);
         $this->blocks_til_maturity = $var;
+
+        return $this;
     }
 
 }

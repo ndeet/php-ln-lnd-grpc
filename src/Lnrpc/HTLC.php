@@ -9,28 +9,28 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.HTLC</code>
+ * Generated from protobuf message <code>lnrpc.HTLC</code>
  */
 class HTLC extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>bool incoming = 1[json_name = "incoming"];</code>
+     * Generated from protobuf field <code>bool incoming = 1[json_name = "incoming"];</code>
      */
     private $incoming = false;
     /**
-     * <code>int64 amount = 2[json_name = "amount"];</code>
+     * Generated from protobuf field <code>int64 amount = 2[json_name = "amount"];</code>
      */
     private $amount = 0;
     /**
-     * <code>bytes hash_lock = 3[json_name = "hash_lock"];</code>
+     * Generated from protobuf field <code>bytes hash_lock = 3[json_name = "hash_lock"];</code>
      */
     private $hash_lock = '';
     /**
-     * <code>uint32 expiration_height = 4[json_name = "expiration_height"];</code>
+     * Generated from protobuf field <code>uint32 expiration_height = 4[json_name = "expiration_height"];</code>
      */
     private $expiration_height = 0;
     /**
-     * <code>uint32 revocation_delay = 5[json_name = "revocation_delay"];</code>
+     * Generated from protobuf field <code>uint32 revocation_delay = 5[json_name = "revocation_delay"];</code>
      */
     private $revocation_delay = 0;
 
@@ -40,7 +40,8 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool incoming = 1[json_name = "incoming"];</code>
+     * Generated from protobuf field <code>bool incoming = 1[json_name = "incoming"];</code>
+     * @return bool
      */
     public function getIncoming()
     {
@@ -48,16 +49,21 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool incoming = 1[json_name = "incoming"];</code>
+     * Generated from protobuf field <code>bool incoming = 1[json_name = "incoming"];</code>
+     * @param bool $var
+     * @return $this
      */
     public function setIncoming($var)
     {
         GPBUtil::checkBool($var);
         $this->incoming = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 amount = 2[json_name = "amount"];</code>
+     * Generated from protobuf field <code>int64 amount = 2[json_name = "amount"];</code>
+     * @return int|string
      */
     public function getAmount()
     {
@@ -65,16 +71,21 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 amount = 2[json_name = "amount"];</code>
+     * Generated from protobuf field <code>int64 amount = 2[json_name = "amount"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setAmount($var)
     {
         GPBUtil::checkInt64($var);
         $this->amount = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bytes hash_lock = 3[json_name = "hash_lock"];</code>
+     * Generated from protobuf field <code>bytes hash_lock = 3[json_name = "hash_lock"];</code>
+     * @return string
      */
     public function getHashLock()
     {
@@ -82,16 +93,21 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes hash_lock = 3[json_name = "hash_lock"];</code>
+     * Generated from protobuf field <code>bytes hash_lock = 3[json_name = "hash_lock"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setHashLock($var)
     {
         GPBUtil::checkString($var, False);
         $this->hash_lock = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 expiration_height = 4[json_name = "expiration_height"];</code>
+     * Generated from protobuf field <code>uint32 expiration_height = 4[json_name = "expiration_height"];</code>
+     * @return int
      */
     public function getExpirationHeight()
     {
@@ -99,16 +115,21 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 expiration_height = 4[json_name = "expiration_height"];</code>
+     * Generated from protobuf field <code>uint32 expiration_height = 4[json_name = "expiration_height"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setExpirationHeight($var)
     {
         GPBUtil::checkUint32($var);
         $this->expiration_height = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 revocation_delay = 5[json_name = "revocation_delay"];</code>
+     * Generated from protobuf field <code>uint32 revocation_delay = 5[json_name = "revocation_delay"];</code>
+     * @return int
      */
     public function getRevocationDelay()
     {
@@ -116,12 +137,16 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 revocation_delay = 5[json_name = "revocation_delay"];</code>
+     * Generated from protobuf field <code>uint32 revocation_delay = 5[json_name = "revocation_delay"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setRevocationDelay($var)
     {
         GPBUtil::checkUint32($var);
         $this->revocation_delay = $var;
+
+        return $this;
     }
 
 }

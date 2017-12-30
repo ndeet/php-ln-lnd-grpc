@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.GraphTopologySubscription</code>
+ * Generated from protobuf message <code>lnrpc.GraphTopologySubscription</code>
  */
 class GraphTopologySubscription extends \Google\Protobuf\Internal\Message
 {

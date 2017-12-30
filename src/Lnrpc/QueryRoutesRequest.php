@@ -9,16 +9,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.QueryRoutesRequest</code>
+ * Generated from protobuf message <code>lnrpc.QueryRoutesRequest</code>
  */
 class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string pub_key = 1;</code>
+     * Generated from protobuf field <code>string pub_key = 1;</code>
      */
     private $pub_key = '';
     /**
-     * <code>int64 amt = 2;</code>
+     * Generated from protobuf field <code>int64 amt = 2;</code>
      */
     private $amt = 0;
 
@@ -28,7 +28,8 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string pub_key = 1;</code>
+     * Generated from protobuf field <code>string pub_key = 1;</code>
+     * @return string
      */
     public function getPubKey()
     {
@@ -36,16 +37,21 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string pub_key = 1;</code>
+     * Generated from protobuf field <code>string pub_key = 1;</code>
+     * @param string $var
+     * @return $this
      */
     public function setPubKey($var)
     {
         GPBUtil::checkString($var, True);
         $this->pub_key = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 amt = 2;</code>
+     * Generated from protobuf field <code>int64 amt = 2;</code>
+     * @return int|string
      */
     public function getAmt()
     {
@@ -53,12 +59,16 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 amt = 2;</code>
+     * Generated from protobuf field <code>int64 amt = 2;</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setAmt($var)
     {
         GPBUtil::checkInt64($var);
         $this->amt = $var;
+
+        return $this;
     }
 
 }

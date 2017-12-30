@@ -9,28 +9,28 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.Payment</code>
+ * Generated from protobuf message <code>lnrpc.Payment</code>
  */
 class Payment extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string payment_hash = 1[json_name = "payment_hash"];</code>
+     * Generated from protobuf field <code>string payment_hash = 1[json_name = "payment_hash"];</code>
      */
     private $payment_hash = '';
     /**
-     * <code>int64 value = 2[json_name = "value"];</code>
+     * Generated from protobuf field <code>int64 value = 2[json_name = "value"];</code>
      */
     private $value = 0;
     /**
-     * <code>int64 creation_date = 3[json_name = "creation_date"];</code>
+     * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date"];</code>
      */
     private $creation_date = 0;
     /**
-     * <code>repeated string path = 4[json_name = "path"];</code>
+     * Generated from protobuf field <code>repeated string path = 4[json_name = "path"];</code>
      */
     private $path;
     /**
-     * <code>int64 fee = 5[json_name = "fee"];</code>
+     * Generated from protobuf field <code>int64 fee = 5[json_name = "fee"];</code>
      */
     private $fee = 0;
 
@@ -40,7 +40,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string payment_hash = 1[json_name = "payment_hash"];</code>
+     * Generated from protobuf field <code>string payment_hash = 1[json_name = "payment_hash"];</code>
+     * @return string
      */
     public function getPaymentHash()
     {
@@ -48,16 +49,21 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string payment_hash = 1[json_name = "payment_hash"];</code>
+     * Generated from protobuf field <code>string payment_hash = 1[json_name = "payment_hash"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setPaymentHash($var)
     {
         GPBUtil::checkString($var, True);
         $this->payment_hash = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 value = 2[json_name = "value"];</code>
+     * Generated from protobuf field <code>int64 value = 2[json_name = "value"];</code>
+     * @return int|string
      */
     public function getValue()
     {
@@ -65,16 +71,21 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 value = 2[json_name = "value"];</code>
+     * Generated from protobuf field <code>int64 value = 2[json_name = "value"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setValue($var)
     {
         GPBUtil::checkInt64($var);
         $this->value = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 creation_date = 3[json_name = "creation_date"];</code>
+     * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date"];</code>
+     * @return int|string
      */
     public function getCreationDate()
     {
@@ -82,16 +93,21 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 creation_date = 3[json_name = "creation_date"];</code>
+     * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setCreationDate($var)
     {
         GPBUtil::checkInt64($var);
         $this->creation_date = $var;
+
+        return $this;
     }
 
     /**
-     * <code>repeated string path = 4[json_name = "path"];</code>
+     * Generated from protobuf field <code>repeated string path = 4[json_name = "path"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPath()
     {
@@ -99,16 +115,21 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated string path = 4[json_name = "path"];</code>
+     * Generated from protobuf field <code>repeated string path = 4[json_name = "path"];</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setPath(&$var)
+    public function setPath($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->path = $arr;
+
+        return $this;
     }
 
     /**
-     * <code>int64 fee = 5[json_name = "fee"];</code>
+     * Generated from protobuf field <code>int64 fee = 5[json_name = "fee"];</code>
+     * @return int|string
      */
     public function getFee()
     {
@@ -116,12 +137,16 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 fee = 5[json_name = "fee"];</code>
+     * Generated from protobuf field <code>int64 fee = 5[json_name = "fee"];</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setFee($var)
     {
         GPBUtil::checkInt64($var);
         $this->fee = $var;
+
+        return $this;
     }
 
 }

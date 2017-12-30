@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.SetAliasResponse</code>
+ * Generated from protobuf message <code>lnrpc.SetAliasResponse</code>
  */
 class SetAliasResponse extends \Google\Protobuf\Internal\Message
 {

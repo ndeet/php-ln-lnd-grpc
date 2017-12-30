@@ -9,16 +9,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.SendCoinsRequest</code>
+ * Generated from protobuf message <code>lnrpc.SendCoinsRequest</code>
  */
 class SendCoinsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string addr = 1;</code>
+     * Generated from protobuf field <code>string addr = 1;</code>
      */
     private $addr = '';
     /**
-     * <code>int64 amount = 2;</code>
+     * Generated from protobuf field <code>int64 amount = 2;</code>
      */
     private $amount = 0;
 
@@ -28,7 +28,8 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string addr = 1;</code>
+     * Generated from protobuf field <code>string addr = 1;</code>
+     * @return string
      */
     public function getAddr()
     {
@@ -36,16 +37,21 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string addr = 1;</code>
+     * Generated from protobuf field <code>string addr = 1;</code>
+     * @param string $var
+     * @return $this
      */
     public function setAddr($var)
     {
         GPBUtil::checkString($var, True);
         $this->addr = $var;
+
+        return $this;
     }
 
     /**
-     * <code>int64 amount = 2;</code>
+     * Generated from protobuf field <code>int64 amount = 2;</code>
+     * @return int|string
      */
     public function getAmount()
     {
@@ -53,12 +59,16 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>int64 amount = 2;</code>
+     * Generated from protobuf field <code>int64 amount = 2;</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setAmount($var)
     {
         GPBUtil::checkInt64($var);
         $this->amount = $var;
+
+        return $this;
     }
 
 }

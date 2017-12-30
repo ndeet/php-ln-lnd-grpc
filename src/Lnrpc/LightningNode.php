@@ -9,24 +9,24 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.LightningNode</code>
+ * Generated from protobuf message <code>lnrpc.LightningNode</code>
  */
 class LightningNode extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>uint32 last_update = 1[json_name = "last_update"];</code>
+     * Generated from protobuf field <code>uint32 last_update = 1[json_name = "last_update"];</code>
      */
     private $last_update = 0;
     /**
-     * <code>string pub_key = 2[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 2[json_name = "pub_key"];</code>
      */
     private $pub_key = '';
     /**
-     * <code>string alias = 3[json_name = "alias"];</code>
+     * Generated from protobuf field <code>string alias = 3[json_name = "alias"];</code>
      */
     private $alias = '';
     /**
-     * <code>repeated .lnrpc.NodeAddress addresses = 4[json_name = "addresses"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.NodeAddress addresses = 4[json_name = "addresses"];</code>
      */
     private $addresses;
 
@@ -36,7 +36,8 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 last_update = 1[json_name = "last_update"];</code>
+     * Generated from protobuf field <code>uint32 last_update = 1[json_name = "last_update"];</code>
+     * @return int
      */
     public function getLastUpdate()
     {
@@ -44,16 +45,21 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 last_update = 1[json_name = "last_update"];</code>
+     * Generated from protobuf field <code>uint32 last_update = 1[json_name = "last_update"];</code>
+     * @param int $var
+     * @return $this
      */
     public function setLastUpdate($var)
     {
         GPBUtil::checkUint32($var);
         $this->last_update = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string pub_key = 2[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 2[json_name = "pub_key"];</code>
+     * @return string
      */
     public function getPubKey()
     {
@@ -61,16 +67,21 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string pub_key = 2[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 2[json_name = "pub_key"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setPubKey($var)
     {
         GPBUtil::checkString($var, True);
         $this->pub_key = $var;
+
+        return $this;
     }
 
     /**
-     * <code>string alias = 3[json_name = "alias"];</code>
+     * Generated from protobuf field <code>string alias = 3[json_name = "alias"];</code>
+     * @return string
      */
     public function getAlias()
     {
@@ -78,16 +89,21 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string alias = 3[json_name = "alias"];</code>
+     * Generated from protobuf field <code>string alias = 3[json_name = "alias"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setAlias($var)
     {
         GPBUtil::checkString($var, True);
         $this->alias = $var;
+
+        return $this;
     }
 
     /**
-     * <code>repeated .lnrpc.NodeAddress addresses = 4[json_name = "addresses"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.NodeAddress addresses = 4[json_name = "addresses"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getAddresses()
     {
@@ -95,12 +111,16 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.NodeAddress addresses = 4[json_name = "addresses"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.NodeAddress addresses = 4[json_name = "addresses"];</code>
+     * @param \Lnrpc\NodeAddress[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setAddresses(&$var)
+    public function setAddresses($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\NodeAddress::class);
         $this->addresses = $arr;
+
+        return $this;
     }
 
 }

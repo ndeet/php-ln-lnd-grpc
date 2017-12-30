@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.NewWitnessAddressRequest</code>
+ * Generated from protobuf message <code>lnrpc.NewWitnessAddressRequest</code>
  */
 class NewWitnessAddressRequest extends \Google\Protobuf\Internal\Message
 {

@@ -9,12 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.TransactionDetails</code>
+ * Generated from protobuf message <code>lnrpc.TransactionDetails</code>
  */
 class TransactionDetails extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>repeated .lnrpc.Transaction transactions = 1[json_name = "transactions"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Transaction transactions = 1[json_name = "transactions"];</code>
      */
     private $transactions;
 
@@ -24,7 +24,8 @@ class TransactionDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.Transaction transactions = 1[json_name = "transactions"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Transaction transactions = 1[json_name = "transactions"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getTransactions()
     {
@@ -32,12 +33,16 @@ class TransactionDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .lnrpc.Transaction transactions = 1[json_name = "transactions"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Transaction transactions = 1[json_name = "transactions"];</code>
+     * @param \Lnrpc\Transaction[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setTransactions(&$var)
+    public function setTransactions($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Transaction::class);
         $this->transactions = $arr;
+
+        return $this;
     }
 
 }

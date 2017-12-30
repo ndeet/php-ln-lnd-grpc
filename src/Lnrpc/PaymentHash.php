@@ -9,16 +9,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>lnrpc.PaymentHash</code>
+ * Generated from protobuf message <code>lnrpc.PaymentHash</code>
  */
 class PaymentHash extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string r_hash_str = 1[json_name = "r_hash_str"];</code>
+     * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str"];</code>
      */
     private $r_hash_str = '';
     /**
-     * <code>bytes r_hash = 2[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
      */
     private $r_hash = '';
 
@@ -28,7 +28,8 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string r_hash_str = 1[json_name = "r_hash_str"];</code>
+     * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str"];</code>
+     * @return string
      */
     public function getRHashStr()
     {
@@ -36,16 +37,21 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string r_hash_str = 1[json_name = "r_hash_str"];</code>
+     * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setRHashStr($var)
     {
         GPBUtil::checkString($var, True);
         $this->r_hash_str = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bytes r_hash = 2[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
+     * @return string
      */
     public function getRHash()
     {
@@ -53,12 +59,16 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes r_hash = 2[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
+     * @param string $var
+     * @return $this
      */
     public function setRHash($var)
     {
         GPBUtil::checkString($var, False);
         $this->r_hash = $var;
+
+        return $this;
     }
 
 }
