@@ -36,7 +36,7 @@ If cloning from git
 $ cd /project/
 $ git clone repo
 $ cd ./lnrpc/
-$ composer update
+$ composer install
 ```
 
 Example
