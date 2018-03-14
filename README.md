@@ -36,7 +36,7 @@ If cloning from Git
 $ cd /project/
 $ git clone https://github.com/BitfuryLightning/php-lnd-grpc-client.git lnrpc
 $ cd ./lnrpc/
-$ composer update
+$ composer install
 ```
 
 Example
