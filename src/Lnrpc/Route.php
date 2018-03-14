@@ -9,23 +9,51 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ **
+ *A path through the channel graph which runs over one or more channels in
+ *succession. This struct carries all the information required to craft the
+ *Sphinx onion packet, and send the payment along the first hop in the path. A
+ *route is only selected as valid if all the channels have sufficient capacity to
+ *carry the initial payment amount after fees are accounted for.
+ *
  * Generated from protobuf message <code>lnrpc.Route</code>
  */
 class Route extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
+     *The cumulative (final) time lock across the entire route.  This is the CLTV
+     *value that should be extended to the first hop in the route. All other hops
+     *will decrement the time-lock as advertised, leaving enough time for all
+     *hops to wait for or present the payment preimage to complete the payment.
+     *
      * Generated from protobuf field <code>uint32 total_time_lock = 1[json_name = "total_time_lock"];</code>
      */
     private $total_time_lock = 0;
     /**
+     **
+     *The sum of the fees paid at each hop within the final route.  In the case
+     *of a one-hop payment, this value will be zero as we don't need to pay a fee
+     *it ourself.
+     *
      * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees"];</code>
      */
     private $total_fees = 0;
     /**
+     **
+     *The total amount of funds required to complete a payment over this route.
+     *This value includes the cumulative fees at each hop. As a result, the HTLC
+     *extended to the first-hop in the route will need to have at least this many
+     *satoshis, otherwise the route will fail at an intermediate node due to an
+     *insufficient amount of fees.
+     *
      * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt"];</code>
      */
     private $total_amt = 0;
     /**
+     **
+     *Contains details concerning the specific forwarding details at each hop.
+     *
      * Generated from protobuf field <code>repeated .lnrpc.Hop hops = 4[json_name = "hops"];</code>
      */
     private $hops;
@@ -36,6 +64,12 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The cumulative (final) time lock across the entire route.  This is the CLTV
+     *value that should be extended to the first hop in the route. All other hops
+     *will decrement the time-lock as advertised, leaving enough time for all
+     *hops to wait for or present the payment preimage to complete the payment.
+     *
      * Generated from protobuf field <code>uint32 total_time_lock = 1[json_name = "total_time_lock"];</code>
      * @return int
      */
@@ -45,6 +79,12 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The cumulative (final) time lock across the entire route.  This is the CLTV
+     *value that should be extended to the first hop in the route. All other hops
+     *will decrement the time-lock as advertised, leaving enough time for all
+     *hops to wait for or present the payment preimage to complete the payment.
+     *
      * Generated from protobuf field <code>uint32 total_time_lock = 1[json_name = "total_time_lock"];</code>
      * @param int $var
      * @return $this
@@ -58,6 +98,11 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The sum of the fees paid at each hop within the final route.  In the case
+     *of a one-hop payment, this value will be zero as we don't need to pay a fee
+     *it ourself.
+     *
      * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees"];</code>
      * @return int|string
      */
@@ -67,6 +112,11 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The sum of the fees paid at each hop within the final route.  In the case
+     *of a one-hop payment, this value will be zero as we don't need to pay a fee
+     *it ourself.
+     *
      * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees"];</code>
      * @param int|string $var
      * @return $this
@@ -80,6 +130,13 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The total amount of funds required to complete a payment over this route.
+     *This value includes the cumulative fees at each hop. As a result, the HTLC
+     *extended to the first-hop in the route will need to have at least this many
+     *satoshis, otherwise the route will fail at an intermediate node due to an
+     *insufficient amount of fees.
+     *
      * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt"];</code>
      * @return int|string
      */
@@ -89,6 +146,13 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The total amount of funds required to complete a payment over this route.
+     *This value includes the cumulative fees at each hop. As a result, the HTLC
+     *extended to the first-hop in the route will need to have at least this many
+     *satoshis, otherwise the route will fail at an intermediate node due to an
+     *insufficient amount of fees.
+     *
      * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt"];</code>
      * @param int|string $var
      * @return $this
@@ -102,6 +166,9 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *Contains details concerning the specific forwarding details at each hop.
+     *
      * Generated from protobuf field <code>repeated .lnrpc.Hop hops = 4[json_name = "hops"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -111,6 +178,9 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *Contains details concerning the specific forwarding details at each hop.
+     *
      * Generated from protobuf field <code>repeated .lnrpc.Hop hops = 4[json_name = "hops"];</code>
      * @param \Lnrpc\Hop[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this

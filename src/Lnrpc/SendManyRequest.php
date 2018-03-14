@@ -14,9 +14,23 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendManyRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The map from addresses to amounts
+     *
      * Generated from protobuf field <code>map<string, int64> AddrToAmount = 1;</code>
      */
     private $AddrToAmount;
+    /**
+     *&#47; The target number of blocks that this transaction should be confirmed by.
+     *
+     * Generated from protobuf field <code>int32 target_conf = 3;</code>
+     */
+    private $target_conf = 0;
+    /**
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the transaction.
+     *
+     * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
+     */
+    private $sat_per_byte = 0;
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
@@ -24,6 +38,8 @@ class SendManyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The map from addresses to amounts
+     *
      * Generated from protobuf field <code>map<string, int64> AddrToAmount = 1;</code>
      * @return \Google\Protobuf\Internal\MapField
      */
@@ -33,6 +49,8 @@ class SendManyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The map from addresses to amounts
+     *
      * Generated from protobuf field <code>map<string, int64> AddrToAmount = 1;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
@@ -41,6 +59,58 @@ class SendManyRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::INT64);
         $this->AddrToAmount = $arr;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The target number of blocks that this transaction should be confirmed by.
+     *
+     * Generated from protobuf field <code>int32 target_conf = 3;</code>
+     * @return int
+     */
+    public function getTargetConf()
+    {
+        return $this->target_conf;
+    }
+
+    /**
+     *&#47; The target number of blocks that this transaction should be confirmed by.
+     *
+     * Generated from protobuf field <code>int32 target_conf = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setTargetConf($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->target_conf = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the transaction.
+     *
+     * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
+     * @return int|string
+     */
+    public function getSatPerByte()
+    {
+        return $this->sat_per_byte;
+    }
+
+    /**
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the transaction.
+     *
+     * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setSatPerByte($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->sat_per_byte = $var;
 
         return $this;
     }

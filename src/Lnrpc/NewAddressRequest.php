@@ -9,11 +9,19 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ ** 
+ *`AddressType` has to be one of:
+ *- `p2wkh`: Pay to witness key hash (`WITNESS_PUBKEY_HASH` = 0)
+ *- `np2wkh`: Pay to nested witness key hash (`NESTED_PUBKEY_HASH` = 1)
+ *- `p2pkh`:  Pay to public key hash (`PUBKEY_HASH` = 2)
+ *
  * Generated from protobuf message <code>lnrpc.NewAddressRequest</code>
  */
 class NewAddressRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The address type
+     *
      * Generated from protobuf field <code>.lnrpc.NewAddressRequest.AddressType type = 1;</code>
      */
     private $type = 0;
@@ -24,6 +32,8 @@ class NewAddressRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The address type
+     *
      * Generated from protobuf field <code>.lnrpc.NewAddressRequest.AddressType type = 1;</code>
      * @return int
      */
@@ -33,6 +43,8 @@ class NewAddressRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The address type
+     *
      * Generated from protobuf field <code>.lnrpc.NewAddressRequest.AddressType type = 1;</code>
      * @param int $var
      * @return $this

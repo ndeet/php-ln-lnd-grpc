@@ -14,11 +14,15 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>bytes payment_preimage = 1[json_name = "payment_preimage"];</code>
+     * Generated from protobuf field <code>string payment_error = 1[json_name = "payment_error"];</code>
+     */
+    private $payment_error = '';
+    /**
+     * Generated from protobuf field <code>bytes payment_preimage = 2[json_name = "payment_preimage"];</code>
      */
     private $payment_preimage = '';
     /**
-     * Generated from protobuf field <code>.lnrpc.Route payment_route = 2[json_name = "payment_route"];</code>
+     * Generated from protobuf field <code>.lnrpc.Route payment_route = 3[json_name = "payment_route"];</code>
      */
     private $payment_route = null;
 
@@ -28,7 +32,29 @@ class SendResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes payment_preimage = 1[json_name = "payment_preimage"];</code>
+     * Generated from protobuf field <code>string payment_error = 1[json_name = "payment_error"];</code>
+     * @return string
+     */
+    public function getPaymentError()
+    {
+        return $this->payment_error;
+    }
+
+    /**
+     * Generated from protobuf field <code>string payment_error = 1[json_name = "payment_error"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPaymentError($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->payment_error = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bytes payment_preimage = 2[json_name = "payment_preimage"];</code>
      * @return string
      */
     public function getPaymentPreimage()
@@ -37,7 +63,7 @@ class SendResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes payment_preimage = 1[json_name = "payment_preimage"];</code>
+     * Generated from protobuf field <code>bytes payment_preimage = 2[json_name = "payment_preimage"];</code>
      * @param string $var
      * @return $this
      */
@@ -50,7 +76,7 @@ class SendResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.Route payment_route = 2[json_name = "payment_route"];</code>
+     * Generated from protobuf field <code>.lnrpc.Route payment_route = 3[json_name = "payment_route"];</code>
      * @return \Lnrpc\Route
      */
     public function getPaymentRoute()
@@ -59,7 +85,7 @@ class SendResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.Route payment_route = 2[json_name = "payment_route"];</code>
+     * Generated from protobuf field <code>.lnrpc.Route payment_route = 3[json_name = "payment_route"];</code>
      * @param \Lnrpc\Route $var
      * @return $this
      */

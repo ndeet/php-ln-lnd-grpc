@@ -18,6 +18,11 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      */
     private $r_hash = '';
     /**
+     **
+     *A bare-bones invoice for a payment within the Lightning Network.  With the
+     *details of the invoice, the sender has all the data necessary to send a
+     *payment to the recipient.
+     *
      * Generated from protobuf field <code>string payment_request = 2[json_name = "payment_request"];</code>
      */
     private $payment_request = '';
@@ -50,6 +55,11 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *A bare-bones invoice for a payment within the Lightning Network.  With the
+     *details of the invoice, the sender has all the data necessary to send a
+     *payment to the recipient.
+     *
      * Generated from protobuf field <code>string payment_request = 2[json_name = "payment_request"];</code>
      * @return string
      */
@@ -59,6 +69,11 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *A bare-bones invoice for a payment within the Lightning Network.  With the
+     *details of the invoice, the sender has all the data necessary to send a
+     *payment to the recipient.
+     *
      * Generated from protobuf field <code>string payment_request = 2[json_name = "payment_request"];</code>
      * @param string $var
      * @return $this

@@ -17,9 +17,5 @@ class NewAddressRequest_AddressType
      * Generated from protobuf enum <code>NESTED_PUBKEY_HASH = 1;</code>
      */
     const NESTED_PUBKEY_HASH = 1;
-    /**
-     * Generated from protobuf enum <code>PUBKEY_HASH = 2;</code>
-     */
-    const PUBKEY_HASH = 2;
 }
 

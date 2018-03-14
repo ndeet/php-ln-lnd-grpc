@@ -14,6 +14,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendManyResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The id of the transaction
+     *
      * Generated from protobuf field <code>string txid = 1[json_name = "txid"];</code>
      */
     private $txid = '';
@@ -24,6 +26,8 @@ class SendManyResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The id of the transaction
+     *
      * Generated from protobuf field <code>string txid = 1[json_name = "txid"];</code>
      * @return string
      */
@@ -33,6 +37,8 @@ class SendManyResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The id of the transaction
+     *
      * Generated from protobuf field <code>string txid = 1[json_name = "txid"];</code>
      * @param string $var
      * @return $this

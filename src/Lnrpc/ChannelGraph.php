@@ -9,15 +9,21 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ *&#47; Returns a new instance of the directed channel graph.
+ *
  * Generated from protobuf message <code>lnrpc.ChannelGraph</code>
  */
 class ChannelGraph extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The list of `LightningNode`s in this channel graph
+     *
      * Generated from protobuf field <code>repeated .lnrpc.LightningNode nodes = 1[json_name = "nodes"];</code>
      */
     private $nodes;
     /**
+     *&#47; The list of `ChannelEdge`s in this channel graph
+     *
      * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge edges = 2[json_name = "edges"];</code>
      */
     private $edges;
@@ -28,6 +34,8 @@ class ChannelGraph extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The list of `LightningNode`s in this channel graph
+     *
      * Generated from protobuf field <code>repeated .lnrpc.LightningNode nodes = 1[json_name = "nodes"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -37,6 +45,8 @@ class ChannelGraph extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The list of `LightningNode`s in this channel graph
+     *
      * Generated from protobuf field <code>repeated .lnrpc.LightningNode nodes = 1[json_name = "nodes"];</code>
      * @param \Lnrpc\LightningNode[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
@@ -50,6 +60,8 @@ class ChannelGraph extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The list of `ChannelEdge`s in this channel graph
+     *
      * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge edges = 2[json_name = "edges"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -59,6 +71,8 @@ class ChannelGraph extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The list of `ChannelEdge`s in this channel graph
+     *
      * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge edges = 2[json_name = "edges"];</code>
      * @param \Lnrpc\ChannelEdge[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this

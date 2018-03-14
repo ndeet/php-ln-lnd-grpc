@@ -14,6 +14,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; Toggles if all invoices should be returned, or only those that are currently unsettled.
+     *
      * Generated from protobuf field <code>bool pending_only = 1;</code>
      */
     private $pending_only = false;
@@ -24,6 +26,8 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Toggles if all invoices should be returned, or only those that are currently unsettled.
+     *
      * Generated from protobuf field <code>bool pending_only = 1;</code>
      * @return bool
      */
@@ -33,6 +37,8 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Toggles if all invoices should be returned, or only those that are currently unsettled.
+     *
      * Generated from protobuf field <code>bool pending_only = 1;</code>
      * @param bool $var
      * @return $this

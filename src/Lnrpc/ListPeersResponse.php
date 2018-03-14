@@ -14,6 +14,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class ListPeersResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The list of currently connected peers
+     *
      * Generated from protobuf field <code>repeated .lnrpc.Peer peers = 1[json_name = "peers"];</code>
      */
     private $peers;
@@ -24,6 +26,8 @@ class ListPeersResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The list of currently connected peers
+     *
      * Generated from protobuf field <code>repeated .lnrpc.Peer peers = 1[json_name = "peers"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -33,6 +37,8 @@ class ListPeersResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The list of currently connected peers
+     *
      * Generated from protobuf field <code>repeated .lnrpc.Peer peers = 1[json_name = "peers"];</code>
      * @param \Lnrpc\Peer[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this

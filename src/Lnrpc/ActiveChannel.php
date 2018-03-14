@@ -14,53 +14,121 @@ use Google\Protobuf\Internal\GPBUtil;
 class ActiveChannel extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; Whether this channel is active or not
+     *
      * Generated from protobuf field <code>bool active = 1[json_name = "active"];</code>
      */
     private $active = false;
     /**
+     *&#47; The identity pubkey of the remote node
+     *
      * Generated from protobuf field <code>string remote_pubkey = 2[json_name = "remote_pubkey"];</code>
      */
     private $remote_pubkey = '';
     /**
+     **
+     *The outpoint (txid:index) of the funding transaction. With this value, Bob
+     *will be able to generate a signature for Alice's version of the commitment
+     *transaction.
+     *
      * Generated from protobuf field <code>string channel_point = 3[json_name = "channel_point"];</code>
      */
     private $channel_point = '';
     /**
+     **
+     *The unique channel ID for the channel. The first 3 bytes are the block
+     *height, the next 3 the index within the block, and the last 2 bytes are the
+     *output index for the channel.
+     *
      * Generated from protobuf field <code>uint64 chan_id = 4[json_name = "chan_id"];</code>
      */
     private $chan_id = 0;
     /**
+     *&#47; The total amount of funds held in this channel
+     *
      * Generated from protobuf field <code>int64 capacity = 5[json_name = "capacity"];</code>
      */
     private $capacity = 0;
     /**
+     *&#47; This node's current balance in this channel
+     *
      * Generated from protobuf field <code>int64 local_balance = 6[json_name = "local_balance"];</code>
      */
     private $local_balance = 0;
     /**
+     *&#47; The counterparty's current balance in this channel
+     *
      * Generated from protobuf field <code>int64 remote_balance = 7[json_name = "remote_balance"];</code>
      */
     private $remote_balance = 0;
     /**
-     * Generated from protobuf field <code>int64 unsettled_balance = 8[json_name = "unsettled_balance"];</code>
+     **
+     *The amount calculated to be paid in fees for the current set of commitment
+     *transactions. The fee amount is persisted with the channel in order to
+     *allow the fee amount to be removed and recalculated with each channel state
+     *update, including updates that happen after a system restart.
+     *
+     * Generated from protobuf field <code>int64 commit_fee = 8[json_name = "commit_fee"];</code>
+     */
+    private $commit_fee = 0;
+    /**
+     *&#47; The weight of the commitment transaction
+     *
+     * Generated from protobuf field <code>int64 commit_weight = 9[json_name = "commit_weight"];</code>
+     */
+    private $commit_weight = 0;
+    /**
+     **
+     *The required number of satoshis per kilo-weight that the requester will pay
+     *at all times, for both the funding transaction and commitment transaction.
+     *This value can later be updated once the channel is open.
+     *
+     * Generated from protobuf field <code>int64 fee_per_kw = 10[json_name = "fee_per_kw"];</code>
+     */
+    private $fee_per_kw = 0;
+    /**
+     *&#47; The unsettled balance in this channel
+     *
+     * Generated from protobuf field <code>int64 unsettled_balance = 11[json_name = "unsettled_balance"];</code>
      */
     private $unsettled_balance = 0;
     /**
-     * Generated from protobuf field <code>int64 total_satoshis_sent = 9[json_name = "total_satoshis_sent"];</code>
+     **
+     *The total number of satoshis we've sent within this channel.
+     *
+     * Generated from protobuf field <code>int64 total_satoshis_sent = 12[json_name = "total_satoshis_sent"];</code>
      */
     private $total_satoshis_sent = 0;
     /**
-     * Generated from protobuf field <code>int64 total_satoshis_received = 10[json_name = "total_satoshis_received"];</code>
+     **
+     *The total number of satoshis we've received within this channel.
+     *
+     * Generated from protobuf field <code>int64 total_satoshis_received = 13[json_name = "total_satoshis_received"];</code>
      */
     private $total_satoshis_received = 0;
     /**
-     * Generated from protobuf field <code>uint64 num_updates = 11[json_name = "num_updates"];</code>
+     **
+     *The total number of updates conducted within this channel.
+     *
+     * Generated from protobuf field <code>uint64 num_updates = 14[json_name = "num_updates"];</code>
      */
     private $num_updates = 0;
     /**
-     * Generated from protobuf field <code>repeated .lnrpc.HTLC pending_htlcs = 12[json_name = "pending_htlcs"];</code>
+     **
+     *The list of active, uncleared HTLCs currently pending within the channel.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.HTLC pending_htlcs = 15[json_name = "pending_htlcs"];</code>
      */
     private $pending_htlcs;
+    /**
+     **
+     *The CSV delay expressed in relative blocks. If the channel is force
+     *closed, we'll need to wait for this many blocks before we can regain our
+     *funds.
+     *
+     * Generated from protobuf field <code>uint32 csv_delay = 16[json_name = "csv_delay"];</code>
+     */
+    private $csv_delay = 0;
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
@@ -68,6 +136,8 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Whether this channel is active or not
+     *
      * Generated from protobuf field <code>bool active = 1[json_name = "active"];</code>
      * @return bool
      */
@@ -77,6 +147,8 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Whether this channel is active or not
+     *
      * Generated from protobuf field <code>bool active = 1[json_name = "active"];</code>
      * @param bool $var
      * @return $this
@@ -90,6 +162,8 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The identity pubkey of the remote node
+     *
      * Generated from protobuf field <code>string remote_pubkey = 2[json_name = "remote_pubkey"];</code>
      * @return string
      */
@@ -99,6 +173,8 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The identity pubkey of the remote node
+     *
      * Generated from protobuf field <code>string remote_pubkey = 2[json_name = "remote_pubkey"];</code>
      * @param string $var
      * @return $this
@@ -112,6 +188,11 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The outpoint (txid:index) of the funding transaction. With this value, Bob
+     *will be able to generate a signature for Alice's version of the commitment
+     *transaction.
+     *
      * Generated from protobuf field <code>string channel_point = 3[json_name = "channel_point"];</code>
      * @return string
      */
@@ -121,6 +202,11 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The outpoint (txid:index) of the funding transaction. With this value, Bob
+     *will be able to generate a signature for Alice's version of the commitment
+     *transaction.
+     *
      * Generated from protobuf field <code>string channel_point = 3[json_name = "channel_point"];</code>
      * @param string $var
      * @return $this
@@ -134,6 +220,11 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The unique channel ID for the channel. The first 3 bytes are the block
+     *height, the next 3 the index within the block, and the last 2 bytes are the
+     *output index for the channel.
+     *
      * Generated from protobuf field <code>uint64 chan_id = 4[json_name = "chan_id"];</code>
      * @return int|string
      */
@@ -143,6 +234,11 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The unique channel ID for the channel. The first 3 bytes are the block
+     *height, the next 3 the index within the block, and the last 2 bytes are the
+     *output index for the channel.
+     *
      * Generated from protobuf field <code>uint64 chan_id = 4[json_name = "chan_id"];</code>
      * @param int|string $var
      * @return $this
@@ -156,6 +252,8 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The total amount of funds held in this channel
+     *
      * Generated from protobuf field <code>int64 capacity = 5[json_name = "capacity"];</code>
      * @return int|string
      */
@@ -165,6 +263,8 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The total amount of funds held in this channel
+     *
      * Generated from protobuf field <code>int64 capacity = 5[json_name = "capacity"];</code>
      * @param int|string $var
      * @return $this
@@ -178,6 +278,8 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; This node's current balance in this channel
+     *
      * Generated from protobuf field <code>int64 local_balance = 6[json_name = "local_balance"];</code>
      * @return int|string
      */
@@ -187,6 +289,8 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; This node's current balance in this channel
+     *
      * Generated from protobuf field <code>int64 local_balance = 6[json_name = "local_balance"];</code>
      * @param int|string $var
      * @return $this
@@ -200,6 +304,8 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The counterparty's current balance in this channel
+     *
      * Generated from protobuf field <code>int64 remote_balance = 7[json_name = "remote_balance"];</code>
      * @return int|string
      */
@@ -209,6 +315,8 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The counterparty's current balance in this channel
+     *
      * Generated from protobuf field <code>int64 remote_balance = 7[json_name = "remote_balance"];</code>
      * @param int|string $var
      * @return $this
@@ -222,7 +330,101 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 unsettled_balance = 8[json_name = "unsettled_balance"];</code>
+     **
+     *The amount calculated to be paid in fees for the current set of commitment
+     *transactions. The fee amount is persisted with the channel in order to
+     *allow the fee amount to be removed and recalculated with each channel state
+     *update, including updates that happen after a system restart.
+     *
+     * Generated from protobuf field <code>int64 commit_fee = 8[json_name = "commit_fee"];</code>
+     * @return int|string
+     */
+    public function getCommitFee()
+    {
+        return $this->commit_fee;
+    }
+
+    /**
+     **
+     *The amount calculated to be paid in fees for the current set of commitment
+     *transactions. The fee amount is persisted with the channel in order to
+     *allow the fee amount to be removed and recalculated with each channel state
+     *update, including updates that happen after a system restart.
+     *
+     * Generated from protobuf field <code>int64 commit_fee = 8[json_name = "commit_fee"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCommitFee($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->commit_fee = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The weight of the commitment transaction
+     *
+     * Generated from protobuf field <code>int64 commit_weight = 9[json_name = "commit_weight"];</code>
+     * @return int|string
+     */
+    public function getCommitWeight()
+    {
+        return $this->commit_weight;
+    }
+
+    /**
+     *&#47; The weight of the commitment transaction
+     *
+     * Generated from protobuf field <code>int64 commit_weight = 9[json_name = "commit_weight"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCommitWeight($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->commit_weight = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The required number of satoshis per kilo-weight that the requester will pay
+     *at all times, for both the funding transaction and commitment transaction.
+     *This value can later be updated once the channel is open.
+     *
+     * Generated from protobuf field <code>int64 fee_per_kw = 10[json_name = "fee_per_kw"];</code>
+     * @return int|string
+     */
+    public function getFeePerKw()
+    {
+        return $this->fee_per_kw;
+    }
+
+    /**
+     **
+     *The required number of satoshis per kilo-weight that the requester will pay
+     *at all times, for both the funding transaction and commitment transaction.
+     *This value can later be updated once the channel is open.
+     *
+     * Generated from protobuf field <code>int64 fee_per_kw = 10[json_name = "fee_per_kw"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setFeePerKw($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->fee_per_kw = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The unsettled balance in this channel
+     *
+     * Generated from protobuf field <code>int64 unsettled_balance = 11[json_name = "unsettled_balance"];</code>
      * @return int|string
      */
     public function getUnsettledBalance()
@@ -231,7 +433,9 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 unsettled_balance = 8[json_name = "unsettled_balance"];</code>
+     *&#47; The unsettled balance in this channel
+     *
+     * Generated from protobuf field <code>int64 unsettled_balance = 11[json_name = "unsettled_balance"];</code>
      * @param int|string $var
      * @return $this
      */
@@ -244,7 +448,10 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 total_satoshis_sent = 9[json_name = "total_satoshis_sent"];</code>
+     **
+     *The total number of satoshis we've sent within this channel.
+     *
+     * Generated from protobuf field <code>int64 total_satoshis_sent = 12[json_name = "total_satoshis_sent"];</code>
      * @return int|string
      */
     public function getTotalSatoshisSent()
@@ -253,7 +460,10 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 total_satoshis_sent = 9[json_name = "total_satoshis_sent"];</code>
+     **
+     *The total number of satoshis we've sent within this channel.
+     *
+     * Generated from protobuf field <code>int64 total_satoshis_sent = 12[json_name = "total_satoshis_sent"];</code>
      * @param int|string $var
      * @return $this
      */
@@ -266,7 +476,10 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 total_satoshis_received = 10[json_name = "total_satoshis_received"];</code>
+     **
+     *The total number of satoshis we've received within this channel.
+     *
+     * Generated from protobuf field <code>int64 total_satoshis_received = 13[json_name = "total_satoshis_received"];</code>
      * @return int|string
      */
     public function getTotalSatoshisReceived()
@@ -275,7 +488,10 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 total_satoshis_received = 10[json_name = "total_satoshis_received"];</code>
+     **
+     *The total number of satoshis we've received within this channel.
+     *
+     * Generated from protobuf field <code>int64 total_satoshis_received = 13[json_name = "total_satoshis_received"];</code>
      * @param int|string $var
      * @return $this
      */
@@ -288,7 +504,10 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint64 num_updates = 11[json_name = "num_updates"];</code>
+     **
+     *The total number of updates conducted within this channel.
+     *
+     * Generated from protobuf field <code>uint64 num_updates = 14[json_name = "num_updates"];</code>
      * @return int|string
      */
     public function getNumUpdates()
@@ -297,7 +516,10 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint64 num_updates = 11[json_name = "num_updates"];</code>
+     **
+     *The total number of updates conducted within this channel.
+     *
+     * Generated from protobuf field <code>uint64 num_updates = 14[json_name = "num_updates"];</code>
      * @param int|string $var
      * @return $this
      */
@@ -310,7 +532,10 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .lnrpc.HTLC pending_htlcs = 12[json_name = "pending_htlcs"];</code>
+     **
+     *The list of active, uncleared HTLCs currently pending within the channel.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.HTLC pending_htlcs = 15[json_name = "pending_htlcs"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPendingHtlcs()
@@ -319,7 +544,10 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .lnrpc.HTLC pending_htlcs = 12[json_name = "pending_htlcs"];</code>
+     **
+     *The list of active, uncleared HTLCs currently pending within the channel.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.HTLC pending_htlcs = 15[json_name = "pending_htlcs"];</code>
      * @param \Lnrpc\HTLC[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -327,6 +555,38 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\HTLC::class);
         $this->pending_htlcs = $arr;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The CSV delay expressed in relative blocks. If the channel is force
+     *closed, we'll need to wait for this many blocks before we can regain our
+     *funds.
+     *
+     * Generated from protobuf field <code>uint32 csv_delay = 16[json_name = "csv_delay"];</code>
+     * @return int
+     */
+    public function getCsvDelay()
+    {
+        return $this->csv_delay;
+    }
+
+    /**
+     **
+     *The CSV delay expressed in relative blocks. If the channel is force
+     *closed, we'll need to wait for this many blocks before we can regain our
+     *funds.
+     *
+     * Generated from protobuf field <code>uint32 csv_delay = 16[json_name = "csv_delay"];</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCsvDelay($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->csv_delay = $var;
 
         return $this;
     }

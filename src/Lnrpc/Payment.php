@@ -14,25 +14,41 @@ use Google\Protobuf\Internal\GPBUtil;
 class Payment extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The payment hash
+     *
      * Generated from protobuf field <code>string payment_hash = 1[json_name = "payment_hash"];</code>
      */
     private $payment_hash = '';
     /**
+     *&#47; The value of the payment in satoshis
+     *
      * Generated from protobuf field <code>int64 value = 2[json_name = "value"];</code>
      */
     private $value = 0;
     /**
+     *&#47; The date of this payment
+     *
      * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date"];</code>
      */
     private $creation_date = 0;
     /**
+     *&#47; The path this payment took
+     *
      * Generated from protobuf field <code>repeated string path = 4[json_name = "path"];</code>
      */
     private $path;
     /**
+     *&#47; The fee paid for this payment in satoshis
+     *
      * Generated from protobuf field <code>int64 fee = 5[json_name = "fee"];</code>
      */
     private $fee = 0;
+    /**
+     *&#47; The payment preimage
+     *
+     * Generated from protobuf field <code>string payment_preimage = 6[json_name = "payment_preimage"];</code>
+     */
+    private $payment_preimage = '';
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
@@ -40,6 +56,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The payment hash
+     *
      * Generated from protobuf field <code>string payment_hash = 1[json_name = "payment_hash"];</code>
      * @return string
      */
@@ -49,6 +67,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The payment hash
+     *
      * Generated from protobuf field <code>string payment_hash = 1[json_name = "payment_hash"];</code>
      * @param string $var
      * @return $this
@@ -62,6 +82,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The value of the payment in satoshis
+     *
      * Generated from protobuf field <code>int64 value = 2[json_name = "value"];</code>
      * @return int|string
      */
@@ -71,6 +93,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The value of the payment in satoshis
+     *
      * Generated from protobuf field <code>int64 value = 2[json_name = "value"];</code>
      * @param int|string $var
      * @return $this
@@ -84,6 +108,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The date of this payment
+     *
      * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date"];</code>
      * @return int|string
      */
@@ -93,6 +119,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The date of this payment
+     *
      * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date"];</code>
      * @param int|string $var
      * @return $this
@@ -106,6 +134,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The path this payment took
+     *
      * Generated from protobuf field <code>repeated string path = 4[json_name = "path"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -115,6 +145,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The path this payment took
+     *
      * Generated from protobuf field <code>repeated string path = 4[json_name = "path"];</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
@@ -128,6 +160,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The fee paid for this payment in satoshis
+     *
      * Generated from protobuf field <code>int64 fee = 5[json_name = "fee"];</code>
      * @return int|string
      */
@@ -137,6 +171,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The fee paid for this payment in satoshis
+     *
      * Generated from protobuf field <code>int64 fee = 5[json_name = "fee"];</code>
      * @param int|string $var
      * @return $this
@@ -145,6 +181,32 @@ class Payment extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->fee = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The payment preimage
+     *
+     * Generated from protobuf field <code>string payment_preimage = 6[json_name = "payment_preimage"];</code>
+     * @return string
+     */
+    public function getPaymentPreimage()
+    {
+        return $this->payment_preimage;
+    }
+
+    /**
+     *&#47; The payment preimage
+     *
+     * Generated from protobuf field <code>string payment_preimage = 6[json_name = "payment_preimage"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPaymentPreimage($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->payment_preimage = $var;
 
         return $this;
     }

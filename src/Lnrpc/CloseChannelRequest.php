@@ -14,17 +14,32 @@ use Google\Protobuf\Internal\GPBUtil;
 class CloseChannelRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
+     *The outpoint (txid:index) of the funding transaction. With this value, Bob
+     *will be able to generate a signature for Alice's version of the commitment
+     *transaction.
+     *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
      */
     private $channel_point = null;
     /**
-     * Generated from protobuf field <code>int64 time_limit = 2;</code>
-     */
-    private $time_limit = 0;
-    /**
-     * Generated from protobuf field <code>bool force = 3;</code>
+     *&#47; If true, then the channel will be closed forcibly. This means the current commitment transaction will be signed and broadcast.
+     *
+     * Generated from protobuf field <code>bool force = 2;</code>
      */
     private $force = false;
+    /**
+     *&#47; The target number of blocks that the closure transaction should be confirmed by.
+     *
+     * Generated from protobuf field <code>int32 target_conf = 3;</code>
+     */
+    private $target_conf = 0;
+    /**
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
+     *
+     * Generated from protobuf field <code>int64 sat_per_byte = 4;</code>
+     */
+    private $sat_per_byte = 0;
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
@@ -32,6 +47,11 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The outpoint (txid:index) of the funding transaction. With this value, Bob
+     *will be able to generate a signature for Alice's version of the commitment
+     *transaction.
+     *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
      * @return \Lnrpc\ChannelPoint
      */
@@ -41,6 +61,11 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The outpoint (txid:index) of the funding transaction. With this value, Bob
+     *will be able to generate a signature for Alice's version of the commitment
+     *transaction.
+     *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
      * @param \Lnrpc\ChannelPoint $var
      * @return $this
@@ -54,29 +79,9 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 time_limit = 2;</code>
-     * @return int|string
-     */
-    public function getTimeLimit()
-    {
-        return $this->time_limit;
-    }
-
-    /**
-     * Generated from protobuf field <code>int64 time_limit = 2;</code>
-     * @param int|string $var
-     * @return $this
-     */
-    public function setTimeLimit($var)
-    {
-        GPBUtil::checkInt64($var);
-        $this->time_limit = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>bool force = 3;</code>
+     *&#47; If true, then the channel will be closed forcibly. This means the current commitment transaction will be signed and broadcast.
+     *
+     * Generated from protobuf field <code>bool force = 2;</code>
      * @return bool
      */
     public function getForce()
@@ -85,7 +90,9 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool force = 3;</code>
+     *&#47; If true, then the channel will be closed forcibly. This means the current commitment transaction will be signed and broadcast.
+     *
+     * Generated from protobuf field <code>bool force = 2;</code>
      * @param bool $var
      * @return $this
      */
@@ -93,6 +100,58 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->force = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The target number of blocks that the closure transaction should be confirmed by.
+     *
+     * Generated from protobuf field <code>int32 target_conf = 3;</code>
+     * @return int
+     */
+    public function getTargetConf()
+    {
+        return $this->target_conf;
+    }
+
+    /**
+     *&#47; The target number of blocks that the closure transaction should be confirmed by.
+     *
+     * Generated from protobuf field <code>int32 target_conf = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setTargetConf($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->target_conf = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
+     *
+     * Generated from protobuf field <code>int64 sat_per_byte = 4;</code>
+     * @return int|string
+     */
+    public function getSatPerByte()
+    {
+        return $this->sat_per_byte;
+    }
+
+    /**
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
+     *
+     * Generated from protobuf field <code>int64 sat_per_byte = 4;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setSatPerByte($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->sat_per_byte = $var;
 
         return $this;
     }

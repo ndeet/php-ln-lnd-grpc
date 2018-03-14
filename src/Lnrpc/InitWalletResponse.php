@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>lnrpc.PendingChannelRequest</code>
+ * Generated from protobuf message <code>lnrpc.InitWalletResponse</code>
  */
-class PendingChannelRequest extends \Google\Protobuf\Internal\Message
+class InitWalletResponse extends \Google\Protobuf\Internal\Message
 {
 
     public function __construct() {

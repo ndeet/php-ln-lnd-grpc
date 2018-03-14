@@ -14,29 +14,50 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The identity pubkey of the payment recipient
+     *
      * Generated from protobuf field <code>bytes dest = 1;</code>
      */
     private $dest = '';
     /**
+     *&#47; The hex-encoded identity pubkey of the payment recipient
+     *
      * Generated from protobuf field <code>string dest_string = 2;</code>
      */
     private $dest_string = '';
     /**
+     *&#47; Number of satoshis to send. 
+     *
      * Generated from protobuf field <code>int64 amt = 3;</code>
      */
     private $amt = 0;
     /**
+     *&#47; The hash to use within the payment's HTLC
+     *
      * Generated from protobuf field <code>bytes payment_hash = 4;</code>
      */
     private $payment_hash = '';
     /**
+     *&#47; The hex-encoded hash to use within the payment's HTLC
+     *
      * Generated from protobuf field <code>string payment_hash_string = 5;</code>
      */
     private $payment_hash_string = '';
     /**
+     **
+     *A bare-bones invoice for a payment within the Lightning Network.  With the
+     *details of the invoice, the sender has all the data necessary to send a
+     *payment to the recipient.
+     *
      * Generated from protobuf field <code>string payment_request = 6;</code>
      */
     private $payment_request = '';
+    /**
+     *&#47; The CLTV delta from the current height that should be used to set the timelock for the final hop.
+     *
+     * Generated from protobuf field <code>int32 final_cltv_delta = 7;</code>
+     */
+    private $final_cltv_delta = 0;
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
@@ -44,6 +65,8 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The identity pubkey of the payment recipient
+     *
      * Generated from protobuf field <code>bytes dest = 1;</code>
      * @return string
      */
@@ -53,6 +76,8 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The identity pubkey of the payment recipient
+     *
      * Generated from protobuf field <code>bytes dest = 1;</code>
      * @param string $var
      * @return $this
@@ -66,6 +91,8 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The hex-encoded identity pubkey of the payment recipient
+     *
      * Generated from protobuf field <code>string dest_string = 2;</code>
      * @return string
      */
@@ -75,6 +102,8 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The hex-encoded identity pubkey of the payment recipient
+     *
      * Generated from protobuf field <code>string dest_string = 2;</code>
      * @param string $var
      * @return $this
@@ -88,6 +117,8 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Number of satoshis to send. 
+     *
      * Generated from protobuf field <code>int64 amt = 3;</code>
      * @return int|string
      */
@@ -97,6 +128,8 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Number of satoshis to send. 
+     *
      * Generated from protobuf field <code>int64 amt = 3;</code>
      * @param int|string $var
      * @return $this
@@ -110,6 +143,8 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The hash to use within the payment's HTLC
+     *
      * Generated from protobuf field <code>bytes payment_hash = 4;</code>
      * @return string
      */
@@ -119,6 +154,8 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The hash to use within the payment's HTLC
+     *
      * Generated from protobuf field <code>bytes payment_hash = 4;</code>
      * @param string $var
      * @return $this
@@ -132,6 +169,8 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The hex-encoded hash to use within the payment's HTLC
+     *
      * Generated from protobuf field <code>string payment_hash_string = 5;</code>
      * @return string
      */
@@ -141,6 +180,8 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The hex-encoded hash to use within the payment's HTLC
+     *
      * Generated from protobuf field <code>string payment_hash_string = 5;</code>
      * @param string $var
      * @return $this
@@ -154,6 +195,11 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *A bare-bones invoice for a payment within the Lightning Network.  With the
+     *details of the invoice, the sender has all the data necessary to send a
+     *payment to the recipient.
+     *
      * Generated from protobuf field <code>string payment_request = 6;</code>
      * @return string
      */
@@ -163,6 +209,11 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *A bare-bones invoice for a payment within the Lightning Network.  With the
+     *details of the invoice, the sender has all the data necessary to send a
+     *payment to the recipient.
+     *
      * Generated from protobuf field <code>string payment_request = 6;</code>
      * @param string $var
      * @return $this
@@ -171,6 +222,32 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->payment_request = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The CLTV delta from the current height that should be used to set the timelock for the final hop.
+     *
+     * Generated from protobuf field <code>int32 final_cltv_delta = 7;</code>
+     * @return int
+     */
+    public function getFinalCltvDelta()
+    {
+        return $this->final_cltv_delta;
+    }
+
+    /**
+     *&#47; The CLTV delta from the current height that should be used to set the timelock for the final hop.
+     *
+     * Generated from protobuf field <code>int32 final_cltv_delta = 7;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setFinalCltvDelta($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->final_cltv_delta = $var;
 
         return $this;
     }

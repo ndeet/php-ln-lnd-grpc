@@ -14,38 +14,50 @@ use Google\Protobuf\Internal\GPBUtil;
 class Peer extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The identity pubkey of the peer
+     *
      * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
      */
     private $pub_key = '';
     /**
-     * Generated from protobuf field <code>int32 peer_id = 2[json_name = "peer_id"];</code>
-     */
-    private $peer_id = 0;
-    /**
+     *&#47; Network address of the peer; eg `127.0.0.1:10011`
+     *
      * Generated from protobuf field <code>string address = 3[json_name = "address"];</code>
      */
     private $address = '';
     /**
+     *&#47; Bytes of data transmitted to this peer
+     *
      * Generated from protobuf field <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
      */
     private $bytes_sent = 0;
     /**
+     *&#47; Bytes of data transmitted from this peer
+     *
      * Generated from protobuf field <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
      */
     private $bytes_recv = 0;
     /**
+     *&#47; Satoshis sent to this peer
+     *
      * Generated from protobuf field <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
      */
     private $sat_sent = 0;
     /**
+     *&#47; Satoshis received from this peer
+     *
      * Generated from protobuf field <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
      */
     private $sat_recv = 0;
     /**
+     *&#47; A channel is inbound if the counterparty initiated the channel
+     *
      * Generated from protobuf field <code>bool inbound = 8[json_name = "inbound"];</code>
      */
     private $inbound = false;
     /**
+     *&#47; Ping time to this peer
+     *
      * Generated from protobuf field <code>int64 ping_time = 9[json_name = "ping_time"];</code>
      */
     private $ping_time = 0;
@@ -56,6 +68,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The identity pubkey of the peer
+     *
      * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
      * @return string
      */
@@ -65,6 +79,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The identity pubkey of the peer
+     *
      * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
      * @param string $var
      * @return $this
@@ -78,28 +94,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 peer_id = 2[json_name = "peer_id"];</code>
-     * @return int
-     */
-    public function getPeerId()
-    {
-        return $this->peer_id;
-    }
-
-    /**
-     * Generated from protobuf field <code>int32 peer_id = 2[json_name = "peer_id"];</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setPeerId($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->peer_id = $var;
-
-        return $this;
-    }
-
-    /**
+     *&#47; Network address of the peer; eg `127.0.0.1:10011`
+     *
      * Generated from protobuf field <code>string address = 3[json_name = "address"];</code>
      * @return string
      */
@@ -109,6 +105,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Network address of the peer; eg `127.0.0.1:10011`
+     *
      * Generated from protobuf field <code>string address = 3[json_name = "address"];</code>
      * @param string $var
      * @return $this
@@ -122,6 +120,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Bytes of data transmitted to this peer
+     *
      * Generated from protobuf field <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
      * @return int|string
      */
@@ -131,6 +131,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Bytes of data transmitted to this peer
+     *
      * Generated from protobuf field <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
      * @param int|string $var
      * @return $this
@@ -144,6 +146,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Bytes of data transmitted from this peer
+     *
      * Generated from protobuf field <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
      * @return int|string
      */
@@ -153,6 +157,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Bytes of data transmitted from this peer
+     *
      * Generated from protobuf field <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
      * @param int|string $var
      * @return $this
@@ -166,6 +172,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Satoshis sent to this peer
+     *
      * Generated from protobuf field <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
      * @return int|string
      */
@@ -175,6 +183,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Satoshis sent to this peer
+     *
      * Generated from protobuf field <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
      * @param int|string $var
      * @return $this
@@ -188,6 +198,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Satoshis received from this peer
+     *
      * Generated from protobuf field <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
      * @return int|string
      */
@@ -197,6 +209,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Satoshis received from this peer
+     *
      * Generated from protobuf field <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
      * @param int|string $var
      * @return $this
@@ -210,6 +224,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; A channel is inbound if the counterparty initiated the channel
+     *
      * Generated from protobuf field <code>bool inbound = 8[json_name = "inbound"];</code>
      * @return bool
      */
@@ -219,6 +235,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; A channel is inbound if the counterparty initiated the channel
+     *
      * Generated from protobuf field <code>bool inbound = 8[json_name = "inbound"];</code>
      * @param bool $var
      * @return $this
@@ -232,6 +250,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Ping time to this peer
+     *
      * Generated from protobuf field <code>int64 ping_time = 9[json_name = "ping_time"];</code>
      * @return int|string
      */
@@ -241,6 +261,8 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Ping time to this peer
+     *
      * Generated from protobuf field <code>int64 ping_time = 9[json_name = "ping_time"];</code>
      * @param int|string $var
      * @return $this

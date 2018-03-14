@@ -14,6 +14,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class PayReqString extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The payment request string to be decoded
+     *
      * Generated from protobuf field <code>string pay_req = 1;</code>
      */
     private $pay_req = '';
@@ -24,6 +26,8 @@ class PayReqString extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The payment request string to be decoded
+     *
      * Generated from protobuf field <code>string pay_req = 1;</code>
      * @return string
      */
@@ -33,6 +37,8 @@ class PayReqString extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The payment request string to be decoded
+     *
      * Generated from protobuf field <code>string pay_req = 1;</code>
      * @param string $var
      * @return $this

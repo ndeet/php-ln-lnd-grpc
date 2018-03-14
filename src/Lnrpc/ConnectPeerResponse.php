@@ -13,36 +13,10 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class ConnectPeerResponse extends \Google\Protobuf\Internal\Message
 {
-    /**
-     * Generated from protobuf field <code>int32 peer_id = 1[json_name = "peer_id"];</code>
-     */
-    private $peer_id = 0;
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
         parent::__construct();
-    }
-
-    /**
-     * Generated from protobuf field <code>int32 peer_id = 1[json_name = "peer_id"];</code>
-     * @return int
-     */
-    public function getPeerId()
-    {
-        return $this->peer_id;
-    }
-
-    /**
-     * Generated from protobuf field <code>int32 peer_id = 1[json_name = "peer_id"];</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setPeerId($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->peer_id = $var;
-
-        return $this;
     }
 
 }

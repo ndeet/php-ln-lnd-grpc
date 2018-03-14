@@ -14,10 +14,16 @@ use Google\Protobuf\Internal\GPBUtil;
 class PaymentHash extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
+     *The hex-encoded payment hash of the invoice to be looked up. The passed
+     *payment hash must be exactly 32 bytes, otherwise an error is returned.
+     *
      * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str"];</code>
      */
     private $r_hash_str = '';
     /**
+     *&#47; The payment hash of the invoice to be looked up.
+     *
      * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
      */
     private $r_hash = '';
@@ -28,6 +34,10 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The hex-encoded payment hash of the invoice to be looked up. The passed
+     *payment hash must be exactly 32 bytes, otherwise an error is returned.
+     *
      * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str"];</code>
      * @return string
      */
@@ -37,6 +47,10 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The hex-encoded payment hash of the invoice to be looked up. The passed
+     *payment hash must be exactly 32 bytes, otherwise an error is returned.
+     *
      * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str"];</code>
      * @param string $var
      * @return $this
@@ -50,6 +64,8 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The payment hash of the invoice to be looked up.
+     *
      * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
      * @return string
      */
@@ -59,6 +75,8 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The payment hash of the invoice to be looked up.
+     *
      * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
      * @param string $var
      * @return $this

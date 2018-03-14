@@ -29,10 +29,6 @@ class HTLC extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 expiration_height = 4[json_name = "expiration_height"];</code>
      */
     private $expiration_height = 0;
-    /**
-     * Generated from protobuf field <code>uint32 revocation_delay = 5[json_name = "revocation_delay"];</code>
-     */
-    private $revocation_delay = 0;
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
@@ -123,28 +119,6 @@ class HTLC extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->expiration_height = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>uint32 revocation_delay = 5[json_name = "revocation_delay"];</code>
-     * @return int
-     */
-    public function getRevocationDelay()
-    {
-        return $this->revocation_delay;
-    }
-
-    /**
-     * Generated from protobuf field <code>uint32 revocation_delay = 5[json_name = "revocation_delay"];</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setRevocationDelay($var)
-    {
-        GPBUtil::checkUint32($var);
-        $this->revocation_delay = $var;
 
         return $this;
     }

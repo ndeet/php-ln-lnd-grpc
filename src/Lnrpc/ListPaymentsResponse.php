@@ -14,6 +14,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The list of payments
+     *
      * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1[json_name = "payments"];</code>
      */
     private $payments;
@@ -24,6 +26,8 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The list of payments
+     *
      * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1[json_name = "payments"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -33,6 +37,8 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The list of payments
+     *
      * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1[json_name = "payments"];</code>
      * @param \Lnrpc\Payment[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this

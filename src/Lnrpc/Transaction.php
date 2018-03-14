@@ -14,33 +14,53 @@ use Google\Protobuf\Internal\GPBUtil;
 class Transaction extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The transaction hash
+     *
      * Generated from protobuf field <code>string tx_hash = 1[json_name = "tx_hash"];</code>
      */
     private $tx_hash = '';
     /**
+     *&#47; The transaction ammount, denominated in satoshis
+     *
      * Generated from protobuf field <code>int64 amount = 2[json_name = "amount"];</code>
      */
     private $amount = 0;
     /**
+     *&#47; The number of confirmations
+     *
      * Generated from protobuf field <code>int32 num_confirmations = 3[json_name = "num_confirmations"];</code>
      */
     private $num_confirmations = 0;
     /**
+     *&#47; The hash of the block this transaction was included in
+     *
      * Generated from protobuf field <code>string block_hash = 4[json_name = "block_hash"];</code>
      */
     private $block_hash = '';
     /**
+     *&#47; The height of the block this transaction was included in
+     *
      * Generated from protobuf field <code>int32 block_height = 5[json_name = "block_height"];</code>
      */
     private $block_height = 0;
     /**
+     *&#47; Timestamp of this transaction 
+     *
      * Generated from protobuf field <code>int64 time_stamp = 6[json_name = "time_stamp"];</code>
      */
     private $time_stamp = 0;
     /**
+     *&#47; Fees paid for this transaction
+     *
      * Generated from protobuf field <code>int64 total_fees = 7[json_name = "total_fees"];</code>
      */
     private $total_fees = 0;
+    /**
+     *&#47; Addresses that received funds for this transaction
+     *
+     * Generated from protobuf field <code>repeated string dest_addresses = 8[json_name = "dest_addresses"];</code>
+     */
+    private $dest_addresses;
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
@@ -48,6 +68,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The transaction hash
+     *
      * Generated from protobuf field <code>string tx_hash = 1[json_name = "tx_hash"];</code>
      * @return string
      */
@@ -57,6 +79,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The transaction hash
+     *
      * Generated from protobuf field <code>string tx_hash = 1[json_name = "tx_hash"];</code>
      * @param string $var
      * @return $this
@@ -70,6 +94,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The transaction ammount, denominated in satoshis
+     *
      * Generated from protobuf field <code>int64 amount = 2[json_name = "amount"];</code>
      * @return int|string
      */
@@ -79,6 +105,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The transaction ammount, denominated in satoshis
+     *
      * Generated from protobuf field <code>int64 amount = 2[json_name = "amount"];</code>
      * @param int|string $var
      * @return $this
@@ -92,6 +120,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The number of confirmations
+     *
      * Generated from protobuf field <code>int32 num_confirmations = 3[json_name = "num_confirmations"];</code>
      * @return int
      */
@@ -101,6 +131,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The number of confirmations
+     *
      * Generated from protobuf field <code>int32 num_confirmations = 3[json_name = "num_confirmations"];</code>
      * @param int $var
      * @return $this
@@ -114,6 +146,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The hash of the block this transaction was included in
+     *
      * Generated from protobuf field <code>string block_hash = 4[json_name = "block_hash"];</code>
      * @return string
      */
@@ -123,6 +157,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The hash of the block this transaction was included in
+     *
      * Generated from protobuf field <code>string block_hash = 4[json_name = "block_hash"];</code>
      * @param string $var
      * @return $this
@@ -136,6 +172,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The height of the block this transaction was included in
+     *
      * Generated from protobuf field <code>int32 block_height = 5[json_name = "block_height"];</code>
      * @return int
      */
@@ -145,6 +183,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The height of the block this transaction was included in
+     *
      * Generated from protobuf field <code>int32 block_height = 5[json_name = "block_height"];</code>
      * @param int $var
      * @return $this
@@ -158,6 +198,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Timestamp of this transaction 
+     *
      * Generated from protobuf field <code>int64 time_stamp = 6[json_name = "time_stamp"];</code>
      * @return int|string
      */
@@ -167,6 +209,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Timestamp of this transaction 
+     *
      * Generated from protobuf field <code>int64 time_stamp = 6[json_name = "time_stamp"];</code>
      * @param int|string $var
      * @return $this
@@ -180,6 +224,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Fees paid for this transaction
+     *
      * Generated from protobuf field <code>int64 total_fees = 7[json_name = "total_fees"];</code>
      * @return int|string
      */
@@ -189,6 +235,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Fees paid for this transaction
+     *
      * Generated from protobuf field <code>int64 total_fees = 7[json_name = "total_fees"];</code>
      * @param int|string $var
      * @return $this
@@ -197,6 +245,32 @@ class Transaction extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->total_fees = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; Addresses that received funds for this transaction
+     *
+     * Generated from protobuf field <code>repeated string dest_addresses = 8[json_name = "dest_addresses"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getDestAddresses()
+    {
+        return $this->dest_addresses;
+    }
+
+    /**
+     *&#47; Addresses that received funds for this transaction
+     *
+     * Generated from protobuf field <code>repeated string dest_addresses = 8[json_name = "dest_addresses"];</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setDestAddresses($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->dest_addresses = $arr;
 
         return $this;
     }

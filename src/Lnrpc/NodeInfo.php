@@ -14,6 +14,12 @@ use Google\Protobuf\Internal\GPBUtil;
 class NodeInfo extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
+     *An individual vertex/node within the channel graph. A node is
+     *connected to other nodes by one or more channel edges emanating from it. As
+     *the graph is directed, a node will also have an incoming edge attached to
+     *it for each outgoing edge.
+     *
      * Generated from protobuf field <code>.lnrpc.LightningNode node = 1[json_name = "node"];</code>
      */
     private $node = null;
@@ -32,6 +38,12 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *An individual vertex/node within the channel graph. A node is
+     *connected to other nodes by one or more channel edges emanating from it. As
+     *the graph is directed, a node will also have an incoming edge attached to
+     *it for each outgoing edge.
+     *
      * Generated from protobuf field <code>.lnrpc.LightningNode node = 1[json_name = "node"];</code>
      * @return \Lnrpc\LightningNode
      */
@@ -41,6 +53,12 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *An individual vertex/node within the channel graph. A node is
+     *connected to other nodes by one or more channel edges emanating from it. As
+     *the graph is directed, a node will also have an incoming edge attached to
+     *it for each outgoing edge.
+     *
      * Generated from protobuf field <code>.lnrpc.LightningNode node = 1[json_name = "node"];</code>
      * @param \Lnrpc\LightningNode $var
      * @return $this

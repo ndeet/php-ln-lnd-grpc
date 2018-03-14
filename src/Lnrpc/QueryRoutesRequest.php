@@ -14,13 +14,23 @@ use Google\Protobuf\Internal\GPBUtil;
 class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The 33-byte hex-encoded public key for the payment destination
+     *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
     private $pub_key = '';
     /**
+     *&#47; The amount to send expressed in satoshis
+     *
      * Generated from protobuf field <code>int64 amt = 2;</code>
      */
     private $amt = 0;
+    /**
+     *&#47; The max number of routes to return.
+     *
+     * Generated from protobuf field <code>int32 num_routes = 3;</code>
+     */
+    private $num_routes = 0;
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
@@ -28,6 +38,8 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The 33-byte hex-encoded public key for the payment destination
+     *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @return string
      */
@@ -37,6 +49,8 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The 33-byte hex-encoded public key for the payment destination
+     *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @param string $var
      * @return $this
@@ -50,6 +64,8 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The amount to send expressed in satoshis
+     *
      * Generated from protobuf field <code>int64 amt = 2;</code>
      * @return int|string
      */
@@ -59,6 +75,8 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The amount to send expressed in satoshis
+     *
      * Generated from protobuf field <code>int64 amt = 2;</code>
      * @param int|string $var
      * @return $this
@@ -67,6 +85,32 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->amt = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The max number of routes to return.
+     *
+     * Generated from protobuf field <code>int32 num_routes = 3;</code>
+     * @return int
+     */
+    public function getNumRoutes()
+    {
+        return $this->num_routes;
+    }
+
+    /**
+     *&#47; The max number of routes to return.
+     *
+     * Generated from protobuf field <code>int32 num_routes = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setNumRoutes($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->num_routes = $var;
 
         return $this;
     }

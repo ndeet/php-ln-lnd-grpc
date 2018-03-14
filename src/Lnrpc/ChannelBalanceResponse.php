@@ -14,6 +14,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; Sum of channels balances denominated in satoshis
+     *
      * Generated from protobuf field <code>int64 balance = 1[json_name = "balance"];</code>
      */
     private $balance = 0;
@@ -24,6 +26,8 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Sum of channels balances denominated in satoshis
+     *
      * Generated from protobuf field <code>int64 balance = 1[json_name = "balance"];</code>
      * @return int|string
      */
@@ -33,6 +37,8 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Sum of channels balances denominated in satoshis
+     *
      * Generated from protobuf field <code>int64 balance = 1[json_name = "balance"];</code>
      * @param int|string $var
      * @return $this

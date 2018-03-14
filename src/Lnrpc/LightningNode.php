@@ -9,6 +9,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ **
+ *An individual vertex/node within the channel graph. A node is
+ *connected to other nodes by one or more channel edges emanating from it. As the
+ *graph is directed, a node will also have an incoming edge attached to it for
+ *each outgoing edge.
+ *
  * Generated from protobuf message <code>lnrpc.LightningNode</code>
  */
 class LightningNode extends \Google\Protobuf\Internal\Message
@@ -29,6 +35,10 @@ class LightningNode extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .lnrpc.NodeAddress addresses = 4[json_name = "addresses"];</code>
      */
     private $addresses;
+    /**
+     * Generated from protobuf field <code>string color = 5[json_name = "color"];</code>
+     */
+    private $color = '';
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
@@ -119,6 +129,28 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\NodeAddress::class);
         $this->addresses = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string color = 5[json_name = "color"];</code>
+     * @return string
+     */
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+    /**
+     * Generated from protobuf field <code>string color = 5[json_name = "color"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setColor($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->color = $var;
 
         return $this;
     }

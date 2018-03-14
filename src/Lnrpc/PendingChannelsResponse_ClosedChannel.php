@@ -9,15 +9,19 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>lnrpc.PendingChannelResponse.ClosedChannel</code>
+ * Generated from protobuf message <code>lnrpc.PendingChannelsResponse.ClosedChannel</code>
  */
-class PendingChannelResponse_ClosedChannel extends \Google\Protobuf\Internal\Message
+class PendingChannelsResponse_ClosedChannel extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1;</code>
+     *&#47; The pending channel to be closed
+     *
+     * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      */
     private $channel = null;
     /**
+     *&#47; The transaction id of the closing transaction
+     *
      * Generated from protobuf field <code>string closing_txid = 2[json_name = "closing_txid"];</code>
      */
     private $closing_txid = '';
@@ -28,8 +32,10 @@ class PendingChannelResponse_ClosedChannel extends \Google\Protobuf\Internal\Mes
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1;</code>
-     * @return \Lnrpc\PendingChannelResponse_PendingChannel
+     *&#47; The pending channel to be closed
+     *
+     * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
+     * @return \Lnrpc\PendingChannelsResponse_PendingChannel
      */
     public function getChannel()
     {
@@ -37,19 +43,23 @@ class PendingChannelResponse_ClosedChannel extends \Google\Protobuf\Internal\Mes
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.PendingChannelResponse.PendingChannel channel = 1;</code>
-     * @param \Lnrpc\PendingChannelResponse_PendingChannel $var
+     *&#47; The pending channel to be closed
+     *
+     * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
+     * @param \Lnrpc\PendingChannelsResponse_PendingChannel $var
      * @return $this
      */
     public function setChannel($var)
     {
-        GPBUtil::checkMessage($var, \Lnrpc\PendingChannelResponse_PendingChannel::class);
+        GPBUtil::checkMessage($var, \Lnrpc\PendingChannelsResponse_PendingChannel::class);
         $this->channel = $var;
 
         return $this;
     }
 
     /**
+     *&#47; The transaction id of the closing transaction
+     *
      * Generated from protobuf field <code>string closing_txid = 2[json_name = "closing_txid"];</code>
      * @return string
      */
@@ -59,6 +69,8 @@ class PendingChannelResponse_ClosedChannel extends \Google\Protobuf\Internal\Mes
     }
 
     /**
+     *&#47; The transaction id of the closing transaction
+     *
      * Generated from protobuf field <code>string closing_txid = 2[json_name = "closing_txid"];</code>
      * @param string $var
      * @return $this

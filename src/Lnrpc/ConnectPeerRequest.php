@@ -14,10 +14,15 @@ use Google\Protobuf\Internal\GPBUtil;
 class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; Lightning address of the peer, in the format `<pubkey>&#64;host`
+     *
      * Generated from protobuf field <code>.lnrpc.LightningAddress addr = 1;</code>
      */
     private $addr = null;
     /**
+     ** If set, the daemon will attempt to persistently connect to the target
+     * peer.  Otherwise, the call will be synchronous. 
+     *
      * Generated from protobuf field <code>bool perm = 2;</code>
      */
     private $perm = false;
@@ -28,6 +33,8 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Lightning address of the peer, in the format `<pubkey>&#64;host`
+     *
      * Generated from protobuf field <code>.lnrpc.LightningAddress addr = 1;</code>
      * @return \Lnrpc\LightningAddress
      */
@@ -37,6 +44,8 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Lightning address of the peer, in the format `<pubkey>&#64;host`
+     *
      * Generated from protobuf field <code>.lnrpc.LightningAddress addr = 1;</code>
      * @param \Lnrpc\LightningAddress $var
      * @return $this
@@ -50,6 +59,9 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     ** If set, the daemon will attempt to persistently connect to the target
+     * peer.  Otherwise, the call will be synchronous. 
+     *
      * Generated from protobuf field <code>bool perm = 2;</code>
      * @return bool
      */
@@ -59,6 +71,9 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     ** If set, the daemon will attempt to persistently connect to the target
+     * peer.  Otherwise, the call will be synchronous. 
+     *
      * Generated from protobuf field <code>bool perm = 2;</code>
      * @param bool $var
      * @return $this

@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>lnrpc.SetAliasResponse</code>
+ * Generated from protobuf message <code>lnrpc.UnlockWalletResponse</code>
  */
-class SetAliasResponse extends \Google\Protobuf\Internal\Message
+class UnlockWalletResponse extends \Google\Protobuf\Internal\Message
 {
 
     public function __construct() {

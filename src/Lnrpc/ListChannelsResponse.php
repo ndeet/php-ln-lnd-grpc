@@ -14,6 +14,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class ListChannelsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The list of active channels
+     *
      * Generated from protobuf field <code>repeated .lnrpc.ActiveChannel channels = 11[json_name = "channels"];</code>
      */
     private $channels;
@@ -24,6 +26,8 @@ class ListChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The list of active channels
+     *
      * Generated from protobuf field <code>repeated .lnrpc.ActiveChannel channels = 11[json_name = "channels"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -33,6 +37,8 @@ class ListChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The list of active channels
+     *
      * Generated from protobuf field <code>repeated .lnrpc.ActiveChannel channels = 11[json_name = "channels"];</code>
      * @param \Lnrpc\ActiveChannel[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this

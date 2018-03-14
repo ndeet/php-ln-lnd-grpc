@@ -14,6 +14,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
+     *The unique channel ID for the channel. The first 3 bytes are the block
+     *height, the next 3 the index within the block, and the last 2 bytes are the
+     *output index for the channel.
+     *
      * Generated from protobuf field <code>uint64 chan_id = 1;</code>
      */
     private $chan_id = 0;
@@ -36,6 +41,11 @@ class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The unique channel ID for the channel. The first 3 bytes are the block
+     *height, the next 3 the index within the block, and the last 2 bytes are the
+     *output index for the channel.
+     *
      * Generated from protobuf field <code>uint64 chan_id = 1;</code>
      * @return int|string
      */
@@ -45,6 +55,11 @@ class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The unique channel ID for the channel. The first 3 bytes are the block
+     *height, the next 3 the index within the block, and the last 2 bytes are the
+     *output index for the channel.
+     *
      * Generated from protobuf field <code>uint64 chan_id = 1;</code>
      * @param int|string $var
      * @return $this

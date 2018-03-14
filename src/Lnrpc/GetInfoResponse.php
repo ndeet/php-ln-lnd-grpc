@@ -14,45 +14,77 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetInfoResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The identity pubkey of the current node.
+     *
      * Generated from protobuf field <code>string identity_pubkey = 1[json_name = "identity_pubkey"];</code>
      */
     private $identity_pubkey = '';
     /**
+     *&#47; If applicable, the alias of the current node, e.g. "bob"
+     *
      * Generated from protobuf field <code>string alias = 2[json_name = "alias"];</code>
      */
     private $alias = '';
     /**
+     *&#47; Number of pending channels
+     *
      * Generated from protobuf field <code>uint32 num_pending_channels = 3[json_name = "num_pending_channels"];</code>
      */
     private $num_pending_channels = 0;
     /**
+     *&#47; Number of active channels
+     *
      * Generated from protobuf field <code>uint32 num_active_channels = 4[json_name = "num_active_channels"];</code>
      */
     private $num_active_channels = 0;
     /**
+     *&#47; Number of peers
+     *
      * Generated from protobuf field <code>uint32 num_peers = 5[json_name = "num_peers"];</code>
      */
     private $num_peers = 0;
     /**
+     *&#47; The node's current view of the height of the best block
+     *
      * Generated from protobuf field <code>uint32 block_height = 6[json_name = "block_height"];</code>
      */
     private $block_height = 0;
     /**
+     *&#47; The node's current view of the hash of the best block
+     *
      * Generated from protobuf field <code>string block_hash = 8[json_name = "block_hash"];</code>
      */
     private $block_hash = '';
     /**
+     *&#47; Whether the wallet's view is synced to the main chain
+     *
      * Generated from protobuf field <code>bool synced_to_chain = 9[json_name = "synced_to_chain"];</code>
      */
     private $synced_to_chain = false;
     /**
+     *&#47; Whether the current node is connected to testnet
+     *
      * Generated from protobuf field <code>bool testnet = 10[json_name = "testnet"];</code>
      */
     private $testnet = false;
     /**
+     *&#47; A list of active chains the node is connected to
+     *
      * Generated from protobuf field <code>repeated string chains = 11[json_name = "chains"];</code>
      */
     private $chains;
+    /**
+     *&#47; The URIs of the current node.
+     *
+     * Generated from protobuf field <code>repeated string uris = 12[json_name = "uris"];</code>
+     */
+    private $uris;
+    /**
+     *&#47; Timestamp of the block best known to the wallet
+     *
+     * Generated from protobuf field <code>int64 best_header_timestamp = 13[json_name = "best_header_timestamp"];</code>
+     */
+    private $best_header_timestamp = 0;
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
@@ -60,6 +92,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The identity pubkey of the current node.
+     *
      * Generated from protobuf field <code>string identity_pubkey = 1[json_name = "identity_pubkey"];</code>
      * @return string
      */
@@ -69,6 +103,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The identity pubkey of the current node.
+     *
      * Generated from protobuf field <code>string identity_pubkey = 1[json_name = "identity_pubkey"];</code>
      * @param string $var
      * @return $this
@@ -82,6 +118,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; If applicable, the alias of the current node, e.g. "bob"
+     *
      * Generated from protobuf field <code>string alias = 2[json_name = "alias"];</code>
      * @return string
      */
@@ -91,6 +129,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; If applicable, the alias of the current node, e.g. "bob"
+     *
      * Generated from protobuf field <code>string alias = 2[json_name = "alias"];</code>
      * @param string $var
      * @return $this
@@ -104,6 +144,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Number of pending channels
+     *
      * Generated from protobuf field <code>uint32 num_pending_channels = 3[json_name = "num_pending_channels"];</code>
      * @return int
      */
@@ -113,6 +155,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Number of pending channels
+     *
      * Generated from protobuf field <code>uint32 num_pending_channels = 3[json_name = "num_pending_channels"];</code>
      * @param int $var
      * @return $this
@@ -126,6 +170,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Number of active channels
+     *
      * Generated from protobuf field <code>uint32 num_active_channels = 4[json_name = "num_active_channels"];</code>
      * @return int
      */
@@ -135,6 +181,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Number of active channels
+     *
      * Generated from protobuf field <code>uint32 num_active_channels = 4[json_name = "num_active_channels"];</code>
      * @param int $var
      * @return $this
@@ -148,6 +196,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Number of peers
+     *
      * Generated from protobuf field <code>uint32 num_peers = 5[json_name = "num_peers"];</code>
      * @return int
      */
@@ -157,6 +207,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Number of peers
+     *
      * Generated from protobuf field <code>uint32 num_peers = 5[json_name = "num_peers"];</code>
      * @param int $var
      * @return $this
@@ -170,6 +222,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The node's current view of the height of the best block
+     *
      * Generated from protobuf field <code>uint32 block_height = 6[json_name = "block_height"];</code>
      * @return int
      */
@@ -179,6 +233,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The node's current view of the height of the best block
+     *
      * Generated from protobuf field <code>uint32 block_height = 6[json_name = "block_height"];</code>
      * @param int $var
      * @return $this
@@ -192,6 +248,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The node's current view of the hash of the best block
+     *
      * Generated from protobuf field <code>string block_hash = 8[json_name = "block_hash"];</code>
      * @return string
      */
@@ -201,6 +259,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The node's current view of the hash of the best block
+     *
      * Generated from protobuf field <code>string block_hash = 8[json_name = "block_hash"];</code>
      * @param string $var
      * @return $this
@@ -214,6 +274,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Whether the wallet's view is synced to the main chain
+     *
      * Generated from protobuf field <code>bool synced_to_chain = 9[json_name = "synced_to_chain"];</code>
      * @return bool
      */
@@ -223,6 +285,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Whether the wallet's view is synced to the main chain
+     *
      * Generated from protobuf field <code>bool synced_to_chain = 9[json_name = "synced_to_chain"];</code>
      * @param bool $var
      * @return $this
@@ -236,6 +300,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Whether the current node is connected to testnet
+     *
      * Generated from protobuf field <code>bool testnet = 10[json_name = "testnet"];</code>
      * @return bool
      */
@@ -245,6 +311,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; Whether the current node is connected to testnet
+     *
      * Generated from protobuf field <code>bool testnet = 10[json_name = "testnet"];</code>
      * @param bool $var
      * @return $this
@@ -258,6 +326,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; A list of active chains the node is connected to
+     *
      * Generated from protobuf field <code>repeated string chains = 11[json_name = "chains"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -267,6 +337,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; A list of active chains the node is connected to
+     *
      * Generated from protobuf field <code>repeated string chains = 11[json_name = "chains"];</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
@@ -275,6 +347,58 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->chains = $arr;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The URIs of the current node.
+     *
+     * Generated from protobuf field <code>repeated string uris = 12[json_name = "uris"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getUris()
+    {
+        return $this->uris;
+    }
+
+    /**
+     *&#47; The URIs of the current node.
+     *
+     * Generated from protobuf field <code>repeated string uris = 12[json_name = "uris"];</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setUris($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->uris = $arr;
+
+        return $this;
+    }
+
+    /**
+     *&#47; Timestamp of the block best known to the wallet
+     *
+     * Generated from protobuf field <code>int64 best_header_timestamp = 13[json_name = "best_header_timestamp"];</code>
+     * @return int|string
+     */
+    public function getBestHeaderTimestamp()
+    {
+        return $this->best_header_timestamp;
+    }
+
+    /**
+     *&#47; Timestamp of the block best known to the wallet
+     *
+     * Generated from protobuf field <code>int64 best_header_timestamp = 13[json_name = "best_header_timestamp"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setBestHeaderTimestamp($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->best_header_timestamp = $var;
 
         return $this;
     }

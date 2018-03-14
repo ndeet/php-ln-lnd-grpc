@@ -9,11 +9,23 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ **
+ *A fully authenticated channel along with all its unique attributes.
+ *Once an authenticated channel announcement has been processed on the network,
+ *then a instance of ChannelEdgeInfo encapsulating the channels attributes is
+ *stored. The other portions relevant to routing policy of a channel are stored
+ *within a ChannelEdgePolicy for each direction of the channel.
+ *
  * Generated from protobuf message <code>lnrpc.ChannelEdge</code>
  */
 class ChannelEdge extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
+     *The unique channel ID for the channel. The first 3 bytes are the block
+     *height, the next 3 the index within the block, and the last 2 bytes are the
+     *output index for the channel.
+     *
      * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id"];</code>
      */
     private $channel_id = 0;
@@ -52,6 +64,11 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The unique channel ID for the channel. The first 3 bytes are the block
+     *height, the next 3 the index within the block, and the last 2 bytes are the
+     *output index for the channel.
+     *
      * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id"];</code>
      * @return int|string
      */
@@ -61,6 +78,11 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The unique channel ID for the channel. The first 3 bytes are the block
+     *height, the next 3 the index within the block, and the last 2 bytes are the
+     *output index for the channel.
+     *
      * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id"];</code>
      * @param int|string $var
      * @return $this

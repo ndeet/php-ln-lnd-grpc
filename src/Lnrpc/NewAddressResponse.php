@@ -14,6 +14,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class NewAddressResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The newly generated wallet address
+     *
      * Generated from protobuf field <code>string address = 1[json_name = "address"];</code>
      */
     private $address = '';
@@ -24,6 +26,8 @@ class NewAddressResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The newly generated wallet address
+     *
      * Generated from protobuf field <code>string address = 1[json_name = "address"];</code>
      * @return string
      */
@@ -33,6 +37,8 @@ class NewAddressResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The newly generated wallet address
+     *
      * Generated from protobuf field <code>string address = 1[json_name = "address"];</code>
      * @param string $var
      * @return $this

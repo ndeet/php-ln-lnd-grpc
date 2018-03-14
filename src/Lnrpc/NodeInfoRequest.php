@@ -14,6 +14,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class NodeInfoRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     *&#47; The 33-byte hex-encoded compressed public of the target node 
+     *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
     private $pub_key = '';
@@ -24,6 +26,8 @@ class NodeInfoRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The 33-byte hex-encoded compressed public of the target node 
+     *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @return string
      */
@@ -33,6 +37,8 @@ class NodeInfoRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *&#47; The 33-byte hex-encoded compressed public of the target node 
+     *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @param string $var
      * @return $this
