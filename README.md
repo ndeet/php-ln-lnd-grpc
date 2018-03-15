@@ -1,8 +1,8 @@
 PHP lnd gRPC client
 ===================
 
-This library is a gRPC client for [lnd](https://github.com/lightningnetwork/lnd) master commit 5818bdba966570fd006b771a7263975b876bf868. It is generated code
-from [rpc.proto](https://github.com/lightningnetwork/lnd/blob/97b7eb226d3b78b1f5700bdc311da180bbb2865d/lnrpc/rpc.proto).
+This library is a gRPC client for [lnd](https://github.com/lightningnetwork/lnd) version [0.4-beta](https://github.com/lightningnetwork/lnd/releases/tag/v0.4-beta). It is generated code
+from [rpc.proto](https://github.com/lightningnetwork/lnd/blob/v0.4-beta/lnrpc/rpc.proto).
 
 
 Requirements
@@ -11,16 +11,16 @@ Requirements
 To use this library you need to
 
 * gRPC extension
-* PHP >= 5.6
+* PHP >= 7.0
 
 Install gRPC extension if not installed
 ```
 # pecl install grpc
 ```
 
-Add grpc.so to php.ini. For PHP 5.6 in ubuntu it will be
+Add grpc.so to php.ini. For PHP 7.0 in Ubuntu it will be
 ```
-# echo 'extension=grpc.so' >> /etc/php/5.6/cli/php.ini
+# echo 'extension=grpc.so' >> /etc/php/7.0/cli/php.ini
 ```
 
 Adding to project
