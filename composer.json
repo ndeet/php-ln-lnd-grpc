@@ -1,5 +1,5 @@
 {
-    "name": "ndeet/lnd-grpc-client",
+    "name": "ndeet/lnd-grpc",
     "description": "gRPC client for Bitcoin Lightning network LND implementation. The code is generated from rpc.proto.",
     "keywords": ["lightning", "grpc", "lnd", "bitcoin"],
     "license": "MIT",
@@ -10,7 +10,7 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/ndeet/php-lnd-grpc-client/issues"
+        "issues": "https://github.com/ndeet/php-lnd-grpc/issues"
     },
     "type": "library",
     "require": {
