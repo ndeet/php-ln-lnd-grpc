@@ -10,7 +10,7 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/ndeet/php-lnd-grpc/issues"
+        "issues": "https://github.com/ndeet/php-ln-lnd-grpc/issues"
     },
     "type": "library",
     "require": {
