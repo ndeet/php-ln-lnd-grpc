@@ -29,7 +29,7 @@ Adding to project
 ####Via composer
 ```
 $ cd /project/
-$ composer require ndeet/lnd-grpc-client
+$ composer require ndeet/lnd-grpc
 ```
 
 ####Cloning from Git
