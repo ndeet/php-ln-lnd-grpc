@@ -26,16 +26,16 @@ Add grpc.so to php.ini. For PHP 7.0 in Ubuntu it will be
 Adding to project
 =================
 
-####Via composer
+#### Via composer
 ```
 $ cd /project/
-$ composer require ndeet/lnd-grpc
+$ composer require ndeet/ln-lnd-grpc
 ```
 
-####Cloning from Git
+#### Cloning from Git
 ```
 $ cd /project/
-$ git clone https://github.com/ndeet/php-lnd-grpc-client.git lnrpc
+$ git clone https://github.com/ndeet/php-ln-lnd-grpc.git lndrpc
 $ cd ./lnrpc/
 $ composer install
 ```
@@ -45,7 +45,7 @@ $ composer install
 Example
 =======
 
-Example of usage you can find in [example/index.php](https://github.com/ndeet/php-lnd-grpc-client/tree/master/example/index.php).
+Example of usage you can find in [example/index.php](https://github.com/ndeet/php-ln-lnd-grpc-client/tree/master/example/index.php).
 
 Generation of PHP classes
 =========================
@@ -58,4 +58,4 @@ protoc -I/usr/local/include -I. -I$GOPATH/src -I$GOPATH/src/github.com/grpc-ecos
 
 Credits
 =======
-This is a fork of [Bitfury Lighting gRPC PHP client](https://github.com/BitfuryLightning/php-lnd-grpc-client). Unfortunately they seem to have abandoned it and did not respond to issues/pull requests [#1](https://github.com/BitfuryLightning/php-lnd-grpc-client/issues/2) [#2](https://github.com/BitfuryLightning/php-lnd-grpc-client/pull/3) [#3](https://github.com/BitfuryLightning/php-lnd-grpc-client/pull/1). That's why this fork now lives here on its own.
+This is a fork of [Bitfury Lighting gRPC PHP client](https://github.com/BitfuryLightning/php-ln-lnd-grpc-client). Unfortunately they seem to have abandoned it and did not respond to issues/pull requests [#1](https://github.com/BitfuryLightning/php-lnd-grpc-client/issues/2) [#2](https://github.com/BitfuryLightning/php-lnd-grpc-client/pull/3) [#3](https://github.com/BitfuryLightning/php-lnd-grpc-client/pull/1). That's why this fork now lives here on its own.
