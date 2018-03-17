@@ -1,6 +1,6 @@
 {
-    "name": "ndeet/lnd-grpc",
-    "description": "gRPC client for Bitcoin Lightning network LND implementation. The code is generated from rpc.proto.",
+    "name": "ndeet/ln-lnd-grpc",
+    "description": "Lightning Network LND gRPC client for Bitcoin and other supported coins. The classes and client is generated from rpc.proto.",
     "keywords": ["lightning", "grpc", "lnd", "bitcoin"],
     "license": "MIT",
     "authors": [
