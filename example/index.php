@@ -6,11 +6,24 @@ require dirname(__FILE__).'/../vendor/autoload.php';
 // LND node IP and Port (lnd option "rpcport").
 $lndIp   = '127.0.0.1:10001';
 
+// We need to set env variables to make ssl work:
+putenv('GRPC_SSL_CIPHER_SUITES=ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256');
+
 // This should be the public SSL certificate of your LND.
-// Copy from your lnd directory (or make sure both use the same cert):
+// We try to load the TLS cert from your users home directory.
 // MacOS: ~/Library/Application Support/Lnd/tls.cert
 // Linux: ~/.lnd/tls.cert
-if (! $sslCert = file_get_contents(dirname(__FILE__) . '/tls.cert')) {
+$local_user = posix_getpwuid(posix_getuid());
+switch (PHP_OS) {
+  case "Darwin":
+    $tls_path = $local_user['dir'] . '/Library/Application Support/Lnd/tls.cert';
+    break;
+
+  case "Linux":
+    $tls_path = $local_user['dir'] . '/.lnd/tls.cert';
+}
+
+if (! $sslCert = file_get_contents($tls_path)) {
   $certError = <<<EOT
     tls.cert not found in "example" directory. Make sure to copy it from your 
     LND config directory.
@@ -21,6 +34,7 @@ EOT;
   throw new Exception($certError);
 }
 
+// Create new client using SSL connection.
 $client = new Lnrpc\LightningClient($lndIp, [
   'credentials' => Grpc\ChannelCredentials::createSsl($sslCert)
 ]);
@@ -40,15 +54,15 @@ print(PHP_EOL);
 
 print('WalletBalance:' . PHP_EOL);
 $walletBalanceRequest = new Lnrpc\WalletBalanceRequest();
-$walletBalanceRequest->setWitnessOnly(FALSE);
 /** @var $reply Lnrpc\WalletBalanceResponse */
 list($reply, $status) = $client->WalletBalance($walletBalanceRequest)->wait();
-print_r($reply->getBalance());
+print_r($reply->getTotalBalance());
 print(PHP_EOL);
 
 print('ChannelBalance:' . PHP_EOL);
+$channelBalanceRequest = new Lnrpc\ChannelBalanceRequest();
 /** @var $reply Lnrpc\ChannelBalanceResponse */
-list($reply, $status) = $client->ChannelBalance(new Lnrpc\ChannelBalanceRequest())->wait();
+list($reply, $status) = $client->ChannelBalance($channelBalanceRequest)->wait();
 print_r($reply->getBalance());
 print(PHP_EOL);
 
