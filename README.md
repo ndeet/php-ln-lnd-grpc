@@ -45,7 +45,7 @@ $ composer install
 Example
 =======
 
-Example of usage you can find in [example/index.php](https://github.com/ndeet/php-ln-lnd-grpc-client/tree/master/example/index.php).
+Example of usage you can find in [example/index.php](https://github.com/ndeet/php-ln-lnd-grpc/blob/master/example/index.php).
 Note: Currently the examples only work with macaroons disabled. Starting lnd with `--no-macaroons` option. The examples 
 will be updated asap. 
 
