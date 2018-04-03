@@ -38,13 +38,13 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      */
     private $push_sat = 0;
     /**
-     *&#47; The target number of blocks that the closure transaction should be confirmed by.
+     *&#47; The target number of blocks that the funding transaction should be confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 6;</code>
      */
     private $target_conf = 0;
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the funding transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 7;</code>
      */
@@ -61,6 +61,12 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 min_htlc_msat = 9[json_name = "min_htlc_msat"];</code>
      */
     private $min_htlc_msat = 0;
+    /**
+     *&#47; The delay we require on the remote's commitment transaction. If this is not set, it will be scaled automatically with the channel size.
+     *
+     * Generated from protobuf field <code>uint32 remote_csv_delay = 10[json_name = "remote_csv_delay"];</code>
+     */
+    private $remote_csv_delay = 0;
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
@@ -172,7 +178,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The target number of blocks that the closure transaction should be confirmed by.
+     *&#47; The target number of blocks that the funding transaction should be confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 6;</code>
      * @return int
@@ -183,7 +189,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The target number of blocks that the closure transaction should be confirmed by.
+     *&#47; The target number of blocks that the funding transaction should be confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 6;</code>
      * @param int $var
@@ -198,7 +204,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the funding transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 7;</code>
      * @return int|string
@@ -209,7 +215,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the funding transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 7;</code>
      * @param int|string $var
@@ -271,6 +277,32 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->min_htlc_msat = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The delay we require on the remote's commitment transaction. If this is not set, it will be scaled automatically with the channel size.
+     *
+     * Generated from protobuf field <code>uint32 remote_csv_delay = 10[json_name = "remote_csv_delay"];</code>
+     * @return int
+     */
+    public function getRemoteCsvDelay()
+    {
+        return $this->remote_csv_delay;
+    }
+
+    /**
+     *&#47; The delay we require on the remote's commitment transaction. If this is not set, it will be scaled automatically with the channel size.
+     *
+     * Generated from protobuf field <code>uint32 remote_csv_delay = 10[json_name = "remote_csv_delay"];</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRemoteCsvDelay($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->remote_csv_delay = $var;
 
         return $this;
     }

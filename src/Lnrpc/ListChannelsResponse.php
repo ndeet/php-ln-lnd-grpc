@@ -16,7 +16,7 @@ class ListChannelsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of active channels
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ActiveChannel channels = 11[json_name = "channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Channel channels = 11[json_name = "channels"];</code>
      */
     private $channels;
 
@@ -28,7 +28,7 @@ class ListChannelsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of active channels
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ActiveChannel channels = 11[json_name = "channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Channel channels = 11[json_name = "channels"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getChannels()
@@ -39,13 +39,13 @@ class ListChannelsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of active channels
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ActiveChannel channels = 11[json_name = "channels"];</code>
-     * @param \Lnrpc\ActiveChannel[]|\Google\Protobuf\Internal\RepeatedField $var
+     * Generated from protobuf field <code>repeated .lnrpc.Channel channels = 11[json_name = "channels"];</code>
+     * @param \Lnrpc\Channel[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setChannels($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\ActiveChannel::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Channel::class);
         $this->channels = $arr;
 
         return $this;

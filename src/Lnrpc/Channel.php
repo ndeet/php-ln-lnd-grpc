@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>lnrpc.ActiveChannel</code>
+ * Generated from protobuf message <code>lnrpc.Channel</code>
  */
-class ActiveChannel extends \Google\Protobuf\Internal\Message
+class Channel extends \Google\Protobuf\Internal\Message
 {
     /**
      *&#47; Whether this channel is active or not
@@ -129,6 +129,12 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 csv_delay = 16[json_name = "csv_delay"];</code>
      */
     private $csv_delay = 0;
+    /**
+     *&#47; Whether this channel is advertised to the network or not
+     *
+     * Generated from protobuf field <code>bool private = 17[json_name = "private"];</code>
+     */
+    private $private = false;
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
@@ -587,6 +593,32 @@ class ActiveChannel extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->csv_delay = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; Whether this channel is advertised to the network or not
+     *
+     * Generated from protobuf field <code>bool private = 17[json_name = "private"];</code>
+     * @return bool
+     */
+    public function getPrivate()
+    {
+        return $this->private;
+    }
+
+    /**
+     *&#47; Whether this channel is advertised to the network or not
+     *
+     * Generated from protobuf field <code>bool private = 17[json_name = "private"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setPrivate($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->private = $var;
 
         return $this;
     }

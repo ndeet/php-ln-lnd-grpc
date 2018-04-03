@@ -13,10 +13,114 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class ListChannelsRequest extends \Google\Protobuf\Internal\Message
 {
+    /**
+     * Generated from protobuf field <code>bool active_only = 1;</code>
+     */
+    private $active_only = false;
+    /**
+     * Generated from protobuf field <code>bool inactive_only = 2;</code>
+     */
+    private $inactive_only = false;
+    /**
+     * Generated from protobuf field <code>bool public_only = 3;</code>
+     */
+    private $public_only = false;
+    /**
+     * Generated from protobuf field <code>bool private_only = 4;</code>
+     */
+    private $private_only = false;
 
     public function __construct() {
         \GPBMetadata\Rpc::initOnce();
         parent::__construct();
+    }
+
+    /**
+     * Generated from protobuf field <code>bool active_only = 1;</code>
+     * @return bool
+     */
+    public function getActiveOnly()
+    {
+        return $this->active_only;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool active_only = 1;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setActiveOnly($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->active_only = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool inactive_only = 2;</code>
+     * @return bool
+     */
+    public function getInactiveOnly()
+    {
+        return $this->inactive_only;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool inactive_only = 2;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setInactiveOnly($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->inactive_only = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool public_only = 3;</code>
+     * @return bool
+     */
+    public function getPublicOnly()
+    {
+        return $this->public_only;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool public_only = 3;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setPublicOnly($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->public_only = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool private_only = 4;</code>
+     * @return bool
+     */
+    public function getPrivateOnly()
+    {
+        return $this->private_only;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool private_only = 4;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setPrivateOnly($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->private_only = $var;
+
+        return $this;
     }
 
 }

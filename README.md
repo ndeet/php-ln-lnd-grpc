@@ -1,8 +1,8 @@
 PHP lnd gRPC client
 ===================
 
-This library is a gRPC client for [lnd](https://github.com/lightningnetwork/lnd) version [0.4-beta](https://github.com/lightningnetwork/lnd/releases/tag/v0.4-beta). It is generated code
-from [rpc.proto](https://github.com/lightningnetwork/lnd/blob/v0.4-beta/lnrpc/rpc.proto).
+This library is a gRPC client for [lnd](https://github.com/lightningnetwork/lnd) version [0.4.1-beta](https://github.com/lightningnetwork/lnd/releases/tag/v0.4.1-beta). It is generated code
+from [rpc.proto](https://github.com/lightningnetwork/lnd/blob/v0.4.1-beta/lnrpc/rpc.proto).
 
 
 Requirements
@@ -46,6 +46,8 @@ Example
 =======
 
 Example of usage you can find in [example/index.php](https://github.com/ndeet/php-ln-lnd-grpc-client/tree/master/example/index.php).
+Note: Currently the examples only work with macaroons disabled. Starting lnd with `--no-macaroons` option. The examples 
+will be updated asap. 
 
 Generation of PHP classes
 =========================
@@ -58,4 +60,4 @@ protoc -I/usr/local/include -I. -I$GOPATH/src -I$GOPATH/src/github.com/grpc-ecos
 
 Credits
 =======
-This is a fork of [Bitfury Lighting gRPC PHP client](https://github.com/BitfuryLightning/php-ln-lnd-grpc-client). Unfortunately they seem to have abandoned it and did not respond to issues/pull requests [#1](https://github.com/BitfuryLightning/php-lnd-grpc-client/issues/2) [#2](https://github.com/BitfuryLightning/php-lnd-grpc-client/pull/3) [#3](https://github.com/BitfuryLightning/php-lnd-grpc-client/pull/1). That's why this fork now lives here on its own.
+This is a fork of [Bitfury Lighting gRPC PHP client](https://github.com/BitfuryLightning/php-lnd-grpc-client). Unfortunately they seem to have abandoned it and did not respond to issues/pull requests [#1](https://github.com/BitfuryLightning/php-lnd-grpc-client/issues/2) [#2](https://github.com/BitfuryLightning/php-lnd-grpc-client/pull/3) [#3](https://github.com/BitfuryLightning/php-lnd-grpc-client/pull/1). That's why this fork now lives here on its own.
