@@ -4,18 +4,13 @@
 
 namespace Lnrpc;
 
-/**
- * Protobuf enum <code>Lnrpc\NewAddressRequest\AddressType</code>
- */
-class NewAddressRequest_AddressType
-{
+if (false) {
     /**
-     * Generated from protobuf enum <code>WITNESS_PUBKEY_HASH = 0;</code>
+     * This class is deprecated. Use Lnrpc\NewAddressRequest\AddressType instead.
+     * @deprecated
      */
-    const WITNESS_PUBKEY_HASH = 0;
-    /**
-     * Generated from protobuf enum <code>NESTED_PUBKEY_HASH = 1;</code>
-     */
-    const NESTED_PUBKEY_HASH = 1;
+    class NewAddressRequest_AddressType {}
 }
+class_exists(NewAddressRequest\AddressType::class);
+@trigger_error('Lnrpc\NewAddressRequest_AddressType is deprecated and will be removed in the next major release. Use Lnrpc\NewAddressRequest\AddressType instead', E_USER_DEPRECATED);
 

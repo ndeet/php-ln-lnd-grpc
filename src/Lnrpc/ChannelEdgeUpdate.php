@@ -43,9 +43,27 @@ class ChannelEdgeUpdate extends \Google\Protobuf\Internal\Message
      */
     private $connecting_node = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type int|string $chan_id
+     *          *
+     *          The unique channel ID for the channel. The first 3 bytes are the block
+     *          height, the next 3 the index within the block, and the last 2 bytes are the
+     *          output index for the channel.
+     *     @type \Lnrpc\ChannelPoint $chan_point
+     *     @type int|string $capacity
+     *     @type \Lnrpc\RoutingPolicy $routing_policy
+     *     @type string $advertising_node
+     *     @type string $connecting_node
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

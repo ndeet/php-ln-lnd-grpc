@@ -30,9 +30,25 @@ class GenSeedRequest extends \Google\Protobuf\Internal\Message
      */
     private $seed_entropy = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $aezeed_passphrase
+     *          *
+     *          aezeed_passphrase is an optional user provided passphrase that will be used
+     *          to encrypt the generated aezeed cipher seed.
+     *     @type string $seed_entropy
+     *          *
+     *          seed_entropy is an optional 16-bytes generated via CSPRNG. If not
+     *          specified, then a fresh set of randomness will be used to create the seed.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

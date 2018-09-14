@@ -22,9 +22,19 @@ class PendingUpdate extends \Google\Protobuf\Internal\Message
      */
     private $output_index = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $txid
+     *     @type int $output_index
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

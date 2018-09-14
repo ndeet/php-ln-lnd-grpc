@@ -20,9 +20,19 @@ class NewAddressResponse extends \Google\Protobuf\Internal\Message
      */
     private $address = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $address
+     *          &#47; The newly generated wallet address
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

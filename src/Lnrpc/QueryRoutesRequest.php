@@ -31,10 +31,48 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int32 num_routes = 3;</code>
      */
     private $num_routes = 0;
+    /**
+     *&#47; An optional CLTV delta from the current height that should be used for the timelock of the final hop
+     *
+     * Generated from protobuf field <code>int32 final_cltv_delta = 4;</code>
+     */
+    private $final_cltv_delta = 0;
+    /**
+     **
+     *The maximum number of satoshis that will be paid as a fee of the payment.
+     *This value can be represented either as a percentage of the amount being
+     *sent, or as a fixed amount of the maximum fee the user is willing the pay to
+     *send the payment.
+     *
+     * Generated from protobuf field <code>.lnrpc.FeeLimit fee_limit = 5;</code>
+     */
+    private $fee_limit = null;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $pub_key
+     *          &#47; The 33-byte hex-encoded public key for the payment destination
+     *     @type int|string $amt
+     *          &#47; The amount to send expressed in satoshis
+     *     @type int $num_routes
+     *          &#47; The max number of routes to return.
+     *     @type int $final_cltv_delta
+     *          &#47; An optional CLTV delta from the current height that should be used for the timelock of the final hop
+     *     @type \Lnrpc\FeeLimit $fee_limit
+     *          *
+     *          The maximum number of satoshis that will be paid as a fee of the payment.
+     *          This value can be represented either as a percentage of the amount being
+     *          sent, or as a fixed amount of the maximum fee the user is willing the pay to
+     *          send the payment.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -111,6 +149,66 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->num_routes = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; An optional CLTV delta from the current height that should be used for the timelock of the final hop
+     *
+     * Generated from protobuf field <code>int32 final_cltv_delta = 4;</code>
+     * @return int
+     */
+    public function getFinalCltvDelta()
+    {
+        return $this->final_cltv_delta;
+    }
+
+    /**
+     *&#47; An optional CLTV delta from the current height that should be used for the timelock of the final hop
+     *
+     * Generated from protobuf field <code>int32 final_cltv_delta = 4;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setFinalCltvDelta($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->final_cltv_delta = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The maximum number of satoshis that will be paid as a fee of the payment.
+     *This value can be represented either as a percentage of the amount being
+     *sent, or as a fixed amount of the maximum fee the user is willing the pay to
+     *send the payment.
+     *
+     * Generated from protobuf field <code>.lnrpc.FeeLimit fee_limit = 5;</code>
+     * @return \Lnrpc\FeeLimit
+     */
+    public function getFeeLimit()
+    {
+        return $this->fee_limit;
+    }
+
+    /**
+     **
+     *The maximum number of satoshis that will be paid as a fee of the payment.
+     *This value can be represented either as a percentage of the amount being
+     *sent, or as a fixed amount of the maximum fee the user is willing the pay to
+     *send the payment.
+     *
+     * Generated from protobuf field <code>.lnrpc.FeeLimit fee_limit = 5;</code>
+     * @param \Lnrpc\FeeLimit $var
+     * @return $this
+     */
+    public function setFeeLimit($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\FeeLimit::class);
+        $this->fee_limit = $var;
 
         return $this;
     }

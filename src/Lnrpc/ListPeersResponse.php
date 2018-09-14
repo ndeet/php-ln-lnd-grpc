@@ -20,9 +20,19 @@ class ListPeersResponse extends \Google\Protobuf\Internal\Message
      */
     private $peers;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type \Lnrpc\Peer[]|\Google\Protobuf\Internal\RepeatedField $peers
+     *          &#47; The list of currently connected peers
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

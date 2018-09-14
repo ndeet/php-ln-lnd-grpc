@@ -20,9 +20,19 @@ class NodeInfoRequest extends \Google\Protobuf\Internal\Message
      */
     private $pub_key = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $pub_key
+     *          &#47; The 33-byte hex-encoded compressed public of the target node 
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

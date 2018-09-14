@@ -30,9 +30,21 @@ class HTLC extends \Google\Protobuf\Internal\Message
      */
     private $expiration_height = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type bool $incoming
+     *     @type int|string $amount
+     *     @type string $hash_lock
+     *     @type int $expiration_height
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

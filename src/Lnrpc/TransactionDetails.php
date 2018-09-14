@@ -20,9 +20,19 @@ class TransactionDetails extends \Google\Protobuf\Internal\Message
      */
     private $transactions;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type \Lnrpc\Transaction[]|\Google\Protobuf\Internal\RepeatedField $transactions
+     *          &#47; The list of transactions relevant to the wallet.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

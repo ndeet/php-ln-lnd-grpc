@@ -53,9 +53,32 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
      */
     private $stage = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type bool $incoming
+     *          &#47; The direction within the channel that the htlc was sent
+     *     @type int|string $amount
+     *          &#47; The total value of the htlc
+     *     @type string $outpoint
+     *          &#47; The final output to be swept back to the user's wallet
+     *     @type int $maturity_height
+     *          &#47; The next block height at which we can spend the current stage
+     *     @type int $blocks_til_maturity
+     *          *
+     *          The number of blocks remaining until the current stage can be swept.
+     *          Negative values indicate how many blocks have passed since becoming
+     *          mature.
+     *     @type int $stage
+     *          &#47; Indicates whether the htlc is in its first or second stage of recovery
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

@@ -28,9 +28,23 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      */
     private $r_hash = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $r_hash_str
+     *          *
+     *          The hex-encoded payment hash of the invoice to be looked up. The passed
+     *          payment hash must be exactly 32 bytes, otherwise an error is returned.
+     *     @type string $r_hash
+     *          &#47; The payment hash of the invoice to be looked up.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

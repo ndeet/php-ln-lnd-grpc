@@ -85,10 +85,50 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 best_header_timestamp = 13[json_name = "best_header_timestamp"];</code>
      */
     private $best_header_timestamp = 0;
+    /**
+     *&#47; The version of the LND software that the node is running.
+     *
+     * Generated from protobuf field <code>string version = 14[json_name = "version"];</code>
+     */
+    private $version = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $identity_pubkey
+     *          &#47; The identity pubkey of the current node.
+     *     @type string $alias
+     *          &#47; If applicable, the alias of the current node, e.g. "bob"
+     *     @type int $num_pending_channels
+     *          &#47; Number of pending channels
+     *     @type int $num_active_channels
+     *          &#47; Number of active channels
+     *     @type int $num_peers
+     *          &#47; Number of peers
+     *     @type int $block_height
+     *          &#47; The node's current view of the height of the best block
+     *     @type string $block_hash
+     *          &#47; The node's current view of the hash of the best block
+     *     @type bool $synced_to_chain
+     *          &#47; Whether the wallet's view is synced to the main chain
+     *     @type bool $testnet
+     *          &#47; Whether the current node is connected to testnet
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $chains
+     *          &#47; A list of active chains the node is connected to
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $uris
+     *          &#47; The URIs of the current node.
+     *     @type int|string $best_header_timestamp
+     *          &#47; Timestamp of the block best known to the wallet
+     *     @type string $version
+     *          &#47; The version of the LND software that the node is running.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -399,6 +439,32 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->best_header_timestamp = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The version of the LND software that the node is running.
+     *
+     * Generated from protobuf field <code>string version = 14[json_name = "version"];</code>
+     * @return string
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+    /**
+     *&#47; The version of the LND software that the node is running.
+     *
+     * Generated from protobuf field <code>string version = 14[json_name = "version"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setVersion($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->version = $var;
 
         return $this;
     }

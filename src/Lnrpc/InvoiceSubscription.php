@@ -13,10 +13,118 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class InvoiceSubscription extends \Google\Protobuf\Internal\Message
 {
+    /**
+     **
+     *If specified (non-zero), then we'll first start by sending out
+     *notifications for all added indexes with an add_index greater than this
+     *value. This allows callers to catch up on any events they missed while they
+     *weren't connected to the streaming RPC.
+     *
+     * Generated from protobuf field <code>uint64 add_index = 1[json_name = "add_index"];</code>
+     */
+    private $add_index = 0;
+    /**
+     **
+     *If specified (non-zero), then we'll first start by sending out
+     *notifications for all settled indexes with an settle_index greater than
+     *this value. This allows callers to catch up on any events they missed while
+     *they weren't connected to the streaming RPC.
+     *
+     * Generated from protobuf field <code>uint64 settle_index = 2[json_name = "settle_index"];</code>
+     */
+    private $settle_index = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type int|string $add_index
+     *          *
+     *          If specified (non-zero), then we'll first start by sending out
+     *          notifications for all added indexes with an add_index greater than this
+     *          value. This allows callers to catch up on any events they missed while they
+     *          weren't connected to the streaming RPC.
+     *     @type int|string $settle_index
+     *          *
+     *          If specified (non-zero), then we'll first start by sending out
+     *          notifications for all settled indexes with an settle_index greater than
+     *          this value. This allows callers to catch up on any events they missed while
+     *          they weren't connected to the streaming RPC.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
+    }
+
+    /**
+     **
+     *If specified (non-zero), then we'll first start by sending out
+     *notifications for all added indexes with an add_index greater than this
+     *value. This allows callers to catch up on any events they missed while they
+     *weren't connected to the streaming RPC.
+     *
+     * Generated from protobuf field <code>uint64 add_index = 1[json_name = "add_index"];</code>
+     * @return int|string
+     */
+    public function getAddIndex()
+    {
+        return $this->add_index;
+    }
+
+    /**
+     **
+     *If specified (non-zero), then we'll first start by sending out
+     *notifications for all added indexes with an add_index greater than this
+     *value. This allows callers to catch up on any events they missed while they
+     *weren't connected to the streaming RPC.
+     *
+     * Generated from protobuf field <code>uint64 add_index = 1[json_name = "add_index"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setAddIndex($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->add_index = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *If specified (non-zero), then we'll first start by sending out
+     *notifications for all settled indexes with an settle_index greater than
+     *this value. This allows callers to catch up on any events they missed while
+     *they weren't connected to the streaming RPC.
+     *
+     * Generated from protobuf field <code>uint64 settle_index = 2[json_name = "settle_index"];</code>
+     * @return int|string
+     */
+    public function getSettleIndex()
+    {
+        return $this->settle_index;
+    }
+
+    /**
+     **
+     *If specified (non-zero), then we'll first start by sending out
+     *notifications for all settled indexes with an settle_index greater than
+     *this value. This allows callers to catch up on any events they missed while
+     *they weren't connected to the streaming RPC.
+     *
+     * Generated from protobuf field <code>uint64 settle_index = 2[json_name = "settle_index"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setSettleIndex($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->settle_index = $var;
+
+        return $this;
     }
 
 }

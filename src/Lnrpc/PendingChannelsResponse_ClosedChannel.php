@@ -4,84 +4,13 @@
 
 namespace Lnrpc;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
-use Google\Protobuf\Internal\GPBUtil;
-
-/**
- * Generated from protobuf message <code>lnrpc.PendingChannelsResponse.ClosedChannel</code>
- */
-class PendingChannelsResponse_ClosedChannel extends \Google\Protobuf\Internal\Message
-{
+if (false) {
     /**
-     *&#47; The pending channel to be closed
-     *
-     * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
+     * This class is deprecated. Use Lnrpc\PendingChannelsResponse\ClosedChannel instead.
+     * @deprecated
      */
-    private $channel = null;
-    /**
-     *&#47; The transaction id of the closing transaction
-     *
-     * Generated from protobuf field <code>string closing_txid = 2[json_name = "closing_txid"];</code>
-     */
-    private $closing_txid = '';
-
-    public function __construct() {
-        \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
-    }
-
-    /**
-     *&#47; The pending channel to be closed
-     *
-     * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
-     * @return \Lnrpc\PendingChannelsResponse_PendingChannel
-     */
-    public function getChannel()
-    {
-        return $this->channel;
-    }
-
-    /**
-     *&#47; The pending channel to be closed
-     *
-     * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
-     * @param \Lnrpc\PendingChannelsResponse_PendingChannel $var
-     * @return $this
-     */
-    public function setChannel($var)
-    {
-        GPBUtil::checkMessage($var, \Lnrpc\PendingChannelsResponse_PendingChannel::class);
-        $this->channel = $var;
-
-        return $this;
-    }
-
-    /**
-     *&#47; The transaction id of the closing transaction
-     *
-     * Generated from protobuf field <code>string closing_txid = 2[json_name = "closing_txid"];</code>
-     * @return string
-     */
-    public function getClosingTxid()
-    {
-        return $this->closing_txid;
-    }
-
-    /**
-     *&#47; The transaction id of the closing transaction
-     *
-     * Generated from protobuf field <code>string closing_txid = 2[json_name = "closing_txid"];</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setClosingTxid($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->closing_txid = $var;
-
-        return $this;
-    }
-
+    class PendingChannelsResponse_ClosedChannel {}
 }
+class_exists(PendingChannelsResponse\ClosedChannel::class);
+@trigger_error('Lnrpc\PendingChannelsResponse_ClosedChannel is deprecated and will be removed in the next major release. Use Lnrpc\PendingChannelsResponse\ClosedChannel instead', E_USER_DEPRECATED);
 

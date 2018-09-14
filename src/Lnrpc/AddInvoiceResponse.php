@@ -26,10 +26,40 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string payment_request = 2[json_name = "payment_request"];</code>
      */
     private $payment_request = '';
+    /**
+     **
+     *The "add" index of this invoice. Each newly created invoice will increment
+     *this index making it monotonically increasing. Callers to the
+     *SubscribeInvoices call can use this to instantly get notified of all added
+     *invoices with an add_index greater than this one.
+     *
+     * Generated from protobuf field <code>uint64 add_index = 16[json_name = "add_index"];</code>
+     */
+    private $add_index = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $r_hash
+     *     @type string $payment_request
+     *          *
+     *          A bare-bones invoice for a payment within the Lightning Network.  With the
+     *          details of the invoice, the sender has all the data necessary to send a
+     *          payment to the recipient.
+     *     @type int|string $add_index
+     *          *
+     *          The "add" index of this invoice. Each newly created invoice will increment
+     *          this index making it monotonically increasing. Callers to the
+     *          SubscribeInvoices call can use this to instantly get notified of all added
+     *          invoices with an add_index greater than this one.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -82,6 +112,40 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->payment_request = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The "add" index of this invoice. Each newly created invoice will increment
+     *this index making it monotonically increasing. Callers to the
+     *SubscribeInvoices call can use this to instantly get notified of all added
+     *invoices with an add_index greater than this one.
+     *
+     * Generated from protobuf field <code>uint64 add_index = 16[json_name = "add_index"];</code>
+     * @return int|string
+     */
+    public function getAddIndex()
+    {
+        return $this->add_index;
+    }
+
+    /**
+     **
+     *The "add" index of this invoice. Each newly created invoice will increment
+     *this index making it monotonically increasing. Callers to the
+     *SubscribeInvoices call can use this to instantly get notified of all added
+     *invoices with an add_index greater than this one.
+     *
+     * Generated from protobuf field <code>uint64 add_index = 16[json_name = "add_index"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setAddIndex($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->add_index = $var;
 
         return $this;
     }

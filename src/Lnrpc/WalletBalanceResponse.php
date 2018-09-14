@@ -32,9 +32,23 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
      */
     private $unconfirmed_balance = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type int|string $total_balance
+     *          &#47; The balance of the wallet
+     *     @type int|string $confirmed_balance
+     *          &#47; The confirmed balance of a wallet(with >= 1 confirmations)
+     *     @type int|string $unconfirmed_balance
+     *          &#47; The unconfirmed balance of a wallet(with 0 confirmations)
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

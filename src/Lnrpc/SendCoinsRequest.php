@@ -38,9 +38,25 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
      */
     private $sat_per_byte = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $addr
+     *          &#47; The address to send coins to 
+     *     @type int|string $amount
+     *          &#47; The amount in satoshis to send
+     *     @type int $target_conf
+     *          &#47; The target number of blocks that this transaction should be confirmed by.
+     *     @type int|string $sat_per_byte
+     *          &#47; A manual fee rate set in sat/byte that should be used when crafting the transaction.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

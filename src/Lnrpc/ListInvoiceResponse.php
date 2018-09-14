@@ -14,16 +14,60 @@ use Google\Protobuf\Internal\GPBUtil;
 class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
+     *A list of invoices from the time slice of the time series specified in the
+     *request.
+     *
      * Generated from protobuf field <code>repeated .lnrpc.Invoice invoices = 1[json_name = "invoices"];</code>
      */
     private $invoices;
+    /**
+     **
+     *The index of the last item in the set of returned invoices. This can be used
+     *to seek further, pagination style.
+     *
+     * Generated from protobuf field <code>uint64 last_index_offset = 2[json_name = "last_index_offset"];</code>
+     */
+    private $last_index_offset = 0;
+    /**
+     **
+     *The index of the last item in the set of returned invoices. This can be used
+     *to seek backwards, pagination style.
+     *
+     * Generated from protobuf field <code>uint64 first_index_offset = 3[json_name = "first_index_offset"];</code>
+     */
+    private $first_index_offset = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type \Lnrpc\Invoice[]|\Google\Protobuf\Internal\RepeatedField $invoices
+     *          *
+     *          A list of invoices from the time slice of the time series specified in the
+     *          request.
+     *     @type int|string $last_index_offset
+     *          *
+     *          The index of the last item in the set of returned invoices. This can be used
+     *          to seek further, pagination style.
+     *     @type int|string $first_index_offset
+     *          *
+     *          The index of the last item in the set of returned invoices. This can be used
+     *          to seek backwards, pagination style.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
+     **
+     *A list of invoices from the time slice of the time series specified in the
+     *request.
+     *
      * Generated from protobuf field <code>repeated .lnrpc.Invoice invoices = 1[json_name = "invoices"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -33,6 +77,10 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *A list of invoices from the time slice of the time series specified in the
+     *request.
+     *
      * Generated from protobuf field <code>repeated .lnrpc.Invoice invoices = 1[json_name = "invoices"];</code>
      * @param \Lnrpc\Invoice[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
@@ -41,6 +89,66 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Invoice::class);
         $this->invoices = $arr;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The index of the last item in the set of returned invoices. This can be used
+     *to seek further, pagination style.
+     *
+     * Generated from protobuf field <code>uint64 last_index_offset = 2[json_name = "last_index_offset"];</code>
+     * @return int|string
+     */
+    public function getLastIndexOffset()
+    {
+        return $this->last_index_offset;
+    }
+
+    /**
+     **
+     *The index of the last item in the set of returned invoices. This can be used
+     *to seek further, pagination style.
+     *
+     * Generated from protobuf field <code>uint64 last_index_offset = 2[json_name = "last_index_offset"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setLastIndexOffset($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->last_index_offset = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The index of the last item in the set of returned invoices. This can be used
+     *to seek backwards, pagination style.
+     *
+     * Generated from protobuf field <code>uint64 first_index_offset = 3[json_name = "first_index_offset"];</code>
+     * @return int|string
+     */
+    public function getFirstIndexOffset()
+    {
+        return $this->first_index_offset;
+    }
+
+    /**
+     **
+     *The index of the last item in the set of returned invoices. This can be used
+     *to seek backwards, pagination style.
+     *
+     * Generated from protobuf field <code>uint64 first_index_offset = 3[json_name = "first_index_offset"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setFirstIndexOffset($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->first_index_offset = $var;
 
         return $this;
     }

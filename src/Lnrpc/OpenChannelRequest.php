@@ -20,7 +20,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      */
     private $node_pubkey = '';
     /**
-     *&#47; The hex encoded pubkey of the node to open a channel with 
+     *&#47; The hex encoded pubkey of the node to open a channel with
      *
      * Generated from protobuf field <code>string node_pubkey_string = 3[json_name = "node_pubkey_string"];</code>
      */
@@ -67,10 +67,44 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 remote_csv_delay = 10[json_name = "remote_csv_delay"];</code>
      */
     private $remote_csv_delay = 0;
+    /**
+     *&#47; The minimum number of confirmations each one of your outputs used for the funding transaction must satisfy.
+     *
+     * Generated from protobuf field <code>int32 min_confs = 11[json_name = "min_confs"];</code>
+     */
+    private $min_confs = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $node_pubkey
+     *          &#47; The pubkey of the node to open a channel with
+     *     @type string $node_pubkey_string
+     *          &#47; The hex encoded pubkey of the node to open a channel with
+     *     @type int|string $local_funding_amount
+     *          &#47; The number of satoshis the wallet should commit to the channel
+     *     @type int|string $push_sat
+     *          &#47; The number of satoshis to push to the remote side as part of the initial commitment state
+     *     @type int $target_conf
+     *          &#47; The target number of blocks that the funding transaction should be confirmed by.
+     *     @type int|string $sat_per_byte
+     *          &#47; A manual fee rate set in sat/byte that should be used when crafting the funding transaction.
+     *     @type bool $private
+     *          &#47; Whether this channel should be private, not announced to the greater network.
+     *     @type int|string $min_htlc_msat
+     *          &#47; The minimum value in millisatoshi we will require for incoming HTLCs on the channel.
+     *     @type int $remote_csv_delay
+     *          &#47; The delay we require on the remote's commitment transaction. If this is not set, it will be scaled automatically with the channel size.
+     *     @type int $min_confs
+     *          &#47; The minimum number of confirmations each one of your outputs used for the funding transaction must satisfy.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -100,7 +134,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hex encoded pubkey of the node to open a channel with 
+     *&#47; The hex encoded pubkey of the node to open a channel with
      *
      * Generated from protobuf field <code>string node_pubkey_string = 3[json_name = "node_pubkey_string"];</code>
      * @return string
@@ -111,7 +145,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hex encoded pubkey of the node to open a channel with 
+     *&#47; The hex encoded pubkey of the node to open a channel with
      *
      * Generated from protobuf field <code>string node_pubkey_string = 3[json_name = "node_pubkey_string"];</code>
      * @param string $var
@@ -303,6 +337,32 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->remote_csv_delay = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The minimum number of confirmations each one of your outputs used for the funding transaction must satisfy.
+     *
+     * Generated from protobuf field <code>int32 min_confs = 11[json_name = "min_confs"];</code>
+     * @return int
+     */
+    public function getMinConfs()
+    {
+        return $this->min_confs;
+    }
+
+    /**
+     *&#47; The minimum number of confirmations each one of your outputs used for the funding transaction must satisfy.
+     *
+     * Generated from protobuf field <code>int32 min_confs = 11[json_name = "min_confs"];</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setMinConfs($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->min_confs = $var;
 
         return $this;
     }

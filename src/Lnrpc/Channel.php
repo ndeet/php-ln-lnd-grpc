@@ -136,9 +136,71 @@ class Channel extends \Google\Protobuf\Internal\Message
      */
     private $private = false;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type bool $active
+     *          &#47; Whether this channel is active or not
+     *     @type string $remote_pubkey
+     *          &#47; The identity pubkey of the remote node
+     *     @type string $channel_point
+     *          *
+     *          The outpoint (txid:index) of the funding transaction. With this value, Bob
+     *          will be able to generate a signature for Alice's version of the commitment
+     *          transaction.
+     *     @type int|string $chan_id
+     *          *
+     *          The unique channel ID for the channel. The first 3 bytes are the block
+     *          height, the next 3 the index within the block, and the last 2 bytes are the
+     *          output index for the channel.
+     *     @type int|string $capacity
+     *          &#47; The total amount of funds held in this channel
+     *     @type int|string $local_balance
+     *          &#47; This node's current balance in this channel
+     *     @type int|string $remote_balance
+     *          &#47; The counterparty's current balance in this channel
+     *     @type int|string $commit_fee
+     *          *
+     *          The amount calculated to be paid in fees for the current set of commitment
+     *          transactions. The fee amount is persisted with the channel in order to
+     *          allow the fee amount to be removed and recalculated with each channel state
+     *          update, including updates that happen after a system restart.
+     *     @type int|string $commit_weight
+     *          &#47; The weight of the commitment transaction
+     *     @type int|string $fee_per_kw
+     *          *
+     *          The required number of satoshis per kilo-weight that the requester will pay
+     *          at all times, for both the funding transaction and commitment transaction.
+     *          This value can later be updated once the channel is open.
+     *     @type int|string $unsettled_balance
+     *          &#47; The unsettled balance in this channel
+     *     @type int|string $total_satoshis_sent
+     *          *
+     *          The total number of satoshis we've sent within this channel.
+     *     @type int|string $total_satoshis_received
+     *          *
+     *          The total number of satoshis we've received within this channel.
+     *     @type int|string $num_updates
+     *          *
+     *          The total number of updates conducted within this channel.
+     *     @type \Lnrpc\HTLC[]|\Google\Protobuf\Internal\RepeatedField $pending_htlcs
+     *          *
+     *          The list of active, uncleared HTLCs currently pending within the channel.
+     *     @type int $csv_delay
+     *          *
+     *          The CSV delay expressed in relative blocks. If the channel is force
+     *          closed, we'll need to wait for this many blocks before we can regain our
+     *          funds.
+     *     @type bool $private
+     *          &#47; Whether this channel is advertised to the network or not
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

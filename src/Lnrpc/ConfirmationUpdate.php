@@ -26,9 +26,20 @@ class ConfirmationUpdate extends \Google\Protobuf\Internal\Message
      */
     private $num_confs_left = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $block_sha
+     *     @type int $block_height
+     *     @type int $num_confs_left
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

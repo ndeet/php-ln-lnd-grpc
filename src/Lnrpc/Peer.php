@@ -62,9 +62,33 @@ class Peer extends \Google\Protobuf\Internal\Message
      */
     private $ping_time = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $pub_key
+     *          &#47; The identity pubkey of the peer
+     *     @type string $address
+     *          &#47; Network address of the peer; eg `127.0.0.1:10011`
+     *     @type int|string $bytes_sent
+     *          &#47; Bytes of data transmitted to this peer
+     *     @type int|string $bytes_recv
+     *          &#47; Bytes of data transmitted from this peer
+     *     @type int|string $sat_sent
+     *          &#47; Satoshis sent to this peer
+     *     @type int|string $sat_recv
+     *          &#47; Satoshis received from this peer
+     *     @type bool $inbound
+     *          &#47; A channel is inbound if the counterparty initiated the channel
+     *     @type int|string $ping_time
+     *          &#47; Ping time to this peer
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

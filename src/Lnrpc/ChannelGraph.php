@@ -28,9 +28,21 @@ class ChannelGraph extends \Google\Protobuf\Internal\Message
      */
     private $edges;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type \Lnrpc\LightningNode[]|\Google\Protobuf\Internal\RepeatedField $nodes
+     *          &#47; The list of `LightningNode`s in this channel graph
+     *     @type \Lnrpc\ChannelEdge[]|\Google\Protobuf\Internal\RepeatedField $edges
+     *          &#47; The list of `ChannelEdge`s in this channel graph
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

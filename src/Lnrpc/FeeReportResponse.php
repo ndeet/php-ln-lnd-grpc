@@ -38,9 +38,25 @@ class FeeReportResponse extends \Google\Protobuf\Internal\Message
      */
     private $month_fee_sum = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type \Lnrpc\ChannelFeeReport[]|\Google\Protobuf\Internal\RepeatedField $channel_fees
+     *          &#47; An array of channel fee reports which describes the current fee schedule for each channel.
+     *     @type int|string $day_fee_sum
+     *          &#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 24 hrs.
+     *     @type int|string $week_fee_sum
+     *          &#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 1 week.
+     *     @type int|string $month_fee_sum
+     *          &#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 1 month.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

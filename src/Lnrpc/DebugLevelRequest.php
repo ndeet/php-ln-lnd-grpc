@@ -22,9 +22,19 @@ class DebugLevelRequest extends \Google\Protobuf\Internal\Message
      */
     private $level_spec = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type bool $show
+     *     @type string $level_spec
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

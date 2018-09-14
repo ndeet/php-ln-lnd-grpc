@@ -27,21 +27,48 @@ class Hop extends \Google\Protobuf\Internal\Message
      */
     private $chan_capacity = 0;
     /**
-     * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward"];</code>
+     * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward", deprecated = true];</code>
      */
     private $amt_to_forward = 0;
     /**
-     * Generated from protobuf field <code>int64 fee = 4[json_name = "fee"];</code>
+     * Generated from protobuf field <code>int64 fee = 4[json_name = "fee", deprecated = true];</code>
      */
     private $fee = 0;
     /**
      * Generated from protobuf field <code>uint32 expiry = 5[json_name = "expiry"];</code>
      */
     private $expiry = 0;
+    /**
+     * Generated from protobuf field <code>int64 amt_to_forward_msat = 6[json_name = "amt_to_forward_msat"];</code>
+     */
+    private $amt_to_forward_msat = 0;
+    /**
+     * Generated from protobuf field <code>int64 fee_msat = 7[json_name = "fee_msat"];</code>
+     */
+    private $fee_msat = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type int|string $chan_id
+     *          *
+     *          The unique channel ID for the channel. The first 3 bytes are the block
+     *          height, the next 3 the index within the block, and the last 2 bytes are the
+     *          output index for the channel.
+     *     @type int|string $chan_capacity
+     *     @type int|string $amt_to_forward
+     *     @type int|string $fee
+     *     @type int $expiry
+     *     @type int|string $amt_to_forward_msat
+     *     @type int|string $fee_msat
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -99,7 +126,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward"];</code>
+     * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward", deprecated = true];</code>
      * @return int|string
      */
     public function getAmtToForward()
@@ -108,7 +135,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward"];</code>
+     * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward", deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -121,7 +148,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 fee = 4[json_name = "fee"];</code>
+     * Generated from protobuf field <code>int64 fee = 4[json_name = "fee", deprecated = true];</code>
      * @return int|string
      */
     public function getFee()
@@ -130,7 +157,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 fee = 4[json_name = "fee"];</code>
+     * Generated from protobuf field <code>int64 fee = 4[json_name = "fee", deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -160,6 +187,50 @@ class Hop extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->expiry = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 amt_to_forward_msat = 6[json_name = "amt_to_forward_msat"];</code>
+     * @return int|string
+     */
+    public function getAmtToForwardMsat()
+    {
+        return $this->amt_to_forward_msat;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 amt_to_forward_msat = 6[json_name = "amt_to_forward_msat"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setAmtToForwardMsat($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->amt_to_forward_msat = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 fee_msat = 7[json_name = "fee_msat"];</code>
+     * @return int|string
+     */
+    public function getFeeMsat()
+    {
+        return $this->fee_msat;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 fee_msat = 7[json_name = "fee_msat"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setFeeMsat($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->fee_msat = $var;
 
         return $this;
     }

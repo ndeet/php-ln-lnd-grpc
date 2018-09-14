@@ -26,9 +26,21 @@ class VerifyMessageRequest extends \Google\Protobuf\Internal\Message
      */
     private $signature = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $msg
+     *          &#47; The message over which the signature is to be verified
+     *     @type string $signature
+     *          &#47; The signature to be verified over the given message
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

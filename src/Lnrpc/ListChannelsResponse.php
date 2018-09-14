@@ -20,9 +20,19 @@ class ListChannelsResponse extends \Google\Protobuf\Internal\Message
      */
     private $channels;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type \Lnrpc\Channel[]|\Google\Protobuf\Internal\RepeatedField $channels
+     *          &#47; The list of active channels
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

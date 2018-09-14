@@ -29,10 +29,27 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 fee_rate_milli_msat = 4[json_name = "fee_rate_milli_msat"];</code>
      */
     private $fee_rate_milli_msat = 0;
+    /**
+     * Generated from protobuf field <code>bool disabled = 5[json_name = "disabled"];</code>
+     */
+    private $disabled = false;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type int $time_lock_delta
+     *     @type int|string $min_htlc
+     *     @type int|string $fee_base_msat
+     *     @type int|string $fee_rate_milli_msat
+     *     @type bool $disabled
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -119,6 +136,28 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->fee_rate_milli_msat = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool disabled = 5[json_name = "disabled"];</code>
+     * @return bool
+     */
+    public function getDisabled()
+    {
+        return $this->disabled;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool disabled = 5[json_name = "disabled"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setDisabled($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->disabled = $var;
 
         return $this;
     }

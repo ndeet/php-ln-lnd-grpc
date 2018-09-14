@@ -26,9 +26,21 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
      */
     private $host = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $pubkey
+     *          &#47; The identity pubkey of the Lightning node
+     *     @type string $host
+     *          &#47; The network location of the lightning node, e.g. `69.69.69.69:1337` or `localhost:10011`
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

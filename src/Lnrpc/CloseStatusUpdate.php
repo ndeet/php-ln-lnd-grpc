@@ -15,9 +15,20 @@ class CloseStatusUpdate extends \Google\Protobuf\Internal\Message
 {
     protected $update;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type \Lnrpc\PendingUpdate $close_pending
+     *     @type \Lnrpc\ConfirmationUpdate $confirmation
+     *     @type \Lnrpc\ChannelCloseUpdate $chan_close
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

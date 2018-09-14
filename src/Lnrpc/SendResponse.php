@@ -26,9 +26,20 @@ class SendResponse extends \Google\Protobuf\Internal\Message
      */
     private $payment_route = null;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $payment_error
+     *     @type string $payment_preimage
+     *     @type \Lnrpc\Route $payment_route
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

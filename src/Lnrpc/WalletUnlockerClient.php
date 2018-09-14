@@ -82,4 +82,20 @@ class WalletUnlockerClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * * lncli: `changepassword`
+     * ChangePassword changes the password of the encrypted wallet. This will
+     * automatically unlock the wallet database if successful.
+     * @param \Lnrpc\ChangePasswordRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function ChangePassword(\Lnrpc\ChangePasswordRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.WalletUnlocker/ChangePassword',
+        $argument,
+        ['\Lnrpc\ChangePasswordResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

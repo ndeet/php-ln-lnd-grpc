@@ -20,9 +20,19 @@ class SignMessageResponse extends \Google\Protobuf\Internal\Message
      */
     private $signature = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $signature
+     *          &#47; The signature for the given message
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

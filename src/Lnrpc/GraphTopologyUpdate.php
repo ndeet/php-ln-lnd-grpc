@@ -26,9 +26,20 @@ class GraphTopologyUpdate extends \Google\Protobuf\Internal\Message
      */
     private $closed_chans;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type \Lnrpc\NodeUpdate[]|\Google\Protobuf\Internal\RepeatedField $node_updates
+     *     @type \Lnrpc\ChannelEdgeUpdate[]|\Google\Protobuf\Internal\RepeatedField $channel_updates
+     *     @type \Lnrpc\ClosedChannelUpdate[]|\Google\Protobuf\Internal\RepeatedField $closed_chans
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

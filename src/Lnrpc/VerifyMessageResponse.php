@@ -26,9 +26,21 @@ class VerifyMessageResponse extends \Google\Protobuf\Internal\Message
      */
     private $pubkey = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type bool $valid
+     *          &#47; Whether the signature was valid over the given message
+     *     @type string $pubkey
+     *          &#47; The pubkey recovered from the signature
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

@@ -26,7 +26,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      */
     private $dest_string = '';
     /**
-     *&#47; Number of satoshis to send. 
+     *&#47; Number of satoshis to send.
      *
      * Generated from protobuf field <code>int64 amt = 3;</code>
      */
@@ -53,15 +53,60 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      */
     private $payment_request = '';
     /**
-     *&#47; The CLTV delta from the current height that should be used to set the timelock for the final hop.
+     **
+     *The CLTV delta from the current height that should be used to set the
+     *timelock for the final hop.
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 7;</code>
      */
     private $final_cltv_delta = 0;
+    /**
+     **
+     *The maximum number of satoshis that will be paid as a fee of the payment.
+     *This value can be represented either as a percentage of the amount being
+     *sent, or as a fixed amount of the maximum fee the user is willing the pay to
+     *send the payment.
+     *
+     * Generated from protobuf field <code>.lnrpc.FeeLimit fee_limit = 8;</code>
+     */
+    private $fee_limit = null;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $dest
+     *          &#47; The identity pubkey of the payment recipient
+     *     @type string $dest_string
+     *          &#47; The hex-encoded identity pubkey of the payment recipient
+     *     @type int|string $amt
+     *          &#47; Number of satoshis to send.
+     *     @type string $payment_hash
+     *          &#47; The hash to use within the payment's HTLC
+     *     @type string $payment_hash_string
+     *          &#47; The hex-encoded hash to use within the payment's HTLC
+     *     @type string $payment_request
+     *          *
+     *          A bare-bones invoice for a payment within the Lightning Network.  With the
+     *          details of the invoice, the sender has all the data necessary to send a
+     *          payment to the recipient.
+     *     @type int $final_cltv_delta
+     *          *
+     *          The CLTV delta from the current height that should be used to set the
+     *          timelock for the final hop.
+     *     @type \Lnrpc\FeeLimit $fee_limit
+     *          *
+     *          The maximum number of satoshis that will be paid as a fee of the payment.
+     *          This value can be represented either as a percentage of the amount being
+     *          sent, or as a fixed amount of the maximum fee the user is willing the pay to
+     *          send the payment.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -117,7 +162,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Number of satoshis to send. 
+     *&#47; Number of satoshis to send.
      *
      * Generated from protobuf field <code>int64 amt = 3;</code>
      * @return int|string
@@ -128,7 +173,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Number of satoshis to send. 
+     *&#47; Number of satoshis to send.
      *
      * Generated from protobuf field <code>int64 amt = 3;</code>
      * @param int|string $var
@@ -227,7 +272,9 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The CLTV delta from the current height that should be used to set the timelock for the final hop.
+     **
+     *The CLTV delta from the current height that should be used to set the
+     *timelock for the final hop.
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 7;</code>
      * @return int
@@ -238,7 +285,9 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The CLTV delta from the current height that should be used to set the timelock for the final hop.
+     **
+     *The CLTV delta from the current height that should be used to set the
+     *timelock for the final hop.
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 7;</code>
      * @param int $var
@@ -248,6 +297,40 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->final_cltv_delta = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The maximum number of satoshis that will be paid as a fee of the payment.
+     *This value can be represented either as a percentage of the amount being
+     *sent, or as a fixed amount of the maximum fee the user is willing the pay to
+     *send the payment.
+     *
+     * Generated from protobuf field <code>.lnrpc.FeeLimit fee_limit = 8;</code>
+     * @return \Lnrpc\FeeLimit
+     */
+    public function getFeeLimit()
+    {
+        return $this->fee_limit;
+    }
+
+    /**
+     **
+     *The maximum number of satoshis that will be paid as a fee of the payment.
+     *This value can be represented either as a percentage of the amount being
+     *sent, or as a fixed amount of the maximum fee the user is willing the pay to
+     *send the payment.
+     *
+     * Generated from protobuf field <code>.lnrpc.FeeLimit fee_limit = 8;</code>
+     * @param \Lnrpc\FeeLimit $var
+     * @return $this
+     */
+    public function setFeeLimit($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\FeeLimit::class);
+        $this->fee_limit = $var;
 
         return $this;
     }

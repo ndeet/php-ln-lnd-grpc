@@ -22,10 +22,41 @@ class UnlockWalletRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bytes wallet_password = 1;</code>
      */
     private $wallet_password = '';
+    /**
+     **
+     *recovery_window is an optional argument specifying the address lookahead
+     *when restoring a wallet seed. The recovery window applies to each
+     *invdividual branch of the BIP44 derivation paths. Supplying a recovery
+     *window of zero indicates that no addresses should be recovered, such after
+     *the first initialization of the wallet.
+     *
+     * Generated from protobuf field <code>int32 recovery_window = 2;</code>
+     */
+    private $recovery_window = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $wallet_password
+     *          *
+     *          wallet_password should be the current valid passphrase for the daemon. This
+     *          will be required to decrypt on-disk material that the daemon requires to
+     *          function properly.
+     *     @type int $recovery_window
+     *          *
+     *          recovery_window is an optional argument specifying the address lookahead
+     *          when restoring a wallet seed. The recovery window applies to each
+     *          invdividual branch of the BIP44 derivation paths. Supplying a recovery
+     *          window of zero indicates that no addresses should be recovered, such after
+     *          the first initialization of the wallet.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -56,6 +87,42 @@ class UnlockWalletRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->wallet_password = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *recovery_window is an optional argument specifying the address lookahead
+     *when restoring a wallet seed. The recovery window applies to each
+     *invdividual branch of the BIP44 derivation paths. Supplying a recovery
+     *window of zero indicates that no addresses should be recovered, such after
+     *the first initialization of the wallet.
+     *
+     * Generated from protobuf field <code>int32 recovery_window = 2;</code>
+     * @return int
+     */
+    public function getRecoveryWindow()
+    {
+        return $this->recovery_window;
+    }
+
+    /**
+     **
+     *recovery_window is an optional argument specifying the address lookahead
+     *when restoring a wallet seed. The recovery window applies to each
+     *invdividual branch of the BIP44 derivation paths. Supplying a recovery
+     *window of zero indicates that no addresses should be recovered, such after
+     *the first initialization of the wallet.
+     *
+     * Generated from protobuf field <code>int32 recovery_window = 2;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRecoveryWindow($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->recovery_window = $var;
 
         return $this;
     }

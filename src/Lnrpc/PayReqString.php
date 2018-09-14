@@ -20,9 +20,19 @@ class PayReqString extends \Google\Protobuf\Internal\Message
      */
     private $pay_req = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $pay_req
+     *          &#47; The payment request string to be decoded
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

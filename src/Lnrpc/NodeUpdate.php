@@ -30,9 +30,21 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
      */
     private $alias = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $addresses
+     *     @type string $identity_key
+     *     @type string $global_features
+     *     @type string $alias
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

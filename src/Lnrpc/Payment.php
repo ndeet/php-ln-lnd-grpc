@@ -50,9 +50,29 @@ class Payment extends \Google\Protobuf\Internal\Message
      */
     private $payment_preimage = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $payment_hash
+     *          &#47; The payment hash
+     *     @type int|string $value
+     *          &#47; The value of the payment in satoshis
+     *     @type int|string $creation_date
+     *          &#47; The date of this payment
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $path
+     *          &#47; The path this payment took
+     *     @type int|string $fee
+     *          &#47; The fee paid for this payment in satoshis
+     *     @type string $payment_preimage
+     *          &#47; The payment preimage
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

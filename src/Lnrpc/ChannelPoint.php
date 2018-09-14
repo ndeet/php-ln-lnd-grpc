@@ -21,9 +21,23 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     private $output_index = 0;
     protected $funding_txid;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $funding_txid_bytes
+     *          &#47; Txid of the funding transaction
+     *     @type string $funding_txid_str
+     *          &#47; Hex-encoded string representing the funding transaction
+     *     @type int $output_index
+     *          &#47; The index of the output of the funding transaction
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

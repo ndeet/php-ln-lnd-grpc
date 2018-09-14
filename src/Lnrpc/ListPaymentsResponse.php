@@ -20,9 +20,19 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
      */
     private $payments;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type \Lnrpc\Payment[]|\Google\Protobuf\Internal\RepeatedField $payments
+     *          &#47; The list of payments
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

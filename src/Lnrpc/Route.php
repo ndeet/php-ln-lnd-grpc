@@ -36,7 +36,7 @@ class Route extends \Google\Protobuf\Internal\Message
      *of a one-hop payment, this value will be zero as we don't need to pay a fee
      *it ourself.
      *
-     * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees"];</code>
+     * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees", deprecated = true];</code>
      */
     private $total_fees = 0;
     /**
@@ -47,7 +47,7 @@ class Route extends \Google\Protobuf\Internal\Message
      *satoshis, otherwise the route will fail at an intermediate node due to an
      *insufficient amount of fees.
      *
-     * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt"];</code>
+     * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt", deprecated = true];</code>
      */
     private $total_amt = 0;
     /**
@@ -57,10 +57,59 @@ class Route extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .lnrpc.Hop hops = 4[json_name = "hops"];</code>
      */
     private $hops;
+    /**
+     **
+     *The total fees in millisatoshis.
+     *
+     * Generated from protobuf field <code>int64 total_fees_msat = 5[json_name = "total_fees_msat"];</code>
+     */
+    private $total_fees_msat = 0;
+    /**
+     **
+     *The total amount in millisatoshis.
+     *
+     * Generated from protobuf field <code>int64 total_amt_msat = 6[json_name = "total_amt_msat"];</code>
+     */
+    private $total_amt_msat = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type int $total_time_lock
+     *          *
+     *          The cumulative (final) time lock across the entire route.  This is the CLTV
+     *          value that should be extended to the first hop in the route. All other hops
+     *          will decrement the time-lock as advertised, leaving enough time for all
+     *          hops to wait for or present the payment preimage to complete the payment.
+     *     @type int|string $total_fees
+     *          *
+     *          The sum of the fees paid at each hop within the final route.  In the case
+     *          of a one-hop payment, this value will be zero as we don't need to pay a fee
+     *          it ourself.
+     *     @type int|string $total_amt
+     *          *
+     *          The total amount of funds required to complete a payment over this route.
+     *          This value includes the cumulative fees at each hop. As a result, the HTLC
+     *          extended to the first-hop in the route will need to have at least this many
+     *          satoshis, otherwise the route will fail at an intermediate node due to an
+     *          insufficient amount of fees.
+     *     @type \Lnrpc\Hop[]|\Google\Protobuf\Internal\RepeatedField $hops
+     *          *
+     *          Contains details concerning the specific forwarding details at each hop.
+     *     @type int|string $total_fees_msat
+     *          *
+     *          The total fees in millisatoshis.
+     *     @type int|string $total_amt_msat
+     *          *
+     *          The total amount in millisatoshis.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -103,7 +152,7 @@ class Route extends \Google\Protobuf\Internal\Message
      *of a one-hop payment, this value will be zero as we don't need to pay a fee
      *it ourself.
      *
-     * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees"];</code>
+     * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees", deprecated = true];</code>
      * @return int|string
      */
     public function getTotalFees()
@@ -117,7 +166,7 @@ class Route extends \Google\Protobuf\Internal\Message
      *of a one-hop payment, this value will be zero as we don't need to pay a fee
      *it ourself.
      *
-     * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees"];</code>
+     * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees", deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -137,7 +186,7 @@ class Route extends \Google\Protobuf\Internal\Message
      *satoshis, otherwise the route will fail at an intermediate node due to an
      *insufficient amount of fees.
      *
-     * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt"];</code>
+     * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt", deprecated = true];</code>
      * @return int|string
      */
     public function getTotalAmt()
@@ -153,7 +202,7 @@ class Route extends \Google\Protobuf\Internal\Message
      *satoshis, otherwise the route will fail at an intermediate node due to an
      *insufficient amount of fees.
      *
-     * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt"];</code>
+     * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt", deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -189,6 +238,62 @@ class Route extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Hop::class);
         $this->hops = $arr;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The total fees in millisatoshis.
+     *
+     * Generated from protobuf field <code>int64 total_fees_msat = 5[json_name = "total_fees_msat"];</code>
+     * @return int|string
+     */
+    public function getTotalFeesMsat()
+    {
+        return $this->total_fees_msat;
+    }
+
+    /**
+     **
+     *The total fees in millisatoshis.
+     *
+     * Generated from protobuf field <code>int64 total_fees_msat = 5[json_name = "total_fees_msat"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setTotalFeesMsat($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->total_fees_msat = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The total amount in millisatoshis.
+     *
+     * Generated from protobuf field <code>int64 total_amt_msat = 6[json_name = "total_amt_msat"];</code>
+     * @return int|string
+     */
+    public function getTotalAmtMsat()
+    {
+        return $this->total_amt_msat;
+    }
+
+    /**
+     **
+     *The total amount in millisatoshis.
+     *
+     * Generated from protobuf field <code>int64 total_amt_msat = 6[json_name = "total_amt_msat"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setTotalAmtMsat($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->total_amt_msat = $var;
 
         return $this;
     }

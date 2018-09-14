@@ -15,9 +15,20 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
 {
     protected $update;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type \Lnrpc\PendingUpdate $chan_pending
+     *     @type \Lnrpc\ConfirmationUpdate $confirmation
+     *     @type \Lnrpc\ChannelOpenUpdate $chan_open
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

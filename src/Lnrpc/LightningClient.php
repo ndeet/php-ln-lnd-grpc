@@ -287,6 +287,22 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
+     * * lncli: `closedchannels`
+     * ClosedChannels returns a description of all the closed channels that 
+     * this node was a participant in.
+     * @param \Lnrpc\ClosedChannelsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function ClosedChannels(\Lnrpc\ClosedChannelsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.Lightning/ClosedChannels',
+        $argument,
+        ['\Lnrpc\ClosedChannelsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * *
      * OpenChannelSync is a synchronous version of the OpenChannel RPC call. This
      * call is meant to be consumed by clients to the REST proxy. As with all
@@ -378,6 +394,37 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
+     * * lncli: `sendtoroute`
+     * SendToRoute is a bi-directional streaming RPC for sending payment through
+     * the Lightning Network. This method differs from SendPayment in that it
+     * allows users to specify a full route manually. This can be used for things
+     * like rebalancing, and atomic swaps.
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function SendToRoute($metadata = [], $options = []) {
+        return $this->_bidiRequest('/lnrpc.Lightning/SendToRoute',
+        ['\Lnrpc\SendResponse','decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * *
+     * SendToRouteSync is a synchronous version of SendToRoute. It Will block
+     * until the payment either fails or succeeds.
+     * @param \Lnrpc\SendToRouteRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function SendToRouteSync(\Lnrpc\SendToRouteRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.Lightning/SendToRouteSync',
+        $argument,
+        ['\Lnrpc\SendResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * * lncli: `addinvoice`
      * AddInvoice attempts to add a new invoice to the invoice database. Any
      * duplicated invoices are rejected, therefore all invoices *must* have a
@@ -397,7 +444,14 @@ class LightningClient extends \Grpc\BaseStub {
     /**
      * * lncli: `listinvoices`
      * ListInvoices returns a list of all the invoices currently stored within the
-     * database. Any active debug invoices are ignored.
+     * database. Any active debug invoices are ignored. It has full support for
+     * paginated responses, allowing users to query for specific invoices through
+     * their add_index. This can be done by using either the first_index_offset or
+     * last_index_offset fields included in the response as the index_offset of the
+     * next request. The reversed flag is set by default in order to paginate
+     * backwards. If you wish to paginate forwards, you must explicitly set the
+     * flag to false. If none of the parameters are specified, then the last 100
+     * invoices will be returned.
      * @param \Lnrpc\ListInvoiceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -430,7 +484,14 @@ class LightningClient extends \Grpc\BaseStub {
     /**
      * *
      * SubscribeInvoices returns a uni-directional stream (sever -> client) for
-     * notifying the client of newly added/settled invoices.
+     * notifying the client of newly added/settled invoices. The caller can
+     * optionally specify the add_index and/or the settle_index. If the add_index
+     * is specified, then we'll first start by sending add invoice events for all
+     * invoices with an add_index greater than the specified value.  If the
+     * settle_index is specified, the next, we'll send out all settle events for
+     * invoices with a settle_index greater than the specified value.  One or both
+     * of these fields can be set. If no fields are set, then we'll only send out
+     * the latest add/settle events.
      * @param \Lnrpc\InvoiceSubscription $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

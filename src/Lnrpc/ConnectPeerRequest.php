@@ -27,9 +27,22 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
      */
     private $perm = false;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type \Lnrpc\LightningAddress $addr
+     *          &#47; Lightning address of the peer, in the format `<pubkey>&#64;host`
+     *     @type bool $perm
+     *          * If set, the daemon will attempt to persistently connect to the target
+     *           peer.  Otherwise, the call will be synchronous. 
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

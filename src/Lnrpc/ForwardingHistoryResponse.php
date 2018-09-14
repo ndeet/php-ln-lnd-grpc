@@ -26,9 +26,21 @@ class ForwardingHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     private $last_offset_index = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type \Lnrpc\ForwardingEvent[]|\Google\Protobuf\Internal\RepeatedField $forwarding_events
+     *          &#47; A list of forwarding events from the time slice of the time series specified in the request.
+     *     @type int $last_offset_index
+     *          &#47; The index of the last time in the set of returned forwarding events. Can be used to seek further, pagination style.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

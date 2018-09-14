@@ -40,9 +40,22 @@ class LightningNode extends \Google\Protobuf\Internal\Message
      */
     private $color = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type int $last_update
+     *     @type string $pub_key
+     *     @type string $alias
+     *     @type \Lnrpc\NodeAddress[]|\Google\Protobuf\Internal\RepeatedField $addresses
+     *     @type string $color
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

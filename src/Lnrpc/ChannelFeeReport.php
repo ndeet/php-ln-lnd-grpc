@@ -38,9 +38,25 @@ class ChannelFeeReport extends \Google\Protobuf\Internal\Message
      */
     private $fee_rate = 0.0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $chan_point
+     *          &#47; The channel that this fee report belongs to.
+     *     @type int|string $base_fee_msat
+     *          &#47; The base fee charged regardless of the number of milli-satoshis sent.
+     *     @type int|string $fee_per_mil
+     *          &#47; The amount charged per milli-satoshis transferred expressed in millionths of a satoshi.
+     *     @type float $fee_rate
+     *          &#47; The effective fee rate in milli-satoshis. Computed by dividing the fee_per_mil value by 1 million.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

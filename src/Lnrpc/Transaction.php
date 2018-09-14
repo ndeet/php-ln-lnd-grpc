@@ -62,9 +62,33 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     private $dest_addresses;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $tx_hash
+     *          &#47; The transaction hash
+     *     @type int|string $amount
+     *          &#47; The transaction ammount, denominated in satoshis
+     *     @type int $num_confirmations
+     *          &#47; The number of confirmations
+     *     @type string $block_hash
+     *          &#47; The hash of the block this transaction was included in
+     *     @type int $block_height
+     *          &#47; The height of the block this transaction was included in
+     *     @type int|string $time_stamp
+     *          &#47; Timestamp of this transaction 
+     *     @type int|string $total_fees
+     *          &#47; Fees paid for this transaction
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $dest_addresses
+     *          &#47; Addresses that received funds for this transaction
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

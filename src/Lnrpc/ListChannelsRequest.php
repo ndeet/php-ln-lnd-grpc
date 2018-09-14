@@ -30,9 +30,21 @@ class ListChannelsRequest extends \Google\Protobuf\Internal\Message
      */
     private $private_only = false;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type bool $active_only
+     *     @type bool $inactive_only
+     *     @type bool $public_only
+     *     @type bool $private_only
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

@@ -37,10 +37,34 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ForceClosedChannel pending_force_closing_channels = 4[json_name = "pending_force_closing_channels"];</code>
      */
     private $pending_force_closing_channels;
+    /**
+     *&#47; Channels waiting for closing tx to confirm
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.WaitingCloseChannel waiting_close_channels = 5[json_name = "waiting_close_channels"];</code>
+     */
+    private $waiting_close_channels;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type int|string $total_limbo_balance
+     *          &#47; The balance in satoshis encumbered in pending channels
+     *     @type \Lnrpc\PendingChannelsResponse\PendingOpenChannel[]|\Google\Protobuf\Internal\RepeatedField $pending_open_channels
+     *          &#47; Channels pending opening
+     *     @type \Lnrpc\PendingChannelsResponse\ClosedChannel[]|\Google\Protobuf\Internal\RepeatedField $pending_closing_channels
+     *          &#47; Channels pending closing
+     *     @type \Lnrpc\PendingChannelsResponse\ForceClosedChannel[]|\Google\Protobuf\Internal\RepeatedField $pending_force_closing_channels
+     *          &#47; Channels pending force closing
+     *     @type \Lnrpc\PendingChannelsResponse\WaitingCloseChannel[]|\Google\Protobuf\Internal\RepeatedField $waiting_close_channels
+     *          &#47; Channels waiting for closing tx to confirm
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -84,12 +108,12 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
      *&#47; Channels pending opening
      *
      * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.PendingOpenChannel pending_open_channels = 2[json_name = "pending_open_channels"];</code>
-     * @param \Lnrpc\PendingChannelsResponse_PendingOpenChannel[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Lnrpc\PendingChannelsResponse\PendingOpenChannel[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPendingOpenChannels($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\PendingChannelsResponse_PendingOpenChannel::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\PendingChannelsResponse\PendingOpenChannel::class);
         $this->pending_open_channels = $arr;
 
         return $this;
@@ -110,12 +134,12 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
      *&#47; Channels pending closing
      *
      * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ClosedChannel pending_closing_channels = 3[json_name = "pending_closing_channels"];</code>
-     * @param \Lnrpc\PendingChannelsResponse_ClosedChannel[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Lnrpc\PendingChannelsResponse\ClosedChannel[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPendingClosingChannels($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\PendingChannelsResponse_ClosedChannel::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\PendingChannelsResponse\ClosedChannel::class);
         $this->pending_closing_channels = $arr;
 
         return $this;
@@ -136,13 +160,39 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
      *&#47; Channels pending force closing
      *
      * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ForceClosedChannel pending_force_closing_channels = 4[json_name = "pending_force_closing_channels"];</code>
-     * @param \Lnrpc\PendingChannelsResponse_ForceClosedChannel[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Lnrpc\PendingChannelsResponse\ForceClosedChannel[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPendingForceClosingChannels($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\PendingChannelsResponse_ForceClosedChannel::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\PendingChannelsResponse\ForceClosedChannel::class);
         $this->pending_force_closing_channels = $arr;
+
+        return $this;
+    }
+
+    /**
+     *&#47; Channels waiting for closing tx to confirm
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.WaitingCloseChannel waiting_close_channels = 5[json_name = "waiting_close_channels"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getWaitingCloseChannels()
+    {
+        return $this->waiting_close_channels;
+    }
+
+    /**
+     *&#47; Channels waiting for closing tx to confirm
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.WaitingCloseChannel waiting_close_channels = 5[json_name = "waiting_close_channels"];</code>
+     * @param \Lnrpc\PendingChannelsResponse\WaitingCloseChannel[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setWaitingCloseChannels($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\PendingChannelsResponse\WaitingCloseChannel::class);
+        $this->waiting_close_channels = $arr;
 
         return $this;
     }

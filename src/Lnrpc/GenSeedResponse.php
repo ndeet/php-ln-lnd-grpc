@@ -33,9 +33,28 @@ class GenSeedResponse extends \Google\Protobuf\Internal\Message
      */
     private $enciphered_seed = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $cipher_seed_mnemonic
+     *          *
+     *          cipher_seed_mnemonic is a 24-word mnemonic that encodes a prior aezeed
+     *          cipher seed obtained by the user. This field is optional, as if not
+     *          provided, then the daemon will generate a new cipher seed for the user.
+     *          Otherwise, then the daemon will attempt to recover the wallet state linked
+     *          to this cipher seed.
+     *     @type string $enciphered_seed
+     *          *
+     *          enciphered_seed are the raw aezeed cipher seed bytes. This is the raw
+     *          cipher text before run through our mnemonic encoding scheme.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

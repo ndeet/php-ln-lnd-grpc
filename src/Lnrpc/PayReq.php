@@ -49,10 +49,32 @@ class PayReq extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 cltv_expiry = 9[json_name = "cltv_expiry"];</code>
      */
     private $cltv_expiry = 0;
+    /**
+     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10[json_name = "route_hints"];</code>
+     */
+    private $route_hints;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $destination
+     *     @type string $payment_hash
+     *     @type int|string $num_satoshis
+     *     @type int|string $timestamp
+     *     @type int|string $expiry
+     *     @type string $description
+     *     @type string $description_hash
+     *     @type string $fallback_addr
+     *     @type int|string $cltv_expiry
+     *     @type \Lnrpc\RouteHint[]|\Google\Protobuf\Internal\RepeatedField $route_hints
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -249,6 +271,28 @@ class PayReq extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->cltv_expiry = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10[json_name = "route_hints"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getRouteHints()
+    {
+        return $this->route_hints;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10[json_name = "route_hints"];</code>
+     * @param \Lnrpc\RouteHint[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setRouteHints($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\RouteHint::class);
+        $this->route_hints = $arr;
 
         return $this;
     }

@@ -12,7 +12,7 @@ use Google\Protobuf\Internal\GPBUtil;
  **
  *A fully authenticated channel along with all its unique attributes.
  *Once an authenticated channel announcement has been processed on the network,
- *then a instance of ChannelEdgeInfo encapsulating the channels attributes is
+ *then an instance of ChannelEdgeInfo encapsulating the channels attributes is
  *stored. The other portions relevant to routing policy of a channel are stored
  *within a ChannelEdgePolicy for each direction of the channel.
  *
@@ -58,9 +58,29 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      */
     private $node2_policy = null;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type int|string $channel_id
+     *          *
+     *          The unique channel ID for the channel. The first 3 bytes are the block
+     *          height, the next 3 the index within the block, and the last 2 bytes are the
+     *          output index for the channel.
+     *     @type string $chan_point
+     *     @type int $last_update
+     *     @type string $node1_pub
+     *     @type string $node2_pub
+     *     @type int|string $capacity
+     *     @type \Lnrpc\RoutingPolicy $node1_policy
+     *     @type \Lnrpc\RoutingPolicy $node2_policy
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

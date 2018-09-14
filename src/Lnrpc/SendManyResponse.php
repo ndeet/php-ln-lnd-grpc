@@ -20,9 +20,19 @@ class SendManyResponse extends \Google\Protobuf\Internal\Message
      */
     private $txid = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $txid
+     *          &#47; The id of the transaction
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

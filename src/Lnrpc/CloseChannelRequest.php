@@ -41,9 +41,28 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
      */
     private $sat_per_byte = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type \Lnrpc\ChannelPoint $channel_point
+     *          *
+     *          The outpoint (txid:index) of the funding transaction. With this value, Bob
+     *          will be able to generate a signature for Alice's version of the commitment
+     *          transaction.
+     *     @type bool $force
+     *          &#47; If true, then the channel will be closed forcibly. This means the current commitment transaction will be signed and broadcast.
+     *     @type int $target_conf
+     *          &#47; The target number of blocks that the closure transaction should be confirmed by.
+     *     @type int|string $sat_per_byte
+     *          &#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

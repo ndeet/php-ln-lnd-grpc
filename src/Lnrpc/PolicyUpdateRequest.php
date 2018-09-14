@@ -33,9 +33,27 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     private $time_lock_delta = 0;
     protected $scope;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type bool $global
+     *          &#47; If set, then this update applies to all currently active channels.
+     *     @type \Lnrpc\ChannelPoint $chan_point
+     *          &#47; If set, this update will target a specific channel.
+     *     @type int|string $base_fee_msat
+     *          &#47; The base fee charged regardless of the number of milli-satoshis sent.
+     *     @type float $fee_rate
+     *          &#47; The effective fee rate in milli-satoshis. The precision of this value goes up to 6 decimal places, so 1e-6.
+     *     @type int $time_lock_delta
+     *          &#47; The required timelock delta for HTLCs forwarded over the channel.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

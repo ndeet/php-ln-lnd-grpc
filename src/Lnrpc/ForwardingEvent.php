@@ -50,9 +50,29 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
      */
     private $fee = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type int|string $timestamp
+     *          &#47; Timestamp is the time (unix epoch offset) that this circuit was completed.
+     *     @type int|string $chan_id_in
+     *          &#47; The incoming channel ID that carried the HTLC that created the circuit.
+     *     @type int|string $chan_id_out
+     *          &#47; The outgoing channel ID that carried the preimage that completed the circuit.
+     *     @type int|string $amt_in
+     *          &#47; The total amount of the incoming HTLC that created half the circuit.
+     *     @type int|string $amt_out
+     *          &#47; The total amount of the outgoign HTLC that created the second half of the circuit.
+     *     @type int|string $fee
+     *          &#47; The total fee that this payment circuit carried.
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**

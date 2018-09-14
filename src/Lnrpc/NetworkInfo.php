@@ -50,9 +50,26 @@ class NetworkInfo extends \Google\Protobuf\Internal\Message
      */
     private $max_channel_size = 0;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type int $graph_diameter
+     *     @type float $avg_out_degree
+     *     @type int $max_out_degree
+     *     @type int $num_nodes
+     *     @type int $num_channels
+     *     @type int|string $total_network_capacity
+     *     @type float $avg_channel_size
+     *     @type int|string $min_channel_size
+     *     @type int|string $max_channel_size
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
