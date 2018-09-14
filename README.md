@@ -1,8 +1,8 @@
 PHP lnd gRPC client
 ===================
 
-This library is a gRPC client for [lnd](https://github.com/lightningnetwork/lnd) version [0.4.1-beta](https://github.com/lightningnetwork/lnd/releases/tag/v0.4.1-beta). It is generated code
-from [rpc.proto](https://github.com/lightningnetwork/lnd/blob/v0.4.1-beta/lnrpc/rpc.proto).
+This library is a gRPC client for [lnd](https://github.com/lightningnetwork/lnd) version [0.5-beta](https://github.com/lightningnetwork/lnd/releases/tag/v0.5-beta). It is generated code
+from [rpc.proto](https://github.com/lightningnetwork/lnd/blob/v0.5-beta/lnrpc/rpc.proto).
 
 
 Requirements
@@ -23,8 +23,8 @@ Add grpc.so to php.ini. For PHP 7.0 in Ubuntu it will be
 # echo 'extension=grpc.so' >> /etc/php/7.0/cli/php.ini
 ```
 
-Adding to project
-=================
+Adding to your project
+======================
 
 #### Via composer
 ```
@@ -36,7 +36,7 @@ $ composer require ndeet/ln-lnd-grpc
 ```
 $ cd /project/
 $ git clone https://github.com/ndeet/php-ln-lnd-grpc.git lndrpc
-$ cd ./lnrpc/
+$ cd ./lndrpc/
 $ composer install
 ```
 
@@ -46,16 +46,15 @@ Example
 =======
 
 Example of usage you can find in [example/index.php](https://github.com/ndeet/php-ln-lnd-grpc/blob/master/example/index.php).
-Note: Currently the examples only work with macaroons disabled. Starting lnd with `--no-macaroons` option. The examples 
-will be updated asap. 
+Note: This is currently untested with the latest lnd-0.5-beta release as time of committing but wanted to push the updated classes out.
 
 Generation of PHP classes
 =========================
-As a primer to grpc and PHP see the [official tutorial](https://grpc.io/docs/quickstart/php.html) and the `lnrpc` [readme](https://github.com/lightningnetwork/lnd/tree/v0.4-beta/lnrpc).
+As a primer to grpc and PHP see the [official tutorial](https://grpc.io/docs/quickstart/php.html) and the `lnrpc` [readme](https://github.com/lightningnetwork/lnd/tree/v0.5-beta/lnrpc).
 
 The following command was used to generate the classes:
 ```
-protoc -I/usr/local/include -I. -I$GOPATH/src -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis/ --php_out=src --grpc_out=src --plugin=protoc-gen-grpc=/usr/local/Cellar/grpc/1.9.1/bin/grpc_php_plugin rpc.proto
+protoc -I/usr/local/include -I. -I$GOPATH/src -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis/ --php_out=src --grpc_out=src --plugin=protoc-gen-grpc=/usr/local/Cellar/grpc/1.14.2/bin/grpc_php_plugin rpc.proto
 ```
 
 Credits
