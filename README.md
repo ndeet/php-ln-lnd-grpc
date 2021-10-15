@@ -1,5 +1,10 @@
+
+
 PHP lnd gRPC client
 ===================
+
+**This package has been abandoned, please use the better maintened one on lnpay here https://packagist.org/packages/lnpay/php-lnd-grpc.**
+
 
 This library is a gRPC client for [lnd](https://github.com/lightningnetwork/lnd) version [0.5-beta](https://github.com/lightningnetwork/lnd/releases/tag/v0.5-beta). It is generated code
 from [rpc.proto](https://github.com/lightningnetwork/lnd/blob/v0.5-beta/lnrpc/rpc.proto).
